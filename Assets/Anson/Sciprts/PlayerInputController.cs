@@ -115,4 +115,9 @@ public class PlayerInputController : MonoBehaviour
     {
         selectObject = hoverObject;
     }
+
+    public void OnClimb()
+    {
+        currentCharacterControllerScript.Climb();
+    }
 }
