@@ -6,6 +6,7 @@ using UnityEngine.Serialization;
 
 public class PlayerInputController : MonoBehaviour
 {
+    [SerializeField]
     private PlayerController playerController;
 
     [Space(10)]
@@ -45,5 +46,17 @@ public class PlayerInputController : MonoBehaviour
         }
         currentCharacterControllerScript.Move(moveDir);
         print(moveDir);
+    }
+
+    public void OnSwitchCharacter(InputValue context)
+    {
+        float value = context.Get<float>();
+        if (value > 0)
+        {
+            playerController.NextCharacter();
+        }else if (value < 0)
+        {
+            playerController.PrevCharacter();
+        }
     }
 }

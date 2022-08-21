@@ -10,19 +10,23 @@ public class CharacterControllerScript : MonoBehaviour
 
     [SerializeField]
     private float climbHeight = 1;
-    
-    
+
+
     [Header("Current Stats")]
     private Vector3 moveDir = new Vector3();
-    
+
     [Header("Components")]
     [SerializeField]
     private CharacterController characterController;
-    
+
+    [SerializeField]
+    private Transform slantTransform;
+    [SerializeField]
+    private Transform modelTransform;
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -31,7 +35,7 @@ public class CharacterControllerScript : MonoBehaviour
         if (moveDir.magnitude > 0.1f)
         {
             characterController.Move(moveDir * (speed * Time.deltaTime));
-            transform.forward = moveDir;
+            modelTransform.localRotation = Quaternion.Euler(0,Vector3.SignedAngle(slantTransform.forward,moveDir,slantTransform.up),0);
         }
     }
 
@@ -39,8 +43,8 @@ public class CharacterControllerScript : MonoBehaviour
     {
         this.moveDir = moveDir.normalized;
     }
-    
-    
+
+
     [ContextMenu("Initialise Components")]
     public void InitialiseComponents()
     {
@@ -49,6 +53,11 @@ public class CharacterControllerScript : MonoBehaviour
         {
             Debug.LogError("Cannot find character controller");
         }
+    }
 
+    public void SlantCharacter(float slantDegree, Transform camera)
+    {
+        slantTransform.rotation =
+            Quaternion.Euler(0f, camera.eulerAngles.y, 0f) * Quaternion.Euler(slantDegree, 0, 0);
     }
 }

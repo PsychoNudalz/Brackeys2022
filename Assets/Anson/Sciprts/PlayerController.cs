@@ -5,12 +5,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Character Controllers")]
+    [SerializeField]
+    private CharacterManager characterManager;
+
     [SerializeField]
     private CharacterControllerScript[] characterControllers;
 
+
     [SerializeField]
     private CharacterControllerScript currentCharacter;
+
+    [SerializeField]
+    private int characterIndex = 0;
 
     public CharacterControllerScript CurrentCharacter => currentCharacter;
 
@@ -18,20 +24,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private PlayerInputController playerInputController;
 
-    
-
-
-
 
     [ContextMenu("Initialise Components")]
     public void InitialiseComponents()
     {
         playerInputController = GetComponentInChildren<PlayerInputController>();
         playerInputController.PlayerController = this;
-        
+
         if (characterControllers.Length > 0)
         {
-            SetCharacter(characterControllers[0]);
+            SetCharacter(characterControllers[characterIndex]);
         }
     }
 
@@ -41,8 +43,17 @@ public class PlayerController : MonoBehaviour
         currentCharacter = characterControllerScript;
         playerInputController.CurrentCharacterControllerScript = currentCharacter;
     }
-    
-    
-    
-    
+
+    public void NextCharacter()
+    {
+        characterIndex++;
+        characterIndex = characterIndex % characterControllers.Length;
+        SetCharacter(characterControllers[characterIndex]);
+    }
+    public void PrevCharacter()
+    {
+        characterIndex--;
+        characterIndex = (characterIndex+characterControllers.Length) % characterControllers.Length;
+        SetCharacter(characterControllers[characterIndex]);
+    }
 }
