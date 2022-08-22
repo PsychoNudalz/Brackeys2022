@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 682081892628363421}
   - component: {fileID: 7898593238747307514}
   - component: {fileID: 3245797624598453531}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: BoxInteractionDetection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -536,4 +536,5 @@ MonoBehaviour:
   onClickEvent:
     m_PersistentCalls:
       m_Calls: []
+  showInteractionWheelOnClick: 1
   highlightEffect: {fileID: 1091191642854799358}

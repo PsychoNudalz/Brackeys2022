@@ -14,10 +14,13 @@ public class ClickableObject : MonoBehaviour
     [SerializeField]
     private UnityEvent onClickEvent;
 
+    [SerializeField]
+    private bool showInteractionWheelOnClick;
     
     [Space(10f)]
     [SerializeField]
     private HighlightEffect highlightEffect;
+    
 
     private bool isSelected = false;
 
@@ -59,13 +62,32 @@ public class ClickableObject : MonoBehaviour
         isSelected = b;
         if (b)
         {
+            if (showInteractionWheelOnClick)
+            {
+                ShowInteractionWheel();
+            }
             OnHover(true);
             highlightEffect.glow = 1;
+            OnClick();
         }
         else
         {
+            if (showInteractionWheelOnClick)
+            {
+                HideInteractionWheel();
+            }
             OnHover(false);
             highlightEffect.glow = 0;
         }
+    }
+
+    public void ShowInteractionWheel()
+    {
+        PlayerUIController.current.PlayerInteractOptionController.ActivateWheel(transform.position);
+    }
+    
+    public void HideInteractionWheel()
+    {
+        PlayerUIController.current.PlayerInteractOptionController.SetWheelActive(false);
     }
 }
