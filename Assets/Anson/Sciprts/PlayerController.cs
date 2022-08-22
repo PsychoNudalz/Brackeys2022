@@ -37,11 +37,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        if (characterControllers.Length > 0)
+        {
+            SetCharacter(characterControllers[characterIndex]);
+        }
+    }
+
 
     public void SetCharacter(CharacterControllerScript characterControllerScript)
     {
         currentCharacter = characterControllerScript;
-        playerInputController.CurrentCharacterControllerScript = currentCharacter;
+        playerInputController.CharacterMovementController = currentCharacter.CharacterMovementController;
     }
 
     public void NextCharacter()

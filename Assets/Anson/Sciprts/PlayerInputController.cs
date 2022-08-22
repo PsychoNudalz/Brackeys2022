@@ -13,7 +13,7 @@ public class PlayerInputController : MonoBehaviour
 
     [Space(10)]
     [SerializeField]
-    private CharacterControllerScript currentCharacterControllerScript;
+    private CharacterMovementController characterMovementController;
 
     [Header("Mouse Settings")]
     [SerializeField]
@@ -38,12 +38,12 @@ public class PlayerInputController : MonoBehaviour
         set => playerController = value;
     }
 
-    public CharacterControllerScript CurrentCharacterControllerScript
-    {
-        get => currentCharacterControllerScript;
-        set => currentCharacterControllerScript = value;
-    }
 
+    public CharacterMovementController CharacterMovementController
+    {
+        get => characterMovementController;
+        set => characterMovementController = value;
+    }
 
     private void Awake()
     {
@@ -67,7 +67,7 @@ public class PlayerInputController : MonoBehaviour
                       new Vector3(moveDir.x, 0, moveDir.y);
         }
 
-        currentCharacterControllerScript.Move(moveDir);
+        characterMovementController.Move(moveDir);
     }
 
     public void OnSwitchCharacter(InputValue context)
@@ -80,6 +80,20 @@ public class PlayerInputController : MonoBehaviour
         else if (value < 0)
         {
             playerController.PrevCharacter();
+        }
+    }
+    
+    public void OnRotateCamera(InputValue context)
+    {
+        float value = context.Get<float>();
+        if (value > 0)
+        {
+         //Rotate the camera clockwise   
+        }
+        else if (value < 0)
+        {
+            //Rotate the camera anti-clockwise   
+
         }
     }
 
@@ -96,16 +110,21 @@ public class PlayerInputController : MonoBehaviour
             if (temp)
             {
                 hoverObject = temp;
+                hoverObject.OnHover(true);
             }
             else
             {
+                hoverObject?.OnHover(false);
                 hoverObject = null;
             }
         }
         else
         {
+            hoverObject?.OnHover(false);
             hoverObject = null;
         }
+        
+        
         // Debug.DrawRay(mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()),mainCamera.transform.forward*1000f);
 
         return raycastHit;
@@ -113,11 +132,21 @@ public class PlayerInputController : MonoBehaviour
 
     public void OnMouseClick(InputValue context)
     {
+        if (selectObject)
+        {
+            selectObject.OnSelect(false);
+        }
+        if (hoverObject)
+        {
+            hoverObject.OnSelect(true);
+        }
+
         selectObject = hoverObject;
+        
     }
 
     public void OnClimb()
     {
-        currentCharacterControllerScript.Climb();
+        characterMovementController.Climb();
     }
 }
