@@ -18,17 +18,28 @@ public class TriggerDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (tagList.Count==0|| tagList.Contains(other.tag))
+        OnTriggerEnterEvent(other);
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        OnTriggerExitEvent(other);
+
+    }
+
+    protected virtual void OnTriggerEnterEvent(Collider other)
+    {
+        if (tagList.Count == 0 || tagList.Contains(other.tag))
         {
             if (!obstructedColliders.Contains(other))
             {
                 obstructedColliders.Add(other);
             }
-            isObstructed = obstructedColliders.Count>0;
+
+            isObstructed = obstructedColliders.Count > 0;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    protected virtual void OnTriggerExitEvent(Collider other)
     {
         if (tagList.Count==0||tagList.Contains(other.tag))
         {
