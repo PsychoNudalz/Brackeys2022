@@ -14,6 +14,9 @@ public class SwitchInteractable : InteractableObject
     private List<Renderer> systemRenderers;
 
     private string colourMaterialName = "_MainColor";
+    [Header("Debug")]
+    [SerializeField]
+    private bool showDebug = true;
 
 
     private void Start()
@@ -32,6 +35,19 @@ public class SwitchInteractable : InteractableObject
             if (systemMaterial.HasColor(colourMaterialName))
             {
                 systemMaterial.SetColor(colourMaterialName,systemColour);
+            }
+        }
+    }
+    
+    private void OnDrawGizmosSelected()
+    {
+        if (showDebug)
+        {
+            foreach (ConsequenceObject consequenceObject in onOnConsequence.Concat(onOffConsequence).ToArray())
+            {
+                Gizmos.color = systemColour;
+                
+                Gizmos.DrawLine(transform.position,consequenceObject.transform.position);
             }
         }
     }

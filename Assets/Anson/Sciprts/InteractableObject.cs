@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -31,10 +33,9 @@ public abstract class InteractableObject : MonoBehaviour
     protected InteractState interactState = InteractState.Off;
     protected InteractState originalInteractState = InteractState.Off;
 
-    [Header("Debug")]
-    [SerializeField]
-    private bool showDebug = false;
-    
+
+
+
 
     [ContextMenu("OnUse")]
     public virtual void OnUse()

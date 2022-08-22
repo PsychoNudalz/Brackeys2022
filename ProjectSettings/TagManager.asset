@@ -8,6 +8,7 @@ TagManager:
   - Interactable
   - Projectiles
   - Clickable
+  - MovableObject
   layers:
   - Default
   - TransparentFX
