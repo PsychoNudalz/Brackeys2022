@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum CharacterEnum
+{
+    Soldier,
+    Archer,
+    Mage
+}
 public enum AliveEnum
 {
     Alive,
@@ -18,6 +25,9 @@ public enum SuppressionEnum
 
 public class CharacterControllerScript : MonoBehaviour
 {
+    [SerializeField]
+    private CharacterEnum characterEnum;
+    [Space(10)]
     [Header("States")]
     [SerializeField]
     private AliveEnum aliveEnum;
