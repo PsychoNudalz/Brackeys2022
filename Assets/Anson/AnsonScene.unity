@@ -345,6 +345,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1138009555}
     m_Modifications:
+    - target: {fileID: 1091191642854799358, guid: 9b859da5eee0c474e8319dce4b72e0ca,
+        type: 3}
+      propertyPath: rmsCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6157155329068032648, guid: 9b859da5eee0c474e8319dce4b72e0ca,
         type: 3}
       propertyPath: m_RootOrder
@@ -958,6 +963,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: SwitchObject
       objectReference: {fileID: 0}
+    - target: {fileID: 6894150021127895019, guid: dddf3a67a1d9af849bb056d588f9ed75,
+        type: 3}
+      propertyPath: onOnConsequence.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894150021127895019, guid: dddf3a67a1d9af849bb056d588f9ed75,
+        type: 3}
+      propertyPath: onOffConsequence.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894150021127895019, guid: dddf3a67a1d9af849bb056d588f9ed75,
+        type: 3}
+      propertyPath: onOnConsequence.Array.data[0]
+      value: 
+      objectReference: {fileID: 905619550}
+    - target: {fileID: 6894150021127895019, guid: dddf3a67a1d9af849bb056d588f9ed75,
+        type: 3}
+      propertyPath: onOffConsequence.Array.data[0]
+      value: 
+      objectReference: {fileID: 905619550}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dddf3a67a1d9af849bb056d588f9ed75, type: 3}
 --- !u!1 &1032239113
@@ -1393,6 +1418,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1138009555}
     m_Modifications:
+    - target: {fileID: 1091191642854799358, guid: 9b859da5eee0c474e8319dce4b72e0ca,
+        type: 3}
+      propertyPath: rmsCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6157155329068032648, guid: 9b859da5eee0c474e8319dce4b72e0ca,
         type: 3}
       propertyPath: m_RootOrder

@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
     public void SetCharacter(CharacterControllerScript characterControllerScript)
     {
         currentCharacter = characterControllerScript;
+        playerInputController.CharacterController = currentCharacter;
         playerInputController.CharacterMovementController = currentCharacter.CharacterMovementController;
     }
 

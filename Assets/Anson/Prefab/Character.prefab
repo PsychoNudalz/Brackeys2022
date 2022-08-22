@@ -347,6 +347,7 @@ MonoBehaviour:
   aliveEnum: 0
   suppressionEnum: 0
   characterMovementController: {fileID: 3840642747324799059}
+  interactTriggerDetector: {fileID: 7898593238747307514}
 --- !u!114 &3840642747324799059
 MonoBehaviour:
   m_ObjectHideFlags: 0

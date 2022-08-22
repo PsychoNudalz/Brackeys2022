@@ -13,6 +13,8 @@ public class PlayerInputController : MonoBehaviour
 
     [Space(10)]
     [SerializeField]
+    private CharacterControllerScript characterController;
+    [SerializeField]
     private CharacterMovementController characterMovementController;
 
     [Header("Mouse Settings")]
@@ -38,6 +40,11 @@ public class PlayerInputController : MonoBehaviour
         set => playerController = value;
     }
 
+    public CharacterControllerScript CharacterController
+    {
+        get => characterController;
+        set => characterController = value;
+    }
 
     public CharacterMovementController CharacterMovementController
     {
@@ -148,5 +155,10 @@ public class PlayerInputController : MonoBehaviour
     public void OnClimb()
     {
         characterMovementController.Climb();
+    }
+
+    public void OnUseInteractable()
+    {
+        characterController.OnUseInteractable();
     }
 }
