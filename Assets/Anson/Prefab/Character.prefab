@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7092986060294245138}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SlantParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6483131172068233966}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Climbing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 6157155328025610344}
   - component: {fileID: 6157155328025610341}
   - component: {fileID: 6157155328025610346}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 6157155328234247815}
   - component: {fileID: 6157155328234247808}
   - component: {fileID: 6157155328234247809}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CharacterModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 6157155329068032648}
   - component: {fileID: 6157155329068032651}
   - component: {fileID: 6157155329068032650}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8cefad5e84819e41bb3d1bb68a39767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterState: 1
   speed: 8
+  gravity: 6
+  groundCheckDistance: 0.6
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1792
   climbHeight: 1
   heightOffset: 2
   climbCastCheckAngle: 45
@@ -303,7 +309,7 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0.1
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
