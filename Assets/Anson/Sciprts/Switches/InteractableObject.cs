@@ -93,13 +93,13 @@ public abstract class InteractableObject : MonoBehaviour
     /// </summary>
     /// <param name="forcedType">Which type</param>
     /// <param name="b">on or off</param>
-    protected virtual void SetLock(bool forcedType, bool b)
+    public virtual void SetLock(bool forcedType, bool b)
     {
         if (interactState is InteractState.On or InteractState.Off)
         {
             originalInteractState = interactState;
         }
-        if (!b)
+        if (b)
         {
             //turning off a lock
             if (forcedType)
@@ -114,6 +114,24 @@ public abstract class InteractableObject : MonoBehaviour
         else
         {
             interactState = originalInteractState;
+        }
+    }
+
+    public virtual void LookCurrent(bool b)
+    {
+        if (b)
+        {
+            if (interactState == InteractState.On)
+            {
+                SetLock(true,true);
+            }else if (interactState == InteractState.Off)
+            {
+                SetLock(false,true);
+            }
+        }
+        else
+        {
+            SetLock(true,false);
         }
     }
 }

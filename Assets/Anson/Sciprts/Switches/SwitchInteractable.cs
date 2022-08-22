@@ -18,6 +18,18 @@ public class SwitchInteractable : InteractableObject
     [SerializeField]
     private bool showDebug = true;
 
+    private void OnDrawGizmosSelected()
+    {
+        if (showDebug)
+        {
+            foreach (ConsequenceObject consequenceObject in onOnConsequence.Concat(onOffConsequence).ToArray())
+            {
+                Gizmos.color = systemColour;
+                
+                Gizmos.DrawLine(transform.position,consequenceObject.transform.position);
+            }
+        }
+    }
 
     private void Start()
     {
@@ -39,19 +51,7 @@ public class SwitchInteractable : InteractableObject
         }
     }
     
-    private void OnDrawGizmosSelected()
-    {
-        if (showDebug)
-        {
-            foreach (ConsequenceObject consequenceObject in onOnConsequence.Concat(onOffConsequence).ToArray())
-            {
-                Gizmos.color = systemColour;
-                
-                Gizmos.DrawLine(transform.position,consequenceObject.transform.position);
-            }
-        }
-    }
-    
+
 
     [ContextMenu("Auto Find renderers in consequence")]
     public void FindRenderersInConsequences()
