@@ -5,28 +5,36 @@ using UnityEngine.Events;
 
 public abstract class InteractableObject : MonoBehaviour
 {
-    enum InteractState
+    protected enum InteractState
     {
         Off,
-        On
+        On,
+        LOCK_ON,
+        LOCK_OFF
     }
 
     [Header("Base Interaction")]
     [SerializeField]
-    private UnityEvent onOnEvent;
+    protected UnityEvent onOnEvent;
 
     [SerializeField]
-    private ConsequenceObject[] onOnConsequence;
+    protected ConsequenceObject[] onOnConsequence;
 
     [Space(10)]
     [SerializeField]
-    private UnityEvent onOffEvent;
+    protected UnityEvent onOffEvent;
 
     [SerializeField]
-    private ConsequenceObject[] onOffConsequence;
-
+    protected ConsequenceObject[] onOffConsequence;
+    
     [SerializeField]
-    private InteractState interactState = InteractState.Off;
+    protected InteractState interactState = InteractState.Off;
+    protected InteractState originalInteractState = InteractState.Off;
+
+    [Header("Debug")]
+    [SerializeField]
+    private bool showDebug = false;
+    
 
     [ContextMenu("OnUse")]
     public virtual void OnUse()
@@ -35,27 +43,76 @@ public abstract class InteractableObject : MonoBehaviour
         {
             if (interactState == InteractState.Off)
             {
-                onOnEvent.Invoke();
-                foreach (ConsequenceObject consequenceObject in onOnConsequence)
-                {
-                    consequenceObject.OnOn();
-                }
-                interactState = InteractState.On;
+                OnOn();
             }
             else if (interactState == InteractState.On)
             {
-                onOffEvent.Invoke();
-                foreach (ConsequenceObject consequenceObject in onOnConsequence)
-                {
-                    consequenceObject.OnOff();
-                }
-                interactState = InteractState.Off;
+                OnOff();
             }
         }
+    }
+
+    public virtual void OnOff()
+    {
+        if (!CanUse())
+        {
+            return;
+        }
+        onOffEvent.Invoke();
+        foreach (ConsequenceObject consequenceObject in onOnConsequence)
+        {
+            consequenceObject.OnOff();
+        }
+
+        interactState = InteractState.Off;
+    }
+
+    public virtual void OnOn()
+    {
+        if (!CanUse())
+        {
+            return;
+        }
+        onOnEvent.Invoke();
+        foreach (ConsequenceObject consequenceObject in onOnConsequence)
+        {
+            consequenceObject.OnOn();
+        }
+
+        interactState = InteractState.On;
     }
 
     protected virtual bool CanUse()
     {
         return true;
+    }
+
+    /// <summary>
+    /// Set the lock of the of the intersection to force it on or off
+    /// </summary>
+    /// <param name="forcedType">Which type</param>
+    /// <param name="b">on or off</param>
+    protected virtual void SetLock(bool forcedType, bool b)
+    {
+        if (interactState is InteractState.On or InteractState.Off)
+        {
+            originalInteractState = interactState;
+        }
+        if (!b)
+        {
+            //turning off a lock
+            if (forcedType)
+            {
+                interactState = InteractState.LOCK_ON;
+            }
+            else
+            {
+                interactState = InteractState.LOCK_OFF;
+            }
+        }
+        else
+        {
+            interactState = originalInteractState;
+        }
     }
 }
