@@ -43,6 +43,7 @@ public class PlayerInteractOptionButtonController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Might be expensive resource
         UpdateAvailability(abilityInteraction);
     }
 

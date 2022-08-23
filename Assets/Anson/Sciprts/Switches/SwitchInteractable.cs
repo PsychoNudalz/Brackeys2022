@@ -25,8 +25,14 @@ public class SwitchInteractable : InteractableObject
             foreach (ConsequenceObject consequenceObject in onOnConsequence.Concat(onOffConsequence).ToArray())
             {
                 Gizmos.color = systemColour;
-                
-                Gizmos.DrawLine(transform.position,consequenceObject.transform.position);
+                try
+                {
+                    Gizmos.DrawLine(transform.position, consequenceObject.transform.position);
+                }
+                catch (NullReferenceException e)
+                {
+                    
+                }
             }
         }
     }
