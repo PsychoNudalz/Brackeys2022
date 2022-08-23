@@ -4906,6 +4906,7 @@ Transform:
   - {fileID: 4412410900450317117}
   - {fileID: 7716109381242927978}
   - {fileID: 3610894829161309349}
+  - {fileID: 8591863103763830088}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5092,10 +5093,34 @@ MonoBehaviour:
   interactState: 0
   OnSword_Lock:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8696755628900694577}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnSword_Unlock:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8696755628900694577}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnArrow_Lock:
     m_PersistentCalls:
       m_Calls: []
@@ -5103,7 +5128,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   systemColour: {r: 0, g: 1, b: 0, a: 1}
-  systemRenderers: []
+  systemRenderers:
+  - {fileID: 4412410900450317119}
   showDebug: 1
   timer: 5
   timer_Now: 0
@@ -5121,11 +5147,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityEnums: 0100000002000000
   centreOfMass: {fileID: 0}
-  destroy_range: 3
-  destroy_los_tagList: []
-  destroy_los_layerMask:
-    serializedVersion: 2
-    m_Bits: 0
   lock_range: 3
   lock_los_tagList:
   - Character
@@ -10110,3 +10131,86 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &8696755628900694577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8591863103763830088}
+  - component: {fileID: 5658838253283920123}
+  - component: {fileID: 3126455899151598886}
+  m_Layer: 0
+  m_Name: SwordModel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8591863103763830088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8696755628900694577}
+  m_LocalRotation: {x: -0.24283014, y: -0.6906509, z: 0.2259486, w: 0.64263695}
+  m_LocalPosition: {x: -0.273, y: 0.723, z: 0.882}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 4412410900411226353}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: -94.125, z: 38.743}
+--- !u!33 &5658838253283920123
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8696755628900694577}
+  m_Mesh: {fileID: 4686849319519084627, guid: 7e5c984af8984ad47878726a2adf6770, type: 3}
+--- !u!23 &3126455899151598886
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8696755628900694577}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f50b1e8a399559a44bf8046e101aa108, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}

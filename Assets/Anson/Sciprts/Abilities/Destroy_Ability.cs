@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Destroy_Ability : Ability
 {
-    [Header("Destroy")]
-    [SerializeField]
-    private Lock_Ability lockAbility;
     public override void OnUse(object target = null)
     {
         base.OnUse(target);
@@ -27,10 +24,7 @@ public class Destroy_Ability : Ability
 
     public override bool CanUse(object target = null)
     {
-        if (lockAbility.AbilityState == AbilityStateEnum.Using)
-        {
-            return false;
-        }
+
         if (target is DestructibleObject destructibleObject)
         {
             return true;
