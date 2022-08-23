@@ -547,6 +547,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 890068208150172171}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &223284122 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 890068207969753493, guid: 69911ffe269c6554ca04ddce22228ece,
+    type: 3}
+  m_PrefabInstance: {fileID: 890068208150172171}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b990672921c9f34f9118f77c3a6d3ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &223685617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1215,7 +1227,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 377968764}
   isActive: 0
-  buttons: []
+  buttons:
+  - {fileID: 223284122}
+  - {fileID: 915376974}
+  - {fileID: 647114584}
+  - {fileID: 1537253978}
+  - {fileID: 909018334}
+  - {fileID: 579709869}
   abilityInteraction: {fileID: 0}
 --- !u!95 &377968764
 Animator:
@@ -1298,6 +1316,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8cefad5e84819e41bb3d1bb68a39767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &579709869 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 890068207969753493, guid: 69911ffe269c6554ca04ddce22228ece,
+    type: 3}
+  m_PrefabInstance: {fileID: 10618341}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b990672921c9f34f9118f77c3a6d3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!23 &632703678 stripped
@@ -1709,6 +1739,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 647114582}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &647114584 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 890068207969753493, guid: 69911ffe269c6554ca04ddce22228ece,
+    type: 3}
+  m_PrefabInstance: {fileID: 647114582}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b990672921c9f34f9118f77c3a6d3ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &729521758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,6 +1957,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 905619548}
+--- !u!114 &909018334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 890068207969753493, guid: 69911ffe269c6554ca04ddce22228ece,
+    type: 3}
+  m_PrefabInstance: {fileID: 109315288}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b990672921c9f34f9118f77c3a6d3ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &915376972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2065,6 +2119,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 915376972}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &915376974 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 890068207969753493, guid: 69911ffe269c6554ca04ddce22228ece,
+    type: 3}
+  m_PrefabInstance: {fileID: 915376972}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b990672921c9f34f9118f77c3a6d3ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &924206669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3621,6 +3687,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1537253978 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 890068207969753493, guid: 69911ffe269c6554ca04ddce22228ece,
+    type: 3}
+  m_PrefabInstance: {fileID: 223685617}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b990672921c9f34f9118f77c3a6d3ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!21 &1684316693
 Material:
   serializedVersion: 8
@@ -5261,10 +5339,12 @@ MonoBehaviour:
   destroy_los_layerMask:
     serializedVersion: 2
     m_Bits: 0
-  lock_los_tagList: []
+  lock_range: 3
+  lock_los_tagList:
+  - Character
   lock_los_layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 832
   shoot_los_range: 50
   shoot_los_tagList: []
   shoot_los_layerMask:
