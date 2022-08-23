@@ -10,6 +10,8 @@ public class PlayerInputController : MonoBehaviour
 {
     [SerializeField]
     private PlayerController playerController;
+    [SerializeField]
+    private PlayerCameraController playerCamController;
 
     [Space(10)]
     [SerializeField]
@@ -38,6 +40,12 @@ public class PlayerInputController : MonoBehaviour
     {
         get => playerController;
         set => playerController = value;
+    }
+
+    public PlayerCameraController PlayerCamController
+    {
+        get => playerCamController;
+        set => playerCamController = value;
     }
 
     public CharacterControllerScript CharacterController
@@ -95,12 +103,11 @@ public class PlayerInputController : MonoBehaviour
         float value = context.Get<float>();
         if (value > 0)
         {
-            //Rotate the camera clockwise   
+            playerCamController.turnCamAntiClockwise();
         }
         else if (value < 0)
         {
-            //Rotate the camera anti-clockwise   
-
+            playerCamController.turnCamClockwise();
         }
     }
 
