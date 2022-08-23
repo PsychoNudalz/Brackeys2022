@@ -82,7 +82,26 @@ public class SwitchAbilityInteraction : AbilityInteraction
 
     public override bool CanShoot()
     {
-        return base.CanShoot();
+        if (CharacterManager.GetArcher().CharacterAbilityHandler.AbilityMain is Shoot_Ability ability)
+        {
+            if (ability.CurrentSwitch)
+            {
+                if (ability.CurrentSwitch.Equals(switchInteractable))
+                {
+                    return true;
+                }
+            }
+        }
+        if (IsLineOfSight(CharacterEnum.Archer, shoot_los_range, shoot_los_tagList, shoot_los_layerMask,
+                out var raycastHit))
+        {
+            if (CharacterManager.GetArcher().CharacterAbilityHandler.CanUseAbility_Main(switchInteractable))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public override bool CanBoostUp()
@@ -107,13 +126,13 @@ public class SwitchAbilityInteraction : AbilityInteraction
 
     public override void UseLock()
     {
-        
         CharacterManager.GetSoldier().CharacterAbilityHandler.UseAbility_Team(switchInteractable);
     }
 
     public override void UseShoot()
     {
-        base.UseShoot();
+        CharacterManager.GetArcher().CharacterAbilityHandler.UseAbility_Main(switchInteractable);
+
     }
 
     public override void UseBoost()
