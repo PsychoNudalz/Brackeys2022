@@ -55,7 +55,7 @@ public abstract class AbilityInteraction : MonoBehaviour
         {
             if (tagList.Contains(raycastHit.collider.tag))
             {
-                CharacterControllerScript temp = GetComponentInParent<CharacterControllerScript>();
+                CharacterControllerScript temp = raycastHit.collider.GetComponentInParent<CharacterControllerScript>();
                 if (temp && temp.CharacterEnum.Equals(character))
                 {
                     Debug.DrawRay(centreOfMass.position, dir * range, Color.green, 5f);
@@ -99,6 +99,30 @@ public abstract class AbilityInteraction : MonoBehaviour
     public virtual bool CanShield()
     {
         return false;
+    }
+
+    public virtual void UseDestroy()
+    {
+    }
+
+    public virtual void UseLock()
+    {
+    }
+
+    public virtual void UseShoot()
+    {
+    }
+
+    public virtual void UseBoost()
+    {
+    }
+
+    public virtual void UseMove()
+    {
+    }
+
+    public virtual void UseShield()
+    {
     }
 
     public virtual void ShowInteractionWheel()

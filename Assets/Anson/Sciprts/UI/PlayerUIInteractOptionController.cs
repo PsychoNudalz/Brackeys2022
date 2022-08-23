@@ -94,4 +94,61 @@ public class PlayerUIInteractOptionController : MonoBehaviour
             }
         }
     }
+
+    public void UseButton(AbilityEnum abilityEnum)
+    {
+        switch (abilityEnum)
+        {
+            case AbilityEnum.Destroy:
+                UseDestroy();
+                break;
+            case AbilityEnum.SwordLock:
+                UseLock();
+                break;
+            case AbilityEnum.Shoot:
+                UseShoot();
+                break;
+            case AbilityEnum.BoostUp:
+                UseBoost();
+                break;
+            case AbilityEnum.Move:
+                UseMove();
+                break;
+            case AbilityEnum.Shield:
+                UseShield();
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(abilityEnum), abilityEnum, null);
+        }
+    }
+
+    public void UseDestroy()
+    {
+        abilityInteraction.UseDestroy();
+    }
+
+    public void UseLock()
+    {
+        abilityInteraction.UseLock();
+    }
+
+    public void UseShoot()
+    {
+        abilityInteraction.UseShoot();
+    }
+
+    public void UseBoost()
+    {
+        abilityInteraction.UseBoost();
+    }
+
+    public void UseMove()
+    {
+        abilityInteraction.UseMove();
+    }
+
+    public void UseShield()
+    {
+        abilityInteraction.UseShield();
+    }
 }

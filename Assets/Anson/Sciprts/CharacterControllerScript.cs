@@ -76,6 +76,11 @@ public class CharacterControllerScript : MonoBehaviour
         {
             interactTriggerDetector = GetComponent<InteractTriggerDetector>();
         }
+
+        if (!characterAbilityHandler)
+        {
+            characterAbilityHandler = GetComponent<CharacterAbilityHandler>();
+        }
     }
 
     public void SlantCharacter(float slantDegree, Transform mainCamera)

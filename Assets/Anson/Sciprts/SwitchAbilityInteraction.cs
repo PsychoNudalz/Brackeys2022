@@ -49,7 +49,16 @@ public class SwitchAbilityInteraction : AbilityInteraction
     [Header("Components")]
     [SerializeField]
     private SwitchInteractable switchInteractable;
-    
+
+
+    protected override void AwakeBehaviour()
+    {
+        base.AwakeBehaviour();
+        if (!switchInteractable)
+        {
+            switchInteractable = GetComponent<SwitchInteractable>();
+        }
+    }
 
     public override bool CanDestroy()
     {
@@ -62,7 +71,7 @@ public class SwitchAbilityInteraction : AbilityInteraction
         if (IsLineOfSight(CharacterEnum.Soldier, lock_range, lock_los_tagList, lock_los_layerMask,
                 out var raycastHit))
         {
-            if (CharacterManager.GetSoldier().CharacterAbilityHandler.CanUseAbility_Team())
+            if (CharacterManager.GetSoldier().CharacterAbilityHandler.CanUseAbility_Team(switchInteractable))
             {
                 b = true;
             }
@@ -89,5 +98,36 @@ public class SwitchAbilityInteraction : AbilityInteraction
     public override bool CanShield()
     {
         return base.CanShield();
+    }
+
+    public override void UseDestroy()
+    {
+        base.UseDestroy();
+    }
+
+    public override void UseLock()
+    {
+        
+        CharacterManager.GetSoldier().CharacterAbilityHandler.UseAbility_Team(switchInteractable);
+    }
+
+    public override void UseShoot()
+    {
+        base.UseShoot();
+    }
+
+    public override void UseBoost()
+    {
+        base.UseBoost();
+    }
+
+    public override void UseMove()
+    {
+        base.UseMove();
+    }
+
+    public override void UseShield()
+    {
+        base.UseShield();
     }
 }

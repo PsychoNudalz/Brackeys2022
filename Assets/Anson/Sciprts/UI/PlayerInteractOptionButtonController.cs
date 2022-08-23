@@ -18,6 +18,12 @@ public class PlayerInteractOptionButtonController : MonoBehaviour
     [SerializeField]
     GameObject unavailableSprite;
 
+    [SerializeField]
+    private PlayerUIInteractOptionController playerUIInteractOptionController;
+
+    [SerializeField]
+    private AbilityInteraction abilityInteraction;
+
 
     public AbilityEnum AbilityEnum => abilityEnum;
 
@@ -28,6 +34,16 @@ public class PlayerInteractOptionButtonController : MonoBehaviour
         {
             animator = GetComponent<Animator>();
         }
+
+        if (!playerUIInteractOptionController)
+        {
+            playerUIInteractOptionController = GetComponentInParent<PlayerUIInteractOptionController>();
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        UpdateAvailability(abilityInteraction);
     }
 
     public void HoverEnter()
@@ -53,6 +69,16 @@ public class PlayerInteractOptionButtonController : MonoBehaviour
     public void SetActive(bool b, AbilityInteraction abilityInteraction)
     {
         gameObject.SetActive(b);
+        this.abilityInteraction = abilityInteraction;
+        UpdateAvailability(abilityInteraction);
+    }
+
+    private void UpdateAvailability(AbilityInteraction abilityInteraction)
+    {
+        if (!abilityInteraction)
+        {
+            return;
+        }
         switch (abilityEnum)
         {
             case AbilityEnum.Destroy:
@@ -81,5 +107,15 @@ public class PlayerInteractOptionButtonController : MonoBehaviour
         }
 
         unavailableSprite.SetActive(!available);
+    }
+
+    public void UseButton()
+    {
+        if (!playerUIInteractOptionController)
+        {
+            Debug.LogError(gameObject+" missing player UI Interaction Option controller");
+            return;
+        }
+        playerUIInteractOptionController.UseButton(abilityEnum);
     }
 }

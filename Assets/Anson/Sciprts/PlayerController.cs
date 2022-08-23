@@ -28,7 +28,11 @@ public class PlayerController : MonoBehaviour
     [ContextMenu("Initialise Components")]
     public void InitialiseComponents()
     {
-        playerInputController = GetComponentInChildren<PlayerInputController>();
+        if (!playerInputController)
+        {
+            playerInputController = GetComponentInChildren<PlayerInputController>();
+        }
+
         playerInputController.PlayerController = this;
 
         if (characterControllers.Length > 0)

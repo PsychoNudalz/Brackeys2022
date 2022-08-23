@@ -27,6 +27,8 @@ public abstract class Ability : MonoBehaviour
     [Header("Base Ability")]
     [SerializeField]
     protected UnityEvent onUseEnterEvent;
+    [SerializeField]
+    protected UnityEvent onUseEndEvent;
 
     [SerializeField]
     protected AbilityStateEnum abilityStateEnum = AbilityStateEnum.Off;
@@ -44,10 +46,8 @@ public abstract class Ability : MonoBehaviour
 
     public virtual void OnUse(object target = null)
     {
-        if (CanUse())
-        {
-            OnUse_Enter();
-        }
+        OnUse_Enter(target);
+        OnUse_End(target);
     }
 
     public virtual void OnUse_Enter(object target = null)
@@ -58,6 +58,7 @@ public abstract class Ability : MonoBehaviour
 
     public virtual void OnUse_End(object target = null)
     {
+        onUseEndEvent.Invoke();
         abilityStateEnum = AbilityStateEnum.Off;
     }
 
