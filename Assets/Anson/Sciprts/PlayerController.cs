@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private CharacterControllerScript[] characterControllers;
 
+    [SerializeField]
+    private HighlightPlus.HighlightEffect[] characterHighlights;
 
     [SerializeField]
     private CharacterControllerScript currentCharacter;
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private PlayerInputController playerInputController;
 
+    private HighlightPlus.HighlightEffect currentCharHighlight;
 
     [ContextMenu("Initialise Components")]
     public void InitialiseComponents()
@@ -52,9 +55,28 @@ public class PlayerController : MonoBehaviour
 
     public void SetCharacter(CharacterControllerScript characterControllerScript)
     {
+        if (currentCharHighlight != null)
+            currentCharHighlight.highlighted = false;
         currentCharacter = characterControllerScript;
         playerInputController.CharacterController = currentCharacter;
         playerInputController.CharacterMovementController = currentCharacter.CharacterMovementController;
+        currentCharHighlight = characterHighlights[characterIndex];
+        StartCoroutine(highlightCharSelect());
+    }
+
+    private IEnumerator highlightCharSelect()
+    {
+        currentCharHighlight.highlighted = true;
+        yield return new WaitForSeconds(0.25f);
+        currentCharHighlight.highlighted = false;
+        yield return new WaitForSeconds(0.25f);
+        currentCharHighlight.highlighted = true;
+        yield return new WaitForSeconds(0.25f);
+        currentCharHighlight.highlighted = false;
+        yield return new WaitForSeconds(0.25f);
+        currentCharHighlight.highlighted = true;
+        yield return new WaitForSeconds(0.25f);
+        currentCharHighlight.highlighted = false;
     }
 
     public void NextCharacter()

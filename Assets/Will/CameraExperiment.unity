@@ -591,22 +591,22 @@ MonoBehaviour:
   m_CustomBlends: {fileID: 11400000, guid: 3641b84635538f142b8802365ccf76c2, type: 2}
   m_CameraCutEvent:
     m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 133144493}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 133144500}
+        m_TargetAssemblyTypeName: MotionBlurController, Assembly-CSharp
+        m_MethodName: motionBlurOn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_CameraActivatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &133144499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -968,7 +968,7 @@ MonoBehaviour:
   onClickEvent:
     m_PersistentCalls:
       m_Calls: []
-  showInteractionWheelOnClick: 1
+  abilityInteraction: {fileID: 0}
   highlightEffect: {fileID: 1466319545}
 --- !u!114 &231229702
 MonoBehaviour:
@@ -1342,6 +1342,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 377968764}
   isActive: 0
+  buttons: []
+  abilityInteraction: {fileID: 0}
 --- !u!95 &377968764
 Animator:
   serializedVersion: 4
@@ -1545,7 +1547,7 @@ MonoBehaviour:
   onClickEvent:
     m_PersistentCalls:
       m_Calls: []
-  showInteractionWheelOnClick: 0
+  abilityInteraction: {fileID: 0}
   highlightEffect: {fileID: 0}
 --- !u!114 &639156757
 MonoBehaviour:
@@ -3017,7 +3019,7 @@ MonoBehaviour:
   onClickEvent:
     m_PersistentCalls:
       m_Calls: []
-  showInteractionWheelOnClick: 0
+  abilityInteraction: {fileID: 0}
   highlightEffect: {fileID: 0}
 --- !u!65 &1032239115
 BoxCollider:
@@ -3511,6 +3513,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155147a89e2819b4990ab11e668aa697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soldier: {fileID: 0}
+  archer: {fileID: 0}
+  mage: {fileID: 0}
   characterControllers:
   - {fileID: 478513350}
   - {fileID: 1047894300}
@@ -3567,7 +3572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef1d408ac5cc1e44189a930af2f97a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInteractOptionController: {fileID: 0}
+  playerUIInteractOptionController: {fileID: 0}
 --- !u!114 &1223469573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3844,6 +3849,137 @@ Transform:
   m_Father: {fileID: 1466319546}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1284406670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7269720588270339987, guid: a9b833a9fae685445bf6809eed3dad44,
+    type: 3}
+  m_PrefabInstance: {fileID: 3796966154528517748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1284406672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284406670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 888380afc233049ce9e618f9f36c8ba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 08adb7201c1d347429b1bf05e4c95b52, type: 2}
+  profileSync: 0
+  previewInEditor: 1
+  camerasLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  effectGroup: 0
+  effectGroupLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  effectNameFilter: 
+  combineMeshes: 0
+  alphaCutOff: 1
+  cullBackFaces: 1
+  ignoreObjectVisibility: 0
+  reflectionProbes: 0
+  GPUInstancing: 1
+  normalsOption: 0
+  ignore: 0
+  _highlighted: 0
+  fadeInDuration: 0
+  fadeOutDuration: 0
+  flipY: 0
+  constantWidth: 1
+  subMeshMask: -1
+  overlay: 0.292
+  overlayColor: {r: 0.066278934, g: 1, b: 0, a: 1}
+  overlayAnimationSpeed: 0
+  overlayMinIntensity: 0.5
+  overlayBlending: 1
+  overlayTexture: {fileID: 0}
+  overlayTextureScale: 1
+  outline: 0.4
+  outlineColor: {r: 0.14117648, g: 1, b: 0, a: 1}
+  outlineWidth: 0.2
+  outlineQuality: 3
+  outlineDownsampling: 2
+  outlineVisibility: 0
+  glowBlendMode: 0
+  outlineBlitDebug: 0
+  outlineIndependent: 0
+  glow: 0
+  glowWidth: 0.4
+  glowQuality: 3
+  glowDownsampling: 2
+  glowHQColor: {r: 0.64, g: 1, b: 0, a: 1}
+  glowDithering: 1
+  glowMagicNumber1: 0.75
+  glowMagicNumber2: 0.5
+  glowAnimationSpeed: 1
+  glowVisibility: 0
+  glowBlitDebug: 0
+  glowBlendPasses: 1
+  glowPasses:
+  - offset: 4
+    alpha: 0.1
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  - offset: 3
+    alpha: 0.2
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  - offset: 2
+    alpha: 0.3
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  - offset: 1
+    alpha: 0.4
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  glowIgnoreMask: 0
+  innerGlow: 0
+  innerGlowWidth: 1
+  innerGlowColor: {r: 1, g: 1, b: 1, a: 1}
+  innerGlowVisibility: 0
+  targetFX: 0
+  targetFXTexture: {fileID: 2800000, guid: 1de3c566a6c8c405b9f6f453137273ec, type: 3}
+  targetFXColor: {r: 1, g: 1, b: 1, a: 1}
+  targetFXCenter: {fileID: 0}
+  targetFXRotationSpeed: 50
+  targetFXInitialScale: 4
+  targetFXEndScale: 1.5
+  targetFXScaleToRenderBounds: 1
+  targetFXAlignToGround: 0
+  targetFXFadePower: 32
+  targetFXGroundMaxDistance: 10
+  targetFXGroundLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  targetFXTransitionDuration: 0.5
+  targetFXStayDuration: 1.5
+  targetFXVisibility: 1
+  seeThrough: 2
+  seeThroughOccluderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  seeThroughOccluderThreshold: 0.3
+  seeThroughOccluderMaskAccurate: 0
+  seeThroughOccluderCheckInterval: 1
+  seeThroughOccluderCheckIndividualObjects: 0
+  seeThroughDepthOffset: 0
+  seeThroughMaxDepth: 0
+  seeThroughIntensity: 0.8
+  seeThroughTintAlpha: 0.5
+  seeThroughTintColor: {r: 1, g: 0, b: 0, a: 1}
+  seeThroughNoise: 1
+  seeThroughBorder: 0
+  seeThroughBorderColor: {r: 0, g: 0, b: 0, a: 1}
+  seeThroughBorderOnly: 0
+  seeThroughBorderWidth: 0.45
+  seeThroughOrdered: 0
+  rmsCount: 7
+  hitFxInitialIntensity: 0
+  hitFxMode: 0
+  hitFxFadeOutDuration: 0.25
+  hitFxColor: {r: 1, g: 1, b: 1, a: 1}
+  hitFxRadius: 0.5
 --- !u!1 &1324160711
 GameObject:
   m_ObjectHideFlags: 0
@@ -4090,6 +4226,18 @@ MonoBehaviour:
   onOffConsequence:
   - {fileID: 1744254701}
   interactState: 0
+  OnSword_Lock:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSword_Unlock:
+    m_PersistentCalls:
+      m_Calls: []
+  OnArrow_Lock:
+    m_PersistentCalls:
+      m_Calls: []
+  OnArrow_Unlock:
+    m_PersistentCalls:
+      m_Calls: []
   systemColour: {r: 0, g: 0, b: 1, a: 1}
   systemRenderers:
   - {fileID: 924206672}
@@ -4364,6 +4512,50 @@ Material:
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SpecularColor: {r: 0.74264705, g: 0.20750435, b: 0.216731, a: 1}
   m_BuildTextureStacks: []
+--- !u!1 &1711480914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1711480916}
+  - component: {fileID: 1711480915}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1711480915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711480914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e9f22b784f68f4da80b2267d126568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1711480916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711480914}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.127907, y: 4.512888, z: 13.691459}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!21 &1722722688
 Material:
   serializedVersion: 8
@@ -5177,6 +5369,268 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1907731033}
+--- !u!1 &2001405460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4543948522102630706, guid: 79f00207a50a1b548be550b5b5f14635,
+    type: 3}
+  m_PrefabInstance: {fileID: 4192695119991533857}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2001405462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001405460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 888380afc233049ce9e618f9f36c8ba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 08adb7201c1d347429b1bf05e4c95b52, type: 2}
+  profileSync: 0
+  previewInEditor: 1
+  camerasLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  effectGroup: 0
+  effectGroupLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  effectNameFilter: 
+  combineMeshes: 0
+  alphaCutOff: 1
+  cullBackFaces: 1
+  ignoreObjectVisibility: 0
+  reflectionProbes: 0
+  GPUInstancing: 1
+  normalsOption: 0
+  ignore: 0
+  _highlighted: 0
+  fadeInDuration: 0
+  fadeOutDuration: 0
+  flipY: 0
+  constantWidth: 1
+  subMeshMask: -1
+  overlay: 0.292
+  overlayColor: {r: 0.066278934, g: 1, b: 0, a: 1}
+  overlayAnimationSpeed: 0
+  overlayMinIntensity: 0.5
+  overlayBlending: 1
+  overlayTexture: {fileID: 0}
+  overlayTextureScale: 1
+  outline: 0.4
+  outlineColor: {r: 0.14117648, g: 1, b: 0, a: 1}
+  outlineWidth: 0.2
+  outlineQuality: 3
+  outlineDownsampling: 2
+  outlineVisibility: 0
+  glowBlendMode: 0
+  outlineBlitDebug: 0
+  outlineIndependent: 0
+  glow: 0
+  glowWidth: 0.4
+  glowQuality: 3
+  glowDownsampling: 2
+  glowHQColor: {r: 0.64, g: 1, b: 0, a: 1}
+  glowDithering: 1
+  glowMagicNumber1: 0.75
+  glowMagicNumber2: 0.5
+  glowAnimationSpeed: 1
+  glowVisibility: 0
+  glowBlitDebug: 0
+  glowBlendPasses: 1
+  glowPasses:
+  - offset: 4
+    alpha: 0.1
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  - offset: 3
+    alpha: 0.2
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  - offset: 2
+    alpha: 0.3
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  - offset: 1
+    alpha: 0.4
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  glowIgnoreMask: 0
+  innerGlow: 0
+  innerGlowWidth: 1
+  innerGlowColor: {r: 1, g: 1, b: 1, a: 1}
+  innerGlowVisibility: 0
+  targetFX: 0
+  targetFXTexture: {fileID: 2800000, guid: 1de3c566a6c8c405b9f6f453137273ec, type: 3}
+  targetFXColor: {r: 1, g: 1, b: 1, a: 1}
+  targetFXCenter: {fileID: 0}
+  targetFXRotationSpeed: 50
+  targetFXInitialScale: 4
+  targetFXEndScale: 1.5
+  targetFXScaleToRenderBounds: 1
+  targetFXAlignToGround: 0
+  targetFXFadePower: 32
+  targetFXGroundMaxDistance: 10
+  targetFXGroundLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  targetFXTransitionDuration: 0.5
+  targetFXStayDuration: 1.5
+  targetFXVisibility: 1
+  seeThrough: 2
+  seeThroughOccluderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  seeThroughOccluderThreshold: 0.3
+  seeThroughOccluderMaskAccurate: 0
+  seeThroughOccluderCheckInterval: 1
+  seeThroughOccluderCheckIndividualObjects: 0
+  seeThroughDepthOffset: 0
+  seeThroughMaxDepth: 0
+  seeThroughIntensity: 0.8
+  seeThroughTintAlpha: 0.5
+  seeThroughTintColor: {r: 1, g: 0, b: 0, a: 1}
+  seeThroughNoise: 1
+  seeThroughBorder: 0
+  seeThroughBorderColor: {r: 0, g: 0, b: 0, a: 1}
+  seeThroughBorderOnly: 0
+  seeThroughBorderWidth: 0.45
+  seeThroughOrdered: 0
+  rmsCount: 3
+  hitFxInitialIntensity: 0
+  hitFxMode: 0
+  hitFxFadeOutDuration: 0.25
+  hitFxColor: {r: 1, g: 1, b: 1, a: 1}
+  hitFxRadius: 0.5
+--- !u!1 &2014312723 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7241500215985180805, guid: 9f5cd905cfbdeba4985173c03b46b361,
+    type: 3}
+  m_PrefabInstance: {fileID: 7016277199510696565}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2014312725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014312723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 888380afc233049ce9e618f9f36c8ba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 08adb7201c1d347429b1bf05e4c95b52, type: 2}
+  profileSync: 0
+  previewInEditor: 1
+  camerasLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  effectGroup: 0
+  effectGroupLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  effectNameFilter: 
+  combineMeshes: 0
+  alphaCutOff: 1
+  cullBackFaces: 1
+  ignoreObjectVisibility: 0
+  reflectionProbes: 0
+  GPUInstancing: 1
+  normalsOption: 0
+  ignore: 0
+  _highlighted: 0
+  fadeInDuration: 0
+  fadeOutDuration: 0
+  flipY: 0
+  constantWidth: 1
+  subMeshMask: -1
+  overlay: 0.292
+  overlayColor: {r: 0.066278934, g: 1, b: 0, a: 1}
+  overlayAnimationSpeed: 0
+  overlayMinIntensity: 0.5
+  overlayBlending: 1
+  overlayTexture: {fileID: 0}
+  overlayTextureScale: 1
+  outline: 0.4
+  outlineColor: {r: 0.14117648, g: 1, b: 0, a: 1}
+  outlineWidth: 0.2
+  outlineQuality: 3
+  outlineDownsampling: 2
+  outlineVisibility: 0
+  glowBlendMode: 0
+  outlineBlitDebug: 0
+  outlineIndependent: 0
+  glow: 0
+  glowWidth: 0.4
+  glowQuality: 3
+  glowDownsampling: 2
+  glowHQColor: {r: 0.64, g: 1, b: 0, a: 1}
+  glowDithering: 1
+  glowMagicNumber1: 0.75
+  glowMagicNumber2: 0.5
+  glowAnimationSpeed: 1
+  glowVisibility: 0
+  glowBlitDebug: 0
+  glowBlendPasses: 1
+  glowPasses:
+  - offset: 4
+    alpha: 0.1
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  - offset: 3
+    alpha: 0.2
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  - offset: 2
+    alpha: 0.3
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  - offset: 1
+    alpha: 0.4
+    color: {r: 0.64, g: 1, b: 0, a: 1}
+  glowIgnoreMask: 0
+  innerGlow: 0
+  innerGlowWidth: 1
+  innerGlowColor: {r: 1, g: 1, b: 1, a: 1}
+  innerGlowVisibility: 0
+  targetFX: 0
+  targetFXTexture: {fileID: 2800000, guid: 1de3c566a6c8c405b9f6f453137273ec, type: 3}
+  targetFXColor: {r: 1, g: 1, b: 1, a: 1}
+  targetFXCenter: {fileID: 0}
+  targetFXRotationSpeed: 50
+  targetFXInitialScale: 4
+  targetFXEndScale: 1.5
+  targetFXScaleToRenderBounds: 1
+  targetFXAlignToGround: 0
+  targetFXFadePower: 32
+  targetFXGroundMaxDistance: 10
+  targetFXGroundLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  targetFXTransitionDuration: 0.5
+  targetFXStayDuration: 1.5
+  targetFXVisibility: 1
+  seeThrough: 2
+  seeThroughOccluderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  seeThroughOccluderThreshold: 0.3
+  seeThroughOccluderMaskAccurate: 0
+  seeThroughOccluderCheckInterval: 1
+  seeThroughOccluderCheckIndividualObjects: 0
+  seeThroughDepthOffset: 0
+  seeThroughMaxDepth: 0
+  seeThroughIntensity: 0.8
+  seeThroughTintAlpha: 0.5
+  seeThroughTintColor: {r: 1, g: 0, b: 0, a: 1}
+  seeThroughNoise: 1
+  seeThroughBorder: 0
+  seeThroughBorderColor: {r: 0, g: 0, b: 0, a: 1}
+  seeThroughBorderOnly: 0
+  seeThroughBorderWidth: 0.45
+  seeThroughOrdered: 0
+  rmsCount: 6
+  hitFxInitialIntensity: 0
+  hitFxMode: 0
+  hitFxFadeOutDuration: 0.25
+  hitFxColor: {r: 1, g: 1, b: 1, a: 1}
+  hitFxRadius: 0.5
 --- !u!114 &2028502917 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3759466470562296228, guid: 9f5cd905cfbdeba4985173c03b46b361,
@@ -5347,6 +5801,10 @@ MonoBehaviour:
   - {fileID: 478513350}
   - {fileID: 1047894300}
   - {fileID: 2028502917}
+  characterHighlights:
+  - {fileID: 1284406672}
+  - {fileID: 2001405462}
+  - {fileID: 2014312725}
   currentCharacter: {fileID: 478513350}
   characterIndex: 0
   playerInputController: {fileID: 2113428223}
@@ -5812,7 +6270,7 @@ PrefabInstance:
     - target: {fileID: 7991538288423023559, guid: a9b833a9fae685445bf6809eed3dad44,
         type: 3}
       propertyPath: rmsCount
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9b833a9fae685445bf6809eed3dad44, type: 3}
@@ -5826,7 +6284,7 @@ PrefabInstance:
     - target: {fileID: 3822360895636839782, guid: 79f00207a50a1b548be550b5b5f14635,
         type: 3}
       propertyPath: rmsCount
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8024831628616124432, guid: 79f00207a50a1b548be550b5b5f14635,
         type: 3}
@@ -5905,7 +6363,7 @@ MonoBehaviour:
   onClickEvent:
     m_PersistentCalls:
       m_Calls: []
-  showInteractionWheelOnClick: 1
+  abilityInteraction: {fileID: 0}
   highlightEffect: {fileID: 0}
 --- !u!114 &4442767366901406357
 MonoBehaviour:
@@ -6093,6 +6551,18 @@ MonoBehaviour:
   onOffConsequence:
   - {fileID: 905619550}
   interactState: 0
+  OnSword_Lock:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSword_Unlock:
+    m_PersistentCalls:
+      m_Calls: []
+  OnArrow_Lock:
+    m_PersistentCalls:
+      m_Calls: []
+  OnArrow_Unlock:
+    m_PersistentCalls:
+      m_Calls: []
   systemColour: {r: 0, g: 1, b: 0, a: 1}
   systemRenderers: []
   showDebug: 1
@@ -15867,7 +16337,7 @@ PrefabInstance:
     - target: {fileID: 7960785195062764753, guid: 9f5cd905cfbdeba4985173c03b46b361,
         type: 3}
       propertyPath: rmsCount
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5cd905cfbdeba4985173c03b46b361, type: 3}
