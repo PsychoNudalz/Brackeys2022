@@ -8,6 +8,8 @@ public class Lock_Ability : Ability
     [SerializeField]
     private SwitchInteractable currentSwitch;
 
+    public SwitchInteractable CurrentSwitch => currentSwitch;
+
     public override void OnUse(object target = null)
     {
         if (abilityStateEnum == AbilityStateEnum.Using)

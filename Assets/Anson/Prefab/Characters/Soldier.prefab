@@ -141,6 +141,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   abilityStateEnum: 0
+  lockAbility: {fileID: 1827498609959979500}
 --- !u!1001 &3317296452389343066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -220,7 +221,7 @@ PrefabInstance:
     - target: {fileID: 1091191642854799358, guid: 9b859da5eee0c474e8319dce4b72e0ca,
         type: 3}
       propertyPath: rmsCount
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1347939426618665140, guid: 9b859da5eee0c474e8319dce4b72e0ca,
         type: 3}
@@ -232,6 +233,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3867196311551554356, guid: 9b859da5eee0c474e8319dce4b72e0ca,
+        type: 3}
+      propertyPath: ability_main
+      value: 
+      objectReference: {fileID: 9037539855841099785}
     - target: {fileID: 3867196311551554356, guid: 9b859da5eee0c474e8319dce4b72e0ca,
         type: 3}
       propertyPath: ability_team

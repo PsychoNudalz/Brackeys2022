@@ -11,6 +11,10 @@ public class CharacterAbilityHandler : MonoBehaviour
     [SerializeField]
     private Ability ability_team;
 
+    public Ability AbilityMain => ability_main;
+
+    public Ability AbilityTeam => ability_team;
+
     public bool CanUseAbility_Main(object target = null)
     {
         if (!ability_main)

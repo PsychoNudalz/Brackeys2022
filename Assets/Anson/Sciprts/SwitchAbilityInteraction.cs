@@ -57,17 +57,27 @@ public class SwitchAbilityInteraction : AbilityInteraction
 
     public override bool CanSwordLock()
     {
-        bool b = false;
+
+        if (CharacterManager.GetSoldier().CharacterAbilityHandler.AbilityTeam is Lock_Ability ability)
+        {
+            if (ability.CurrentSwitch)
+            {
+                if (ability.CurrentSwitch.Equals(switchInteractable))
+                {
+                    return true;
+                }
+            }
+        }
         if (IsLineOfSight(CharacterEnum.Soldier, lock_range, lock_los_tagList, lock_los_layerMask,
                 out var raycastHit))
         {
             if (CharacterManager.GetSoldier().CharacterAbilityHandler.CanUseAbility_Team(switchInteractable))
             {
-                b = true;
+                return true;
             }
         }
 
-        return b;
+        return false;
     }
 
     public override bool CanShoot()
