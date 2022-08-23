@@ -1,18 +1,42 @@
+using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class MotionBlurController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Volume postProcess;
+    private MotionBlur motionBlur;
+
+    private void Awake()
     {
-        
+        postProcess = GetComponent<Volume>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        postProcess.profile.TryGet(out motionBlur);
+    }
+
+    public void motionBlurOn()
+    {
+        if (motionBlur != null)
+        {
+            motionBlur.active = true;
+            StartCoroutine(turnOffBlur());
+        }
+    }
+
+    private IEnumerator turnOffBlur()
+    {
+        yield return new WaitForSeconds(0.2f);
+        motionBlurOff();
+    }
+
+    public void motionBlurOff()
+    {
+        if (motionBlur != null)
+            motionBlur.active = false;
     }
 }
