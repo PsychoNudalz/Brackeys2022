@@ -36,6 +36,8 @@ public abstract class Ability : MonoBehaviour
     [Header("Components")]
     protected AbilityEffect abilityEffect;
 
+    public AbilityStateEnum AbilityState => abilityStateEnum;
+
     private void Awake()
     {
         if (!abilityEffect)

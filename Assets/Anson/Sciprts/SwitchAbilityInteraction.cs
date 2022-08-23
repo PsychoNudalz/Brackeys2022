@@ -5,16 +5,6 @@ using UnityEngine;
 public class SwitchAbilityInteraction : AbilityInteraction
 {
     [Header("Switch Ability Interaction")]
-    [Header("Destroy")]
-    [SerializeField]
-    private float destroy_range = 3;
-
-    [SerializeField]
-    private List<string> destroy_los_tagList;
-
-    [SerializeField]
-    private LayerMask destroy_los_layerMask;
-
     [Header("Lock")]
     [SerializeField]
     private float lock_range = 3;
