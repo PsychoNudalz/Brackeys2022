@@ -55,13 +55,17 @@ public class PlayerController : MonoBehaviour
 
     public void SetCharacter(CharacterControllerScript characterControllerScript)
     {
-        if (currentCharHighlight != null)
-            currentCharHighlight.highlighted = false;
+
         currentCharacter = characterControllerScript;
         playerInputController.CharacterController = currentCharacter;
         playerInputController.CharacterMovementController = currentCharacter.CharacterMovementController;
-        currentCharHighlight = characterHighlights[characterIndex];
-        StartCoroutine(highlightCharSelect());
+
+        if (currentCharHighlight)
+        {
+            currentCharHighlight.highlighted = false;
+            currentCharHighlight = characterHighlights[characterIndex];
+            StartCoroutine(highlightCharSelect());
+        }
     }
 
     private IEnumerator highlightCharSelect()
