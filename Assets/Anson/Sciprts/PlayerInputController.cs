@@ -95,7 +95,7 @@ public class PlayerInputController : MonoBehaviour
         float value = context.Get<float>();
         if (value > 0)
         {
-         //Rotate the camera clockwise   
+            //Rotate the camera clockwise   
         }
         else if (value < 0)
         {

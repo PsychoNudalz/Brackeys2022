@@ -10,6 +10,7 @@ public enum CharacterEnum
     Archer,
     Mage
 }
+
 public enum AliveEnum
 {
     Alive,
@@ -27,6 +28,7 @@ public class CharacterControllerScript : MonoBehaviour
 {
     [SerializeField]
     private CharacterEnum characterEnum;
+
     [Space(10)]
     [Header("States")]
     [SerializeField]
@@ -35,6 +37,10 @@ public class CharacterControllerScript : MonoBehaviour
     [SerializeField]
     private SuppressionEnum suppressionEnum;
 
+    [SerializeField]
+    private Vector3 centreOffset = new Vector3(0, 1, 0);
+
+
     [Header("Components")]
     [SerializeField]
     private CharacterMovementController characterMovementController;
@@ -42,17 +48,22 @@ public class CharacterControllerScript : MonoBehaviour
     [SerializeField]
     private InteractTriggerDetector interactTriggerDetector;
 
+    [SerializeField]
+    private CharacterAbilityHandler characterAbilityHandler;
+
 
     public CharacterMovementController CharacterMovementController => characterMovementController;
 
+    public CharacterAbilityHandler CharacterAbilityHandler => characterAbilityHandler;
+
+    public CharacterEnum CharacterEnum => characterEnum;
 
     public AliveEnum Alive => aliveEnum;
 
     public SuppressionEnum Suppression => suppressionEnum;
 
-    private void Start()
-    {
-    }
+    public Vector3 CentreOffset => centreOffset;
+
 
     private void Awake()
     {
@@ -76,4 +87,11 @@ public class CharacterControllerScript : MonoBehaviour
     {
         interactTriggerDetector.InteractableObject?.OnUse();
     }
+
+    public Vector3 GetCentrePosition()
+    {
+        return centreOffset + transform.position;
+    }
+    
+    
 }

@@ -6,11 +6,11 @@ using UnityEngine;
 public class PlayerUIController : MonoBehaviour
 {
     [SerializeField]
-    private PlayerInteractOptionController playerInteractOptionController;
+    private PlayerUIInteractOptionController playerUIInteractOptionController;
 
     public static PlayerUIController current;
 
-    public PlayerInteractOptionController PlayerInteractOptionController => playerInteractOptionController;
+    public PlayerUIInteractOptionController PlayerUIInteractOptionController => playerUIInteractOptionController;
 
     private void Awake()
     {
@@ -23,9 +23,9 @@ public class PlayerUIController : MonoBehaviour
             Destroy(gameObject);
         }
         
-        if (!playerInteractOptionController)
+        if (!playerUIInteractOptionController)
         {
-            playerInteractOptionController = GetComponentInChildren<PlayerInteractOptionController>();
+            playerUIInteractOptionController = GetComponentInChildren<PlayerUIInteractOptionController>();
         }
     }
 

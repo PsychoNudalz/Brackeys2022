@@ -15,7 +15,7 @@ public class ClickableObject : MonoBehaviour
     private UnityEvent onClickEvent;
 
     [SerializeField]
-    private bool showInteractionWheelOnClick;
+    private AbilityInteraction abilityInteraction;
     
     [Space(10f)]
     [SerializeField]
@@ -62,7 +62,7 @@ public class ClickableObject : MonoBehaviour
         isSelected = b;
         if (b)
         {
-            if (showInteractionWheelOnClick)
+            if (abilityInteraction)
             {
                 ShowInteractionWheel();
             }
@@ -72,7 +72,7 @@ public class ClickableObject : MonoBehaviour
         }
         else
         {
-            if (showInteractionWheelOnClick)
+            if (abilityInteraction)
             {
                 HideInteractionWheel();
             }
@@ -83,11 +83,11 @@ public class ClickableObject : MonoBehaviour
 
     public void ShowInteractionWheel()
     {
-        PlayerUIController.current.PlayerInteractOptionController.ActivateWheel(transform.position);
+        abilityInteraction.ShowInteractionWheel();
     }
     
     public void HideInteractionWheel()
     {
-        PlayerUIController.current.PlayerInteractOptionController.SetWheelActive(false);
+        abilityInteraction.HideInteractionWheel();
     }
 }

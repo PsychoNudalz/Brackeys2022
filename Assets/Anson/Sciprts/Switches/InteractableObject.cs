@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 public abstract class InteractableObject : MonoBehaviour
 {
-    protected enum InteractState
+    public enum InteractState
     {
         Off,
         On,
@@ -28,13 +28,27 @@ public abstract class InteractableObject : MonoBehaviour
 
     [SerializeField]
     protected ConsequenceObject[] onOffConsequence;
-    
+
     [SerializeField]
     protected InteractState interactState = InteractState.Off;
+
     protected InteractState originalInteractState = InteractState.Off;
 
+    [Header("Locks")]
+    [SerializeField]
+    private UnityEvent OnSword_Lock;
+
+    [SerializeField]
+    private UnityEvent OnSword_Unlock;
+
+    [SerializeField]
+    private UnityEvent OnArrow_Lock;
+
+    [SerializeField]
+    private UnityEvent OnArrow_Unlock;
 
 
+    public InteractState InteractState_Current => interactState;
 
 
     [ContextMenu("OnUse")]
@@ -59,6 +73,7 @@ public abstract class InteractableObject : MonoBehaviour
         {
             return;
         }
+
         onOffEvent.Invoke();
         foreach (ConsequenceObject consequenceObject in onOnConsequence)
         {
@@ -74,6 +89,7 @@ public abstract class InteractableObject : MonoBehaviour
         {
             return;
         }
+
         onOnEvent.Invoke();
         foreach (ConsequenceObject consequenceObject in onOnConsequence)
         {
@@ -99,6 +115,7 @@ public abstract class InteractableObject : MonoBehaviour
         {
             originalInteractState = interactState;
         }
+
         if (b)
         {
             //turning off a lock
@@ -115,23 +132,56 @@ public abstract class InteractableObject : MonoBehaviour
         {
             interactState = originalInteractState;
         }
+
+        //Debugging
+        print(gameObject.name + " Set state to: " + interactState.ToString());
     }
 
-    public virtual void LookCurrent(bool b)
+    public virtual void LockCurrent(bool b)
     {
         if (b)
         {
             if (interactState == InteractState.On)
             {
-                SetLock(true,true);
-            }else if (interactState == InteractState.Off)
+                SetLock(true, true);
+            }
+            else if (interactState == InteractState.Off)
             {
-                SetLock(false,true);
+                SetLock(false, true);
             }
         }
         else
         {
-            SetLock(true,false);
+            if (interactState is InteractState.LOCK_ON or InteractState.LOCK_OFF)
+            {
+                SetLock(true, false);
+            }
+        }
+    }
+
+    public virtual void OnSwordLock(bool b)
+    {
+        LockCurrent(b);
+        if (b)
+        {
+            OnSword_Lock.Invoke();
+        }
+        else
+        {
+            OnSword_Unlock.Invoke();
+        }
+    }
+
+    public virtual void OnArrowLock(bool b)
+    {
+        LockCurrent(b);
+        if (b)
+        {
+            OnArrow_Lock.Invoke();
+        }
+        else
+        {
+            OnArrow_Unlock.Invoke();
         }
     }
 }
