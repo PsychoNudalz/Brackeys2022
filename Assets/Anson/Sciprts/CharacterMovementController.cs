@@ -92,8 +92,15 @@ public class CharacterMovementController : MonoBehaviour
         if (moveDir.magnitude > 0.1f)
         {
             characterController.Move(moveDir * (speed * Time.deltaTime));
-            modelTransform.localRotation = Quaternion.Euler(0,
-                Vector3.SignedAngle(slantTransform.forward, moveDir, slantTransform.up), 0);
+            if (characterState == CharacterState.Climbing)
+            {
+                
+            }
+            else
+            {
+                modelTransform.localRotation = Quaternion.Euler(0,
+                    Vector3.SignedAngle(slantTransform.forward, moveDir, slantTransform.up), 0);
+            }
         }
     }
 

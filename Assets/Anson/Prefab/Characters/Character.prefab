@@ -300,6 +300,7 @@ MonoBehaviour:
   centreOffset: {x: 0, y: 1, z: 0}
   characterMovementController: {fileID: 3840642747324799059}
   interactTriggerDetector: {fileID: 7898593238747307514}
+  characterAbilityHandler: {fileID: 0}
 --- !u!114 &3840642747324799059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,13 +319,13 @@ MonoBehaviour:
   groundCheckDistance: 0.6
   groundLayer:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 66304
   climbHeight: 1
   heightOffset: 2
   climbCastCheckAngle: 45
   climbLayer:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 66304
   climbTime: 0.5
   climbSpeed: 2
   characterController: {fileID: 6157155329068032650}
@@ -488,7 +489,7 @@ MonoBehaviour:
   onClickEvent:
     m_PersistentCalls:
       m_Calls: []
-  showInteractionWheelOnClick: 1
+  abilityInteraction: {fileID: 0}
   highlightEffect: {fileID: 1091191642854799358}
 --- !u!114 &3867196311551554356
 MonoBehaviour:
@@ -502,6 +503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d7643bcb42e184ba58a8a7b243d954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ability_main: {fileID: 0}
+  ability_team: {fileID: 0}
 --- !u!1001 &1530782665020804959
 PrefabInstance:
   m_ObjectHideFlags: 0

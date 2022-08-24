@@ -10,6 +10,7 @@ TagManager:
   - Clickable
   - MovableObject
   - Destructible
+  - ClimbableCharacter
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - TriggerBox
   - Destructible
   - Arrow
-  - 
+  - ClimbableCharacter
   - 
   - 
   - 
