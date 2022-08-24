@@ -52,7 +52,7 @@ public abstract class InteractableObject : MonoBehaviour
 
 
     [ContextMenu("OnUse")]
-    public virtual void OnUse()
+    public virtual bool OnUse()
     {
         if (CanUse())
         {
@@ -64,7 +64,11 @@ public abstract class InteractableObject : MonoBehaviour
             {
                 OnOff();
             }
+
+            return true;
         }
+
+        return false;
     }
 
     public virtual void OnOff()

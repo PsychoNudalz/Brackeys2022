@@ -30,9 +30,10 @@ public class ButtonSwitch : SwitchInteractable
         return timer_Now / timer;
     }
 
-    public override void OnUse()
+    public override bool OnUse()
     {
         OnOn();
+        return true;
     }
 
     public override void OnOn()

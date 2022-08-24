@@ -141,7 +141,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   abilityStateEnum: 0
-  lockAbility: {fileID: 1827498609959979500}
 --- !u!1001 &3317296452389343066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -162,7 +161,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7e5c984af8984ad47878726a2adf6770,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e5c984af8984ad47878726a2adf6770,
         type: 3}
@@ -209,8 +208,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Soldier
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 7e5c984af8984ad47878726a2adf6770,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0ceb865203c0d8042bd68618ebf09005, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 7e5c984af8984ad47878726a2adf6770,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e5c984af8984ad47878726a2adf6770, type: 3}
+--- !u!95 &9179446709604070091 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 7e5c984af8984ad47878726a2adf6770,
+    type: 3}
+  m_PrefabInstance: {fileID: 3317296452389343066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7044497056808764473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -221,7 +236,7 @@ PrefabInstance:
     - target: {fileID: 1091191642854799358, guid: 9b859da5eee0c474e8319dce4b72e0ca,
         type: 3}
       propertyPath: rmsCount
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1347939426618665140, guid: 9b859da5eee0c474e8319dce4b72e0ca,
         type: 3}
@@ -243,6 +258,11 @@ PrefabInstance:
       propertyPath: ability_team
       value: 
       objectReference: {fileID: 1827498609959979500}
+    - target: {fileID: 5486511849180655649, guid: 9b859da5eee0c474e8319dce4b72e0ca,
+        type: 3}
+      propertyPath: avatar
+      value: 
+      objectReference: {fileID: 9179446709604070091}
     - target: {fileID: 6157155329068032648, guid: 9b859da5eee0c474e8319dce4b72e0ca,
         type: 3}
       propertyPath: m_RootOrder

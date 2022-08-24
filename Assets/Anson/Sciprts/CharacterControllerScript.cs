@@ -51,10 +51,15 @@ public class CharacterControllerScript : MonoBehaviour
     [SerializeField]
     private CharacterAbilityHandler characterAbilityHandler;
 
+    [SerializeField]
+    private CharacterAvatarController characterAvatarController;
+
 
     public CharacterMovementController CharacterMovementController => characterMovementController;
 
     public CharacterAbilityHandler CharacterAbilityHandler => characterAbilityHandler;
+
+    public CharacterAvatarController CharacterAvatarController => characterAvatarController;
 
     public CharacterEnum CharacterEnum => characterEnum;
 
@@ -81,6 +86,11 @@ public class CharacterControllerScript : MonoBehaviour
         {
             characterAbilityHandler = GetComponent<CharacterAbilityHandler>();
         }
+
+        if (!characterAvatarController)
+        {
+            characterAvatarController = GetComponentInChildren<CharacterAvatarController>();
+        }
     }
 
     public void SlantCharacter(float slantDegree, Transform mainCamera)
@@ -90,12 +100,30 @@ public class CharacterControllerScript : MonoBehaviour
 
     public void OnUseInteractable()
     {
-        interactTriggerDetector.InteractableObject?.OnUse();
+        if (interactTriggerDetector.InteractableObject)
+        {
+            if (interactTriggerDetector.InteractableObject.OnUse())
+            {
+                characterAvatarController.Interact();
+            }
+        }
     }
 
     public Vector3 GetCentrePosition()
     {
         return centreOffset + transform.position;
+    }
+
+    public void SetActive(bool b)
+    {
+        if (b)
+        {
+            
+        }
+        else
+        {
+            characterMovementController.Move(new Vector3());
+        }
     }
     
     

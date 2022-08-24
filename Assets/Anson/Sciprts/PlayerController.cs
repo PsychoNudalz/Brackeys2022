@@ -56,6 +56,14 @@ public class PlayerController : MonoBehaviour
     public void SetCharacter(CharacterControllerScript characterControllerScript)
     {
 
+        if (currentCharacter)
+        {
+            currentCharacter.SetActive(false);
+        }
+        else
+        {
+            currentCharacter.SetActive(true);
+        }
         currentCharacter = characterControllerScript;
         playerInputController.CharacterController = currentCharacter;
         playerInputController.CharacterMovementController = currentCharacter.CharacterMovementController;

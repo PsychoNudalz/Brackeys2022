@@ -1,10 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMovementController : MonoBehaviour
 {
-    
     enum CharacterState
     {
         Idle,
@@ -70,6 +70,17 @@ public class CharacterMovementController : MonoBehaviour
     [SerializeField]
     private Transform modelTransform;
 
+    [SerializeField]
+    private CharacterAvatarController characterAvatarController;
+
+    private void Awake()
+    {
+        if (!characterAvatarController)
+        {
+            characterAvatarController = GetComponentInChildren<CharacterAvatarController>();
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -89,15 +100,17 @@ public class CharacterMovementController : MonoBehaviour
             UpdateGravity();
         }
 
+        characterAvatarController.SetWalk(moveDir.magnitude);
         if (moveDir.magnitude > 0.1f)
         {
-            characterController.Move(moveDir * (speed * Time.deltaTime));
             if (characterState == CharacterState.Climbing)
             {
-                
+                characterController.Move(new Vector3(moveDir.x*speed, moveDir.y* climbSpeed, moveDir.z*speed)  * Time.deltaTime);
             }
             else
             {
+                characterController.Move(moveDir * (speed * Time.deltaTime));
+
                 modelTransform.localRotation = Quaternion.Euler(0,
                     Vector3.SignedAngle(slantTransform.forward, moveDir, slantTransform.up), 0);
             }
@@ -139,6 +152,7 @@ public class CharacterMovementController : MonoBehaviour
 
     IEnumerator ClimbCoroutine()
     {
+        characterAvatarController.Climb();
         characterState = CharacterState.Climbing;
         controlLock = true;
         characterController.slopeLimit = 85f;
@@ -186,7 +200,8 @@ public class CharacterMovementController : MonoBehaviour
 
     bool UpdateGrounded()
     {
-        isGrounded = Physics.CheckSphere(transform.position,groundCheckDistance,groundLayer,QueryTriggerInteraction.Ignore);
+        isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundLayer,
+            QueryTriggerInteraction.Ignore);
         // isGrounded = Physics.Raycast(transform.position+new Vector3(0,.1f,0),  Vector3.down, out var raycastHit,
         //     groundCheckDistance , groundLayer);
 
@@ -205,6 +220,6 @@ public class CharacterMovementController : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawSphere(transform.position,groundCheckDistance);
+        Gizmos.DrawSphere(transform.position, groundCheckDistance);
     }
 }

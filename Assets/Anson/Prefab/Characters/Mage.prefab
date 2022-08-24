@@ -10,13 +10,18 @@ PrefabInstance:
     - target: {fileID: 1091191642854799358, guid: 9b859da5eee0c474e8319dce4b72e0ca,
         type: 3}
       propertyPath: rmsCount
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1873224116839461390, guid: 9b859da5eee0c474e8319dce4b72e0ca,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5486511849180655649, guid: 9b859da5eee0c474e8319dce4b72e0ca,
+        type: 3}
+      propertyPath: avatar
+      value: 
+      objectReference: {fileID: 3782815112176537216}
     - target: {fileID: 6157155329068032648, guid: 9b859da5eee0c474e8319dce4b72e0ca,
         type: 3}
       propertyPath: m_RootOrder
@@ -110,7 +115,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0154f3869f1eba54aaa847095de53926,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0154f3869f1eba54aaa847095de53926,
         type: 3}
@@ -159,3 +164,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0154f3869f1eba54aaa847095de53926, type: 3}
+--- !u!1 &7222833667104456613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0154f3869f1eba54aaa847095de53926,
+    type: 3}
+  m_PrefabInstance: {fileID: 7565415302225396468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3782815112176537216
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7222833667104456613}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 5a5eaa313737cb64aa18fb8e8bd0bc8c, type: 3}
+  m_Controller: {fileID: 9100000, guid: 0ceb865203c0d8042bd68618ebf09005, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
