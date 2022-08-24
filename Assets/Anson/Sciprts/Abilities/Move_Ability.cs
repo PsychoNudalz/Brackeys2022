@@ -60,7 +60,15 @@ public class Move_Ability : Ability
 
     public override bool CanUse(object target = null)
     {
-        return base.CanUse(target);
+        if (target is DestructibleAbilityInteraction destructibleAbilityInteraction)
+        {
+        }
+        else if (target is MovePointAbilityInteraction movePointAbilityInteraction)
+        {
+        }
+
+        return false;
+        
     }
 
 
@@ -84,12 +92,12 @@ public class Move_Ability : Ability
         {
             if (hit.collider.Equals(characterCollider))
             {
-                Debug.DrawRay(transform.position, dir * range, Color.green, 5f);
+                Debug.DrawRay(target, dir * range, Color.green, 5f);
                 return true;
             }
         }
 
-        Debug.DrawRay(transform.position, dir * range, Color.red, 5f);
+        Debug.DrawRay(target, dir * range, Color.red, 5f);
         return false;
     }
 
@@ -100,10 +108,13 @@ public class Move_Ability : Ability
                      move_range, move_layerMask))
         {
             if (raycastHit.collider.gameObject.TryGetComponent(out MovePoint movePoint) &&
-                CheckLOS_Move(movePoint.Destination.position) && !movePoint.IsInRange)
+                CheckLOS_Move(movePoint.Destination.position))
             {
                 tempList.Add(movePoint);
-                movePoint.OnInRange_Enter();
+                if (!movePoint.IsInRange)
+                {
+                    movePoint.OnInRange_Enter();
+                }
             }
         }
 

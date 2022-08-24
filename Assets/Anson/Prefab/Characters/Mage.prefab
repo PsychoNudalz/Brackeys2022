@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3199806229494891742}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5595455, y: -0.907986, z: 0.5646}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77,14 +77,14 @@ MonoBehaviour:
     m_Bits: 17408
   select_los_layerMask:
     serializedVersion: 2
-    m_Bits: 18176
+    m_Bits: 18240
   move_range: 10
   move_layerMask:
     serializedVersion: 2
     m_Bits: 131072
   move_los_layerMask:
     serializedVersion: 2
-    m_Bits: 18176
+    m_Bits: 18240
   movePoints: []
 --- !u!1001 &7016277199785005871
 PrefabInstance:
