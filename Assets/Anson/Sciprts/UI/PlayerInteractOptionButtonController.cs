@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInteractOptionButtonController : MonoBehaviour
 {
@@ -24,6 +25,12 @@ public class PlayerInteractOptionButtonController : MonoBehaviour
     [SerializeField]
     private AbilityInteraction abilityInteraction;
 
+    [SerializeField]
+    private Button button;
+
+    [SerializeField]
+    private TMPro.TextMeshProUGUI text;
+
 
     public AbilityEnum AbilityEnum => abilityEnum;
 
@@ -39,6 +46,11 @@ public class PlayerInteractOptionButtonController : MonoBehaviour
         {
             playerUIInteractOptionController = GetComponentInParent<PlayerUIInteractOptionController>();
         }
+    }
+
+    private void Start()
+    {
+        text.text = abilityEnum.ToString();
     }
 
     private void FixedUpdate()
@@ -70,6 +82,7 @@ public class PlayerInteractOptionButtonController : MonoBehaviour
     public void SetActive(bool b, AbilityInteraction abilityInteraction)
     {
         gameObject.SetActive(b);
+        button.interactable = b;
         this.abilityInteraction = abilityInteraction;
         UpdateAvailability(abilityInteraction);
     }

@@ -228,12 +228,12 @@ PrefabInstance:
     - target: {fileID: 890068207969753490, guid: 69911ffe269c6554ca04ddce22228ece,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -85
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 890068207969753490, guid: 69911ffe269c6554ca04ddce22228ece,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -85
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 890068207969753490, guid: 69911ffe269c6554ca04ddce22228ece,
         type: 3}
@@ -378,12 +378,12 @@ PrefabInstance:
     - target: {fileID: 890068207969753490, guid: 69911ffe269c6554ca04ddce22228ece,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -70
       objectReference: {fileID: 0}
     - target: {fileID: 890068207969753490, guid: 69911ffe269c6554ca04ddce22228ece,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -100
+      value: -85
       objectReference: {fileID: 0}
     - target: {fileID: 890068207969753490, guid: 69911ffe269c6554ca04ddce22228ece,
         type: 3}
@@ -546,7 +546,7 @@ PrefabInstance:
     - target: {fileID: 890068207969753490, guid: 69911ffe269c6554ca04ddce22228ece,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 85
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 890068207969753490, guid: 69911ffe269c6554ca04ddce22228ece,
         type: 3}
@@ -1391,7 +1391,7 @@ PrefabInstance:
     - target: {fileID: 890068207969753490, guid: 69911ffe269c6554ca04ddce22228ece,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 890068207969753490, guid: 69911ffe269c6554ca04ddce22228ece,
         type: 3}
@@ -1965,12 +1965,12 @@ PrefabInstance:
     - target: {fileID: 890068207969753490, guid: 69911ffe269c6554ca04ddce22228ece,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 85
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 890068207969753490, guid: 69911ffe269c6554ca04ddce22228ece,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 85
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 890068207969753490, guid: 69911ffe269c6554ca04ddce22228ece,
         type: 3}
@@ -4429,7 +4429,7 @@ PrefabInstance:
     - target: {fileID: 890068207969753490, guid: 69911ffe269c6554ca04ddce22228ece,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 890068207969753490, guid: 69911ffe269c6554ca04ddce22228ece,
         type: 3}
@@ -4460,6 +4460,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WheelButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638496637567577878, guid: 69911ffe269c6554ca04ddce22228ece,
+        type: 3}
+      propertyPath: m_text
+      value: Destroy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69911ffe269c6554ca04ddce22228ece, type: 3}
