@@ -23,7 +23,9 @@ public enum SuppressionEnum
     Suppressed
 }
 
-
+/// <summary>
+/// Controls individual character
+/// </summary>
 public class CharacterControllerScript : MonoBehaviour
 {
     [SerializeField]
@@ -53,6 +55,7 @@ public class CharacterControllerScript : MonoBehaviour
 
     [SerializeField]
     private CharacterEffectsController characterEffectsController;
+    //add in health script 
 
 
     public CharacterMovementController CharacterMovementController => characterMovementController;
@@ -127,6 +130,9 @@ public class CharacterControllerScript : MonoBehaviour
 
         }
     }
-    
-    
+
+    public void DealDamage(float f)
+    {
+        // add method to do damage to life script here
+    }
 }
