@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject archer;
 
     private int characterAmount;
-    private int characterDeaths;
+    public int characterDeaths;
     private CanvasGroup canvas;
 
     private void Awake()

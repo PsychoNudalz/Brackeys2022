@@ -35,6 +35,7 @@ public class PlayerInputController : MonoBehaviour
     [Header("Components")]
     [SerializeField]
     private Camera mainCamera;
+    private GameManager gm;
 
     public PlayerController PlayerController
     {
@@ -63,6 +64,7 @@ public class PlayerInputController : MonoBehaviour
     private void Awake()
     {
         mainCamera = Camera.main;
+        gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
     private void Update()
@@ -87,14 +89,17 @@ public class PlayerInputController : MonoBehaviour
 
     public void OnSwitchCharacter(InputValue context)
     {
-        float value = context.Get<float>();
-        if (value > 0)
+        if (gm.characterDeaths < 2)
         {
-            playerController.NextCharacter();
-        }
-        else if (value < 0)
-        {
-            playerController.PrevCharacter();
+            float value = context.Get<float>();
+            if (value > 0)
+            {
+                playerController.NextCharacter();
+            }
+            else if (value < 0)
+            {
+                playerController.PrevCharacter();
+            }
         }
     }
     
