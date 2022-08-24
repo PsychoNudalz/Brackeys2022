@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private CharacterMovementController[] characterMovementControllers;
 
+
     [SerializeField]
     private HighlightPlus.HighlightEffect[] characterHighlights;
 
@@ -45,6 +46,17 @@ public class PlayerController : MonoBehaviour
         {
             SetCharacter(characterControllers[characterIndex]);
         }
+
+        // if (characterControllers.Length == 0)
+        // {
+        //     List<CharacterMovementController> characterControllers = new List<CharacterMovementController>();
+        //     foreach (CharacterControllerScript characterController in characterControllers)
+        //     {
+        //         characterControllers.Add(characterController.CharacterMovementController);
+        //     }
+        //
+        //     this.characterControllers = characterControllers.ToArray();
+        // }
     }
 
     private void Start()
@@ -109,7 +121,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 characterIndex -= 2;
-                characterIndex = characterIndex % characterMovementControllers.Length;
+                characterIndex = characterIndex % characterControllers.Length;
             } 
         }
     }
@@ -117,7 +129,7 @@ public class PlayerController : MonoBehaviour
     public void PrevCharacter()
     {
         characterIndex--;
-        characterIndex = (characterIndex + characterMovementControllers.Length) % characterMovementControllers.Length;
+        characterIndex = (characterIndex + characterControllers.Length) % characterControllers.Length;
 
         if (characterMovementControllers[characterIndex].enabled != false)
             SetCharacter(characterControllers[characterIndex]);
@@ -130,7 +142,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 characterIndex += 2;
-                characterIndex = (characterIndex + characterMovementControllers.Length) % characterMovementControllers.Length;
+                characterIndex = (characterIndex + characterControllers.Length) % characterControllers.Length;
             }
         }
     }
