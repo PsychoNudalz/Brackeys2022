@@ -12,6 +12,7 @@ TagManager:
   - Destructible
   - ClimbableCharacter
   - DamageBox
+  - GameManager
   layers:
   - Default
   - TransparentFX
