@@ -11,8 +11,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private CharacterControllerScript[] characterControllers;
 
-    [SerializeField]
-    private CharacterMovementController[] characterMovementControllers;
 
 
     [SerializeField]
@@ -108,15 +106,15 @@ public class PlayerController : MonoBehaviour
     public void NextCharacter()
     {
         characterIndex++;
-        characterIndex = characterIndex % characterMovementControllers.Length;
+        characterIndex = characterIndex % characterControllers.Length;
        
-        if (characterMovementControllers[characterIndex].enabled != false)
+        if (characterControllers[characterIndex].enabled != false)
             SetCharacter(characterControllers[characterIndex]);
         else
         {
             characterIndex++;
-            characterIndex = characterIndex % characterMovementControllers.Length;
-            if (characterMovementControllers[characterIndex].enabled != false)
+            characterIndex = characterIndex % characterControllers.Length;
+            if (characterControllers[characterIndex].enabled != false)
                 SetCharacter(characterControllers[characterIndex]);
             else
             {
@@ -131,13 +129,13 @@ public class PlayerController : MonoBehaviour
         characterIndex--;
         characterIndex = (characterIndex + characterControllers.Length) % characterControllers.Length;
 
-        if (characterMovementControllers[characterIndex].enabled != false)
+        if (characterControllers[characterIndex].enabled != false)
             SetCharacter(characterControllers[characterIndex]);
         else
         {
             characterIndex--;
-            characterIndex = (characterIndex + characterMovementControllers.Length) % characterMovementControllers.Length;
-            if (characterMovementControllers[characterIndex].enabled != false)
+            characterIndex = (characterIndex + characterControllers.Length) % characterControllers.Length;
+            if (characterControllers[characterIndex].enabled != false)
                 SetCharacter(characterControllers[characterIndex]);
             else
             {

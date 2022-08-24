@@ -117,6 +117,12 @@ public class CharacterMovementController : MonoBehaviour
         }
     }
 
+    public void SetControlLock(bool b)
+    {
+        controlLock = b;
+        
+    }
+
     public void Move(Vector3 moveDir)
     {
         if (!(controlLock || characterState is CharacterState.Falling or CharacterState.Climbing))
