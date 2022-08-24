@@ -190,9 +190,6 @@
             "m_Id": "e72d6abf55114163b0a8d08872db2145"
         },
         {
-            "m_Id": "4cc3bcf2dd224ac5bca31bdd7323b28b"
-        },
-        {
             "m_Id": "5c8ebfa6094443f5b787c70e18670cfe"
         },
         {
@@ -482,27 +479,6 @@
         "b": 0.5,
         "a": 1.0
     }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
-    "m_ObjectId": "4cc3bcf2dd224ac5bca31bdd7323b28b",
-    "m_Id": 354491881,
-    "m_DisplayName": "Tilting",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "_Tilting",
-    "m_StageCapability": 3,
-    "m_Value": {
-        "x": 16.0,
-        "y": 16.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0
-    },
-    "m_Labels": []
 }
 
 {
