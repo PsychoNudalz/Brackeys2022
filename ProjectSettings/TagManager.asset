@@ -12,6 +12,7 @@ TagManager:
   - Destructible
   - ClimbableCharacter
   - DamageBox
+  - Object
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Debug
   - Clickable
   - TriggerBox
-  - Destructible
+  - Object
   - Arrow
   - ClimbableCharacter
   - MovePoint

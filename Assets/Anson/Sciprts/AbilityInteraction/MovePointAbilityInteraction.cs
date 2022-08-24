@@ -9,13 +9,19 @@ public class MovePointAbilityInteraction : AbilityInteraction
     [SerializeField]
     private MovePoint movePoint;
 
+    public MovePoint MovePoint => movePoint;
+    public bool InRange => movePoint.IsInRange;
+
     public override bool CanMove()
     {
-        return base.CanMove();
+        return CharacterManager.GetMage().CharacterAbilityHandler.CanUseAbility_Main(movePoint);
     }
 
     public override void UseMove()
     {
-        base.UseMove();
+        if (CanMove())
+        {
+            CharacterManager.GetMage().CharacterAbilityHandler.UseAbility_Main(movePoint);
+        }
     }
 }

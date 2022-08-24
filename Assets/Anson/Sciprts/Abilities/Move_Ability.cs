@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class Move_Ability : Ability
 {
-    [Header("Move")]
+    [Space(5)]
     [SerializeField]
     private Collider characterCollider;
+
+    [SerializeField]
+    private MovableObject currentObject;
 
     [Header("Line of Sight")]
     [Space(10)]
@@ -45,30 +48,57 @@ public class Move_Ability : Ability
 
     public override void OnUse(object target = null)
     {
-        base.OnUse(target);
+        if (abilityStateEnum == AbilityStateEnum.Off)
+        {
+            OnUse_Enter(target);
+        }
+        else if (abilityStateEnum == AbilityStateEnum.Using)
+        {
+            OnUse_End(target);
+        }
     }
 
     public override void OnUse_Enter(object target = null)
     {
-        base.OnUse_Enter(target);
+        if (target is MovableObject movableObject)
+        {
+            movableObject.OnSelect();
+            currentObject = movableObject;
+            base.OnUse_Enter(target);
+        }
     }
 
     public override void OnUse_End(object target = null)
     {
-        base.OnUse_End(target);
+        if (target is MovePoint movePoint)
+        {
+            if (movePoint.IsInRange)
+            {
+                currentObject.OnMove(movePoint);
+                currentObject = null;
+                base.OnUse_End(target);
+            }
+        }
     }
 
     public override bool CanUse(object target = null)
     {
-        if (target is DestructibleAbilityInteraction destructibleAbilityInteraction)
+        if (abilityStateEnum == AbilityStateEnum.Off)
         {
+            if (target is MovableObject movableObject)
+            {
+                return CheckLOS_Select(movableObject.transform.position + new Vector3(0f, .5f, 0f));
+            }
         }
-        else if (target is MovePointAbilityInteraction movePointAbilityInteraction)
+        else if (abilityStateEnum == AbilityStateEnum.Using)
         {
+            if (target is MovePoint movePoint)
+            {
+                return movePoint.IsInRange;
+            }
         }
 
         return false;
-        
     }
 
 

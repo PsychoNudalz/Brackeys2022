@@ -106,6 +106,7 @@ MonoBehaviour:
   mouseTags:
   - Clickable
   - Character
+  - Destructable
   mouseLayer:
     serializedVersion: 2
     m_Bits: 5184

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestructibleAbilityInteraction : AbilityInteraction
+public class ObjectAbilityInteraction : AbilityInteraction
 {
     [Header("Destructible")]
     [SerializeField]
@@ -23,17 +23,7 @@ public class DestructibleAbilityInteraction : AbilityInteraction
     [SerializeField]
     private MovableObject movableObject;
 
-    [SerializeField]
-    private float move_select_range = 3;
 
-    [SerializeField]
-    private float move_target_range = 3;
-
-    [SerializeField]
-    private List<string> move_los_tagList;
-
-    [SerializeField]
-    private LayerMask move_los_layerMask;
 
 
     public override bool CanMove()
@@ -42,15 +32,16 @@ public class DestructibleAbilityInteraction : AbilityInteraction
         {
             return false;
         }
-        
-        
 
-        return base.CanMove();
+        return  CharacterManager.GetMage().CharacterAbilityHandler.CanUseAbility_Main(movableObject);
     }
 
     public override void UseMove()
     {
-        base.UseMove();
+        if (CanMove())
+        {
+            CharacterManager.GetMage().CharacterAbilityHandler.UseAbility_Main(movableObject);
+        }
     }
 
     public override bool CanDestroy()

@@ -33,6 +33,11 @@ public class MovableObject : MonoBehaviour
         {
             colliders = GetComponentsInChildren<Collider>();
         }
+
+        if (!animator)
+        {
+            animator = GetComponentInChildren<Animator>();
+        }
     }
 
     public void OnSelect()
@@ -47,9 +52,19 @@ public class MovableObject : MonoBehaviour
         StartCoroutine(MoveCoroutine());
     }
 
+    void SetCollidersActive(bool b)
+    {
+        foreach (Collider c in colliders)
+        {
+            c.enabled = b;
+        }
+    }
+
     public void PlayAnimator_Select()
     {
         animator.Play("Select");
+        SetCollidersActive(false);
+        
     }
 
     public void PlayAnimator_Move_Enter()
@@ -60,6 +75,8 @@ public class MovableObject : MonoBehaviour
     public void PlayAnimator_Move_End()
     {
         animator.Play("End");
+        SetCollidersActive(true);
+
     }
 
     IEnumerator MoveCoroutine()
@@ -67,6 +84,8 @@ public class MovableObject : MonoBehaviour
         moveState = MoveStateEnum.Move;
         PlayAnimator_Move_Enter();
         yield return new WaitForSeconds(moveDuration);
+        transform.position = currentMovePoint.Destination.position;
+        transform.rotation = currentMovePoint.Destination.rotation;
         PlayAnimator_Move_End();
         moveState = MoveStateEnum.None;
 

@@ -108,6 +108,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3867196311551554356, guid: 9b859da5eee0c474e8319dce4b72e0ca,
+        type: 3}
+      propertyPath: ability_main
+      value: 
+      objectReference: {fileID: 2835863929230616187}
     - target: {fileID: 5486511849180655649, guid: 9b859da5eee0c474e8319dce4b72e0ca,
         type: 3}
       propertyPath: avatar

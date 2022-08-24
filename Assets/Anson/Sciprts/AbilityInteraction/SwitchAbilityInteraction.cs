@@ -25,15 +25,12 @@ public class SwitchAbilityInteraction : AbilityInteraction
     [SerializeField]
     private LayerMask shoot_los_layerMask;
 
-    [Header("Move")]
+    [Header("Move Point")]
     [SerializeField]
-    private float move_range = 3;
+    private MovePoint movePoint;
 
-    [SerializeField]
-    private List<string> move_los_tagList;
-
-    [SerializeField]
-    private LayerMask move_los_layerMask;
+    public MovePoint MovePoint => movePoint;
+    public bool InRange => movePoint.IsInRange;
 
     [Space(10f)]
     [Header("Components")]
@@ -111,7 +108,7 @@ public class SwitchAbilityInteraction : AbilityInteraction
 
     public override bool CanMove()
     {
-        return base.CanMove();
+        return CharacterManager.GetMage().CharacterAbilityHandler.CanUseAbility_Main(movePoint);
     }
 
     public override bool CanShield()
@@ -142,7 +139,10 @@ public class SwitchAbilityInteraction : AbilityInteraction
 
     public override void UseMove()
     {
-        base.UseMove();
+        if (CanMove())
+        {
+            CharacterManager.GetMage().CharacterAbilityHandler.UseAbility_Main(movePoint);
+        }
     }
 
     public override void UseShield()
