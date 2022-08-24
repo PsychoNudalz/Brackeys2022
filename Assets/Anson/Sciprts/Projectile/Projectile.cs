@@ -19,9 +19,6 @@ public class Projectile : MonoBehaviour
 
     [Header("On Impact")]
     [SerializeField]
-    private List<string> tagList;
-
-    [SerializeField]
     private LayerMask layerMask;
 
     [SerializeField]
@@ -30,6 +27,8 @@ public class Projectile : MonoBehaviour
     [SerializeField]
     private UnityEvent onImpactEvent;
 
+    private bool exploded = false;
+
     private void Start()
     {
         spawnTime = Time.time;
@@ -37,7 +36,10 @@ public class Projectile : MonoBehaviour
 
     private void Update()
     {
-        MoveProjectile();
+        if (!exploded)
+        {
+            MoveProjectile();
+        }
     }
 
     private void FixedUpdate()
@@ -50,30 +52,46 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (tagList.Contains(collision.collider.tag))
-        {
-            OnImpact();
-        }
+        OnImpact();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        OnImpact();
     }
 
     public void OnImpact()
     {
+        if (exploded)
+        {
+            return;
+        }
+
+        exploded = true;
         onImpactEvent.Invoke();
-        enabled = false;
         RaycastHit[] hits = Physics.SphereCastAll(transform.position, castSize, transform.forward, castSize, layerMask);
         foreach (RaycastHit raycastHit in hits)
         {
-            SwitchInteractable switchInteractable = GetComponentInParent<SwitchInteractable>();
+            SwitchInteractable switchInteractable = raycastHit.collider.GetComponentInParent<SwitchInteractable>();
             if (switchInteractable)
             {
                 switchInteractable.OnUse();
             }
             else
             {
-                CharacterControllerScript character = GetComponentInParent<CharacterControllerScript>();
-                if (character)
+                DestructibleObject destructibleObject = raycastHit.collider.GetComponentInParent<DestructibleObject>();
+                if (destructibleObject)
                 {
-                    character.DealDamage(1f);
+                    destructibleObject.Destroy();
+                }
+
+                else
+                {
+                    CharacterControllerScript character = raycastHit.collider.GetComponentInParent<CharacterControllerScript>();
+                    if (character)
+                    {
+                        character.killCharacter();
+                    }
                 }
             }
         }
