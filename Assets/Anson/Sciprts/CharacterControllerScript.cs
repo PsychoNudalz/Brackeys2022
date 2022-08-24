@@ -55,7 +55,6 @@ public class CharacterControllerScript : MonoBehaviour
 
     [SerializeField]
     private CharacterEffectsController characterEffectsController;
-    //add in health script 
 
 
     public CharacterMovementController CharacterMovementController => characterMovementController;
@@ -127,12 +126,16 @@ public class CharacterControllerScript : MonoBehaviour
         {
             characterMovementController.Move(new Vector3());
             characterEffectsController.SetModelSelectHighlight(false);
-
         }
     }
 
-    public void DealDamage(float f)
+    public void killCharacter() //disables movement, switches to the next character (if possible) and disabled switching back
     {
-        // add method to do damage to life script here
+        aliveEnum = AliveEnum.Dead;
+        SetActive(false);
+        // play death animation
+
+        characterMovementController.enabled = false;
+        GetComponent<CharacterController>().enabled = false;
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - Destructible
   - ClimbableCharacter
   - DamageBox
+  - GameManager
   - Object
   layers:
   - Default

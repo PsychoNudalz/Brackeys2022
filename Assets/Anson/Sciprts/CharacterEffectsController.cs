@@ -61,9 +61,11 @@ public class CharacterEffectsController : MonoBehaviour
             {
                 StopCoroutine(flashCoroutine);
             }
-            selectHighlightEffect.highlighted = false;
+            if (selectHighlightEffect)
+                selectHighlightEffect.highlighted = false;
         }
     }
+
     private IEnumerator SelectCharacterHighlightAnimation()
     {
         bool b = true;
@@ -73,6 +75,5 @@ public class CharacterEffectsController : MonoBehaviour
             yield return new WaitForSeconds(0.25f);
             b = !b;
         }
-        
     }
 }

@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     private CharacterControllerScript[] characterControllers;
 
     [SerializeField]
+    private CharacterControllerScript[] characterMovementControllers;
+
+    [SerializeField]
     private HighlightPlus.HighlightEffect[] characterHighlights;
 
     [SerializeField]
@@ -93,13 +96,42 @@ public class PlayerController : MonoBehaviour
     public void NextCharacter()
     {
         characterIndex++;
-        characterIndex = characterIndex % characterControllers.Length;
-        SetCharacter(characterControllers[characterIndex]);
+        characterIndex = characterIndex % characterMovementControllers.Length;
+
+        if (characterMovementControllers[characterIndex].enabled != false)
+            SetCharacter(characterMovementControllers[characterIndex]);
+        else
+        {
+            characterIndex++;
+            characterIndex = characterIndex % characterMovementControllers.Length;
+            if (characterMovementControllers[characterIndex].enabled != false)
+                SetCharacter(characterMovementControllers[characterIndex]);
+            else
+            {
+                characterIndex -= 2;
+                characterIndex = characterIndex % characterMovementControllers.Length;
+            } 
+        }
     }
+
     public void PrevCharacter()
     {
         characterIndex--;
-        characterIndex = (characterIndex+characterControllers.Length) % characterControllers.Length;
-        SetCharacter(characterControllers[characterIndex]);
+        characterIndex = (characterIndex + characterMovementControllers.Length) % characterMovementControllers.Length;
+
+        if (characterMovementControllers[characterIndex].enabled != false)
+            SetCharacter(characterMovementControllers[characterIndex]);
+        else
+        {
+            characterIndex--;
+            characterIndex = (characterIndex + characterMovementControllers.Length) % characterMovementControllers.Length;
+            if (characterMovementControllers[characterIndex].enabled != false)
+                SetCharacter(characterMovementControllers[characterIndex]);
+            else
+            {
+                characterIndex += 2;
+                characterIndex = (characterIndex + characterMovementControllers.Length) % characterMovementControllers.Length;
+            }
+        }
     }
 }
