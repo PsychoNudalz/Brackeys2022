@@ -60,36 +60,35 @@ public class PlayerController : MonoBehaviour
         {
             currentCharacter.SetActive(false);
         }
-        else
-        {
-            currentCharacter.SetActive(true);
-        }
         currentCharacter = characterControllerScript;
         playerInputController.CharacterController = currentCharacter;
         playerInputController.CharacterMovementController = currentCharacter.CharacterMovementController;
+        currentCharacter.SetActive(true);
 
-        if (currentCharHighlight)
-        {
-            currentCharHighlight.highlighted = false;
-            currentCharHighlight = characterHighlights[characterIndex];
-            StartCoroutine(highlightCharSelect());
-        }
+        
+        //
+        // if (currentCharHighlight)
+        // {
+        //     currentCharHighlight.highlighted = false;
+        //     currentCharHighlight = characterHighlights[characterIndex];
+        //     StartCoroutine(highlightCharSelect());
+        // }
     }
 
-    private IEnumerator highlightCharSelect()
-    {
-        currentCharHighlight.highlighted = true;
-        yield return new WaitForSeconds(0.25f);
-        currentCharHighlight.highlighted = false;
-        yield return new WaitForSeconds(0.25f);
-        currentCharHighlight.highlighted = true;
-        yield return new WaitForSeconds(0.25f);
-        currentCharHighlight.highlighted = false;
-        yield return new WaitForSeconds(0.25f);
-        currentCharHighlight.highlighted = true;
-        yield return new WaitForSeconds(0.25f);
-        currentCharHighlight.highlighted = false;
-    }
+    // private IEnumerator highlightCharSelect()
+    // {
+    //     currentCharHighlight.highlighted = true;
+    //     yield return new WaitForSeconds(0.25f);
+    //     currentCharHighlight.highlighted = false;
+    //     yield return new WaitForSeconds(0.25f);
+    //     currentCharHighlight.highlighted = true;
+    //     yield return new WaitForSeconds(0.25f);
+    //     currentCharHighlight.highlighted = false;
+    //     yield return new WaitForSeconds(0.25f);
+    //     currentCharHighlight.highlighted = true;
+    //     yield return new WaitForSeconds(0.25f);
+    //     currentCharHighlight.highlighted = false;
+    // }
 
     public void NextCharacter()
     {

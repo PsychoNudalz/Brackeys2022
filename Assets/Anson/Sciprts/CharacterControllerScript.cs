@@ -52,14 +52,14 @@ public class CharacterControllerScript : MonoBehaviour
     private CharacterAbilityHandler characterAbilityHandler;
 
     [SerializeField]
-    private CharacterAvatarController characterAvatarController;
+    private CharacterEffectsController characterEffectsController;
 
 
     public CharacterMovementController CharacterMovementController => characterMovementController;
 
     public CharacterAbilityHandler CharacterAbilityHandler => characterAbilityHandler;
 
-    public CharacterAvatarController CharacterAvatarController => characterAvatarController;
+    public CharacterEffectsController CharacterEffectsController => characterEffectsController;
 
     public CharacterEnum CharacterEnum => characterEnum;
 
@@ -87,9 +87,9 @@ public class CharacterControllerScript : MonoBehaviour
             characterAbilityHandler = GetComponent<CharacterAbilityHandler>();
         }
 
-        if (!characterAvatarController)
+        if (!characterEffectsController)
         {
-            characterAvatarController = GetComponentInChildren<CharacterAvatarController>();
+            characterEffectsController = GetComponentInChildren<CharacterEffectsController>();
         }
     }
 
@@ -104,7 +104,7 @@ public class CharacterControllerScript : MonoBehaviour
         {
             if (interactTriggerDetector.InteractableObject.OnUse())
             {
-                characterAvatarController.Interact();
+                characterEffectsController.Interact();
             }
         }
     }
@@ -118,11 +118,13 @@ public class CharacterControllerScript : MonoBehaviour
     {
         if (b)
         {
-            
+            characterEffectsController.SetModelSelectHighlight(true);
         }
         else
         {
             characterMovementController.Move(new Vector3());
+            characterEffectsController.SetModelSelectHighlight(false);
+
         }
     }
     

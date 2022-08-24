@@ -11,27 +11,27 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Armour
-    second: {fileID: 2100000, guid: d287c7de6eb2d8842972665e24ddd753, type: 2}
+    second: {fileID: 2100000, guid: 1797ba38873c7f34e97ba670f23eb090, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Face
-    second: {fileID: 2100000, guid: 17da57c23a1065b41aaa6ced5b89995a, type: 2}
+    second: {fileID: 2100000, guid: 1782c0c27647f474d8dd3bcd203e0f0a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material
-    second: {fileID: 2100000, guid: 0290f865c5396674686b8ae425b79257, type: 2}
+    second: {fileID: 2100000, guid: 67d1aaed2f827824ab736044d9e4befe, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Skin_White
-    second: {fileID: 2100000, guid: ceb4c155e8b299748941418fafad59aa, type: 2}
+    second: {fileID: 2100000, guid: ccbddedfbc3c24544a966a4380f44abb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Sword
-    second: {fileID: 2100000, guid: f50b1e8a399559a44bf8046e101aa108, type: 2}
+    second: {fileID: 2100000, guid: 6ab5bc173172d2f45b8e414d7b3c9658, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

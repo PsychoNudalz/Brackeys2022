@@ -71,13 +71,13 @@ public class CharacterMovementController : MonoBehaviour
     private Transform modelTransform;
 
     [SerializeField]
-    private CharacterAvatarController characterAvatarController;
+    private CharacterEffectsController characterEffectsController;
 
     private void Awake()
     {
-        if (!characterAvatarController)
+        if (!characterEffectsController)
         {
-            characterAvatarController = GetComponentInChildren<CharacterAvatarController>();
+            characterEffectsController = GetComponentInChildren<CharacterEffectsController>();
         }
     }
 
@@ -100,7 +100,7 @@ public class CharacterMovementController : MonoBehaviour
             UpdateGravity();
         }
 
-        characterAvatarController.SetWalk(moveDir.magnitude);
+        characterEffectsController.SetWalk(moveDir.magnitude);
         if (moveDir.magnitude > 0.1f)
         {
             if (characterState == CharacterState.Climbing)
@@ -152,7 +152,7 @@ public class CharacterMovementController : MonoBehaviour
 
     IEnumerator ClimbCoroutine()
     {
-        characterAvatarController.Climb();
+        characterEffectsController.Climb();
         characterState = CharacterState.Climbing;
         controlLock = true;
         characterController.slopeLimit = 85f;
