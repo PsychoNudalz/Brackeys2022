@@ -10,6 +10,7 @@ TagManager:
   - Clickable
   - MovableObject
   - Destructible
+  - DamageBox
   layers:
   - Default
   - TransparentFX
