@@ -1471,6 +1471,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200d43b50af762c40a36732219bc09fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCtrl: {fileID: 2113428224}
+--- !u!114 &640495384 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6093265314267962474, guid: a9b833a9fae685445bf6809eed3dad44,
+    type: 3}
+  m_PrefabInstance: {fileID: 3796966154528517748}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640495373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9279915e158efd842b6af3049d1690d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &643054853 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2497961413394583006, guid: dddf3a67a1d9af849bb056d588f9ed75,
@@ -3548,6 +3561,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200d43b50af762c40a36732219bc09fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCtrl: {fileID: 2113428224}
+--- !u!114 &1266989223 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1108947387231154891, guid: 79f00207a50a1b548be550b5b5f14635,
+    type: 3}
+  m_PrefabInstance: {fileID: 4192695119991533857}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266989212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9279915e158efd842b6af3049d1690d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1271666141
 GameObject:
   m_ObjectHideFlags: 0
@@ -4434,6 +4460,7 @@ MonoBehaviour:
   mageSpawnpoint: {fileID: 42881970}
   mage: {fileID: 1461163865}
   archer: {fileID: 1266989212}
+  characterDeaths: 0
 --- !u!4 &1711480916
 Transform:
   m_ObjectHideFlags: 0
@@ -5381,6 +5408,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200d43b50af762c40a36732219bc09fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCtrl: {fileID: 2113428224}
+--- !u!114 &2028502929 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6058017469180808060, guid: 9f5cd905cfbdeba4985173c03b46b361,
+    type: 3}
+  m_PrefabInstance: {fileID: 7016277199510696565}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461163865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9279915e158efd842b6af3049d1690d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2113428220
 GameObject:
   m_ObjectHideFlags: 0
@@ -5490,9 +5530,9 @@ MonoBehaviour:
   - {fileID: 1047894300}
   - {fileID: 2028502917}
   characterMovementControllers:
-  - {fileID: 478513350}
-  - {fileID: 1047894300}
-  - {fileID: 2028502917}
+  - {fileID: 640495384}
+  - {fileID: 1266989223}
+  - {fileID: 2028502929}
   characterHighlights:
   - {fileID: 1284406672}
   - {fileID: 2001405462}
@@ -15914,6 +15954,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5580525373880041105, guid: fd30647c8a8dcbe4087ef6a2c7527bec,
+        type: 3}
+      propertyPath: ShapeModule.angle
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5580525373880041105, guid: fd30647c8a8dcbe4087ef6a2c7527bec,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5580525374988069276, guid: fd30647c8a8dcbe4087ef6a2c7527bec,
         type: 3}
       propertyPath: m_RootOrder
@@ -16036,6 +16086,11 @@ PrefabInstance:
     - target: {fileID: 5668858905173998080, guid: 5e707444405afb54b838de180bccbd11,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668858905173998082, guid: 5e707444405afb54b838de180bccbd11,
+        type: 3}
+      propertyPath: m_ShowDebugText
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5668858905173998109, guid: 5e707444405afb54b838de180bccbd11,

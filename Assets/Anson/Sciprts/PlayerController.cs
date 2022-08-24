@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private CharacterControllerScript[] characterControllers;
 
     [SerializeField]
-    private CharacterControllerScript[] characterMovementControllers;
+    private CharacterMovementController[] characterMovementControllers;
 
     [SerializeField]
     private HighlightPlus.HighlightEffect[] characterHighlights;
@@ -97,15 +97,15 @@ public class PlayerController : MonoBehaviour
     {
         characterIndex++;
         characterIndex = characterIndex % characterMovementControllers.Length;
-
+       
         if (characterMovementControllers[characterIndex].enabled != false)
-            SetCharacter(characterMovementControllers[characterIndex]);
+            SetCharacter(characterControllers[characterIndex]);
         else
         {
             characterIndex++;
             characterIndex = characterIndex % characterMovementControllers.Length;
             if (characterMovementControllers[characterIndex].enabled != false)
-                SetCharacter(characterMovementControllers[characterIndex]);
+                SetCharacter(characterControllers[characterIndex]);
             else
             {
                 characterIndex -= 2;
@@ -120,13 +120,13 @@ public class PlayerController : MonoBehaviour
         characterIndex = (characterIndex + characterMovementControllers.Length) % characterMovementControllers.Length;
 
         if (characterMovementControllers[characterIndex].enabled != false)
-            SetCharacter(characterMovementControllers[characterIndex]);
+            SetCharacter(characterControllers[characterIndex]);
         else
         {
             characterIndex--;
             characterIndex = (characterIndex + characterMovementControllers.Length) % characterMovementControllers.Length;
             if (characterMovementControllers[characterIndex].enabled != false)
-                SetCharacter(characterMovementControllers[characterIndex]);
+                SetCharacter(characterControllers[characterIndex]);
             else
             {
                 characterIndex += 2;

@@ -6,6 +6,7 @@ public class DamageDetector : MonoBehaviour
 {
     private GameManager gm;
     private CharacterControllerScript charControl;
+    [SerializeField] private PlayerController playerCtrl;
 
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class DamageDetector : MonoBehaviour
 
     private void characterDeath()
     {
+        playerCtrl.NextCharacter();
         charControl.killCharacter();
         gm.checkForGameOver();
     }
