@@ -24,11 +24,22 @@ public class ProjectileLauncher : MonoBehaviour
     [SerializeField]
     private UnityEvent onShootEvent;
 
+    [SerializeField]
+    private UnityEvent onOnEvent;
+
+    [SerializeField]
+    private UnityEvent onOffEvent;
+
+    private bool isActive = true;
+
     private void Update()
     {
-        if (Time.time - lastShotTime > shootTime)
+        if (isActive)
         {
-            OnShoot();
+            if (Time.time - lastShotTime > shootTime)
+            {
+                OnShoot();
+            }
         }
     }
 
@@ -42,6 +53,21 @@ public class ProjectileLauncher : MonoBehaviour
 
     private void OnEnable()
     {
-        OnShoot();
+        SetActive(true);
+    }
+
+    public void SetActive(bool b)
+    {
+        if (b)
+        {
+            OnShoot();
+            onOnEvent.Invoke();
+        }
+        else
+        {
+            onOffEvent.Invoke();
+        }
+
+        isActive = b;
     }
 }
