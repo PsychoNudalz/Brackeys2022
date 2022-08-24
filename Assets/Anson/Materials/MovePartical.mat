@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PixelTexture
+  m_Name: MovePartical
   m_Shader: {fileID: -6465566751694194690, guid: f1b62ea2cc145204c90caab2b43d9b60,
     type: 3}
   m_ValidKeywords: []
@@ -22,7 +22,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainText:
@@ -49,13 +49,13 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Tiling: 16
+    - _Tiling: 64
     m_Colors:
-    - _Color: {r: 0.10295476, g: 0.103815176, b: 0.11320752, a: 0}
-    - _Color_1: {r: 0.10427198, g: 0.11849618, b: 0.2735849, a: 0}
-    - _MainColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color_1: {r: 0, g: 0, b: 0, a: 1}
+    - _Emission: {r: 1, g: 1, b: 1, a: 0}
+    - _MainColor: {r: 0.9371728, g: 0, b: 1, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &6006276898362006311
+--- !u!114 &3452828018879570748
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
