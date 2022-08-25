@@ -62,8 +62,14 @@ public class GameManager : MonoBehaviour
     {
         switch (scene.buildIndex)
         {
+            case 0:
+                startLevel(false, false, 1);
+                break;
             case 1:
                 startLevel(false, false, 1);
+                break;
+            case 2:
+                startLevel(true, false, 2);
                 break;
         }
     }
