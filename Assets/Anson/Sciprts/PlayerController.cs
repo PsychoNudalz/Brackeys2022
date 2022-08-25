@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -10,7 +11,6 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private CharacterControllerScript[] characterControllers;
-
 
 
     [SerializeField]
@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
 
     private HighlightPlus.HighlightEffect currentCharHighlight;
 
+
+    public static PlayerController current;
+    
     [ContextMenu("Initialise Components")]
     public void InitialiseComponents()
     {
@@ -57,6 +60,19 @@ public class PlayerController : MonoBehaviour
         // }
     }
 
+    private void Awake()
+    {
+        if (!current)
+        {
+            current = this;
+        }
+        else
+        {
+            Destroy(current.gameObject);
+            current = this;
+        }
+    }
+
     private void Start()
     {
         if (characterControllers.Length > 0)
@@ -68,17 +84,17 @@ public class PlayerController : MonoBehaviour
 
     public void SetCharacter(CharacterControllerScript characterControllerScript)
     {
-
         if (currentCharacter)
         {
             currentCharacter.SetActive(false);
         }
+
         currentCharacter = characterControllerScript;
         playerInputController.CharacterController = currentCharacter;
         playerInputController.CharacterMovementController = currentCharacter.CharacterMovementController;
         currentCharacter.SetActive(true);
 
-        
+
         //
         // if (currentCharHighlight)
         // {
@@ -105,43 +121,59 @@ public class PlayerController : MonoBehaviour
 
     public void NextCharacter()
     {
-        characterIndex++;
-        characterIndex = characterIndex % characterControllers.Length;
-       
-        if (characterControllers[characterIndex].enabled != false)
-            SetCharacter(characterControllers[characterIndex]);
-        else
+        int originalIndex = characterIndex;
+        CharacterControllerScript temp;
+
+        for (int i = 1; i < characterControllers.Length; i++)
         {
-            characterIndex++;
-            characterIndex = characterIndex % characterControllers.Length;
-            if (characterControllers[characterIndex].enabled != false)
-                SetCharacter(characterControllers[characterIndex]);
-            else
+            temp = characterControllers[(characterIndex + i)%characterControllers.Length];
+            if (temp.Alive == AliveEnum.Alive)
             {
-                characterIndex -= 2;
-                characterIndex = characterIndex % characterControllers.Length;
-            } 
+                characterIndex = (characterIndex + i)%characterControllers.Length;
+
+                SetCharacter(temp);
+                return;
+            }
         }
+        SetCharacter(characterControllers[characterIndex]);
+        Debug.LogWarning("Next character loop back");
+        
+        // characterIndex++;
+        // characterIndex = characterIndex % characterControllers.Length;
+        //
+        // if (characterControllers[characterIndex].enabled != false)
+        //     SetCharacter(characterControllers[characterIndex]);
+        // else
+        // {
+        //     characterIndex++;
+        //     characterIndex = characterIndex % characterControllers.Length;
+        //     if (characterControllers[characterIndex].enabled != false)
+        //         SetCharacter(characterControllers[characterIndex]);
+        //     else
+        //     {
+        //         characterIndex -= 2;
+        //         characterIndex = characterIndex % characterControllers.Length;
+        //     }
+        // }
     }
 
     public void PrevCharacter()
     {
-        characterIndex--;
-        characterIndex = (characterIndex + characterControllers.Length) % characterControllers.Length;
+        int originalIndex = characterIndex;
+        CharacterControllerScript temp;
 
-        if (characterControllers[characterIndex].enabled != false)
-            SetCharacter(characterControllers[characterIndex]);
-        else
+        for (int i = 1; i < characterControllers.Length; i++)
         {
-            characterIndex--;
-            characterIndex = (characterIndex + characterControllers.Length) % characterControllers.Length;
-            if (characterControllers[characterIndex].enabled != false)
-                SetCharacter(characterControllers[characterIndex]);
-            else
+            temp = characterControllers[(characterIndex - i+characterControllers.Length)%characterControllers.Length];
+            if (temp.Alive == AliveEnum.Alive)
             {
-                characterIndex += 2;
-                characterIndex = (characterIndex + characterControllers.Length) % characterControllers.Length;
+                characterIndex = (characterIndex - i+characterControllers.Length)%characterControllers.Length;
+                SetCharacter(temp);
+                return;
             }
         }
+        SetCharacter(characterControllers[characterIndex]);
+        Debug.LogWarning("prev character loop back");
+
     }
 }

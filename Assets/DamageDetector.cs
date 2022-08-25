@@ -17,13 +17,12 @@ public class DamageDetector : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "DamageBox")
-            characterDeath();
+            killCharacter();
     }
 
-    private void characterDeath()
+    private void killCharacter()
     {
-        playerCtrl.NextCharacter();
-        charControl.killCharacter();
-        gm.checkForGameOver();
+        charControl.KillCharacter();
+
     }
 }

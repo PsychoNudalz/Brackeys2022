@@ -124,7 +124,7 @@ public class Projectile : MonoBehaviour
                         raycastHit.collider.GetComponentInParent<CharacterControllerScript>();
                     if (character)
                     {
-                        character.killCharacter();
+                        character.KillCharacter();
                     }
                 }
             }

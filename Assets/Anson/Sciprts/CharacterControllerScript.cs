@@ -138,11 +138,17 @@ public class CharacterControllerScript : MonoBehaviour
         }
     }
 
-    public void killCharacter() //disables movement, switches to the next character (if possible) and disabled switching back
+    public void KillCharacter() //disables movement, switches to the next character (if possible) and disabled switching back
     {
+        if (aliveEnum == AliveEnum.Dead)
+        {
+            return;
+        }
         print(name +" is dead");
         aliveEnum = AliveEnum.Dead;
         SetActive(false);
+        PlayerController.current.NextCharacter();
+        GameManager.current.checkForGameOver();
         // play death animation
         //
         // characterMovementController.enabled = false;

@@ -15,9 +15,20 @@ public class GameManager : MonoBehaviour
     public int characterDeaths;
     private CanvasGroup canvas;
 
+    public static GameManager current;
+
     private void Awake()
     {
         canvas = GetComponentInChildren<CanvasGroup>();
+        if (!current)
+        {
+            current = this;
+        }
+        else
+        {
+            Destroy(current.gameObject);
+            current = this;
+        }
     }
 
     private void startLevel(bool archerSpawned, bool mageSpawned, int charAmt)
