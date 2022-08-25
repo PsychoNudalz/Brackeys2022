@@ -5,6 +5,14 @@ using UnityEngine.Events;
 
 public class MovePoint : MonoBehaviour
 {
+    enum MovePointEnum
+    {
+        Empty,
+        InRange,
+        Occupied
+    }
+
+    private MovePointEnum movePointState = MovePointEnum.Empty;
 
     [SerializeField]
     private Transform destination;
@@ -13,25 +21,51 @@ public class MovePoint : MonoBehaviour
 
     [SerializeField]
     private UnityEvent inRange_Enter;
+
     [SerializeField]
     private UnityEvent inRange_Exit;
 
-    [SerializeField]
-    private bool isInRange = false;
 
-    public bool IsInRange => isInRange;
+    [SerializeField]
+    private MovableObject currentObject;
+
+    public bool IsInRange => movePointState == MovePointEnum.InRange;
 
     public void OnInRange_Enter()
     {
-        inRange_Enter.Invoke();
-        isInRange = true;
+        if (movePointState == MovePointEnum.Empty)
+        {
+            inRange_Enter.Invoke();
+            movePointState = MovePointEnum.InRange;
+        }
     }
 
     public void OnInRange_Exit()
     {
-        inRange_Exit.Invoke();
-        isInRange = false;
+        if (movePointState == MovePointEnum.InRange)
+        {
+            inRange_Exit.Invoke();
+            if (!currentObject)
+            {
+                movePointState = MovePointEnum.Empty;
+            }
+            else
+            {
+                movePointState = MovePointEnum.Occupied;
+            }
+        }
     }
-    
-}
 
+    public void OnMove_Enter(MovableObject m)
+    {
+        currentObject = m;
+        OnInRange_Exit();
+    }
+
+    public void OnMove_Exit()
+    {
+        currentObject = null;
+        OnInRange_Exit();
+
+    }
+}

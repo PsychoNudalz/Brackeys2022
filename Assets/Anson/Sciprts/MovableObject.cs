@@ -48,7 +48,12 @@ public class MovableObject : MonoBehaviour
 
     public void OnMove(MovePoint movePoint)
     {
+        if (!movePoint.Equals(currentMovePoint))
+        {
+            currentMovePoint?.OnMove_Exit();
+        }
         currentMovePoint = movePoint;
+        currentMovePoint.OnMove_Enter(this);
         StartCoroutine(MoveCoroutine());
     }
 
@@ -82,6 +87,7 @@ public class MovableObject : MonoBehaviour
     IEnumerator MoveCoroutine()
     {
         moveState = MoveStateEnum.Move;
+        
         PlayAnimator_Move_Enter();
         yield return new WaitForSeconds(moveDuration);
         transform.position = currentMovePoint.Destination.position;
