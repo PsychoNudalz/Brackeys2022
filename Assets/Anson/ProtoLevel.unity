@@ -1929,15 +1929,20 @@ PrefabInstance:
       propertyPath: rmsCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2394407235866257901, guid: 49860442517a5b741857712f6f2bb846,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5793751989782743512, guid: 49860442517a5b741857712f6f2bb846,
         type: 3}
       propertyPath: rmsCount
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6359564967142593736, guid: 49860442517a5b741857712f6f2bb846,
         type: 3}
       propertyPath: rmsCount
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6864395918946331994, guid: 49860442517a5b741857712f6f2bb846,
         type: 3}
