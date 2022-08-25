@@ -89,7 +89,7 @@ PrefabInstance:
     - target: {fileID: 5610563807075539857, guid: ea930192fc9dd684f852cd0679ddb01d,
         type: 3}
       propertyPath: m_Name
-      value: PlayerControiller
+      value: PlayerController
       objectReference: {fileID: 0}
     - target: {fileID: 5610563807075539858, guid: ea930192fc9dd684f852cd0679ddb01d,
         type: 3}
@@ -226,6 +226,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 5668858905173998111, guid: 5e707444405afb54b838de180bccbd11,
+        type: 3}
+      propertyPath: orthographic size
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e707444405afb54b838de180bccbd11, type: 3}
 --- !u!20 &3198707749175963398 stripped
@@ -310,7 +315,7 @@ PrefabInstance:
     - target: {fileID: 7834767737386786611, guid: b77bd57b6bf4efb468146f09aa9eaeb1,
         type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.7777774
+      value: 1.7772336
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b77bd57b6bf4efb468146f09aa9eaeb1, type: 3}

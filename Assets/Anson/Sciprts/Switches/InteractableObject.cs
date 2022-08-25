@@ -81,7 +81,7 @@ public abstract class InteractableObject : MonoBehaviour
         onOffEvent.Invoke();
         foreach (ConsequenceObject consequenceObject in onOnConsequence)
         {
-            consequenceObject.OnOff();
+            consequenceObject?.OnOff();
         }
 
         interactState = InteractState.Off;
@@ -97,7 +97,7 @@ public abstract class InteractableObject : MonoBehaviour
         onOnEvent.Invoke();
         foreach (ConsequenceObject consequenceObject in onOnConsequence)
         {
-            consequenceObject.OnOn();
+            consequenceObject?.OnOn();
         }
 
         interactState = InteractState.On;

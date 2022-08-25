@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5610563807075539858}
   - component: {fileID: 5610563807075539564}
   m_Layer: 0
-  m_Name: PlayerControiller
+  m_Name: PlayerController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,10 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterManager: {fileID: 0}
-  characterControllers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  characterControllers: []
   characterHighlights: []
   currentCharacter: {fileID: 0}
   characterIndex: 0

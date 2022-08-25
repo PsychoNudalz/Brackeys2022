@@ -36,6 +36,10 @@ public class PlayerController : MonoBehaviour
     [ContextMenu("Initialise Components")]
     public void InitialiseComponents()
     {
+        if (!characterManager)
+        {
+            characterManager = CharacterManager.current;
+        }
         if (!playerInputController)
         {
             playerInputController = GetComponentInChildren<PlayerInputController>();
@@ -43,11 +47,12 @@ public class PlayerController : MonoBehaviour
 
         playerInputController.PlayerController = this;
 
-        if (characterControllers.Length > 0)
+        if (characterControllers.Length == 0)
         {
-            SetCharacter(characterControllers[characterIndex]);
+            characterControllers = characterManager.CharacterControllers;
         }
 
+        SetCharacter(characterControllers[characterIndex]);
         // if (characterControllers.Length == 0)
         // {
         //     List<CharacterMovementController> characterControllers = new List<CharacterMovementController>();
@@ -71,6 +76,7 @@ public class PlayerController : MonoBehaviour
             Destroy(current.gameObject);
             current = this;
         }
+        InitialiseComponents();
     }
 
     private void Start()

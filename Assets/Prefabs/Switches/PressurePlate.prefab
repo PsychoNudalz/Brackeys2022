@@ -252,13 +252,13 @@ MonoBehaviour:
   - Character
   - Destructible
   - Object
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 16448
   obstructedColliders: []
   useCastCheck: 1
   centre: {x: 0, y: 0, z: 0}
   size: {x: 2, y: 2, z: 2}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 16448
   checkTime: 1
 --- !u!1 &368733723444261442
 GameObject:
@@ -714,8 +714,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onOnConsequence:
-  - {fileID: 0}
+  onOnConsequence: []
   onOffEvent:
     m_PersistentCalls:
       m_Calls:
@@ -743,8 +742,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  onOffConsequence:
-  - {fileID: 0}
+  onOffConsequence: []
   interactState: 0
   OnSword_Lock:
     m_PersistentCalls:

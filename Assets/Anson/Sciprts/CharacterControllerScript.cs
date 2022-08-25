@@ -31,6 +31,9 @@ public class CharacterControllerScript : MonoBehaviour
     [SerializeField]
     private CharacterEnum characterEnum;
 
+    [SerializeField]
+    private bool isInControl;
+
     [Space(10)]
     [Header("States")]
     [SerializeField]
@@ -136,6 +139,8 @@ public class CharacterControllerScript : MonoBehaviour
             characterMovementController.Move(new Vector3());
             characterEffectsController.SetModelSelectHighlight(false);
         }
+
+        isInControl = b;
     }
 
     public void KillCharacter() //disables movement, switches to the next character (if possible) and disabled switching back
@@ -146,9 +151,14 @@ public class CharacterControllerScript : MonoBehaviour
         }
         print(name +" is dead");
         aliveEnum = AliveEnum.Dead;
-        SetActive(false);
-        PlayerController.current.NextCharacter();
+        if (isInControl)
+        {
+            PlayerController.current.NextCharacter();
+        }
+
         GameManager.current.checkForGameOver();
+        SetActive(false);
+
         // play death animation
         //
         // characterMovementController.enabled = false;
