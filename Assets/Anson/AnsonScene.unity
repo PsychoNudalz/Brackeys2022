@@ -185,6 +185,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   consequenceState: 1
+  renderers: []
 --- !u!65 &53154654
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -605,6 +606,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   consequenceState: 1
+  renderers: []
 --- !u!65 &349765043
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1513,6 +1515,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   consequenceState: 0
+  renderers:
+  - {fileID: 1135563611}
 --- !u!114 &905619551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2496,6 +2500,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   consequenceState: 0
+  renderers: []
 --- !u!114 &1285997631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2936,7 +2941,7 @@ PrefabInstance:
     - target: {fileID: 5416651227195773315, guid: f68c9ba791cf74e49bc8e540c31553c0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.37
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 5416651227195773315, guid: f68c9ba791cf74e49bc8e540c31553c0,
         type: 3}
@@ -2946,7 +2951,7 @@ PrefabInstance:
     - target: {fileID: 5416651227195773315, guid: f68c9ba791cf74e49bc8e540c31553c0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.38
+      value: -2.31
       objectReference: {fileID: 0}
     - target: {fileID: 5416651227195773315, guid: f68c9ba791cf74e49bc8e540c31553c0,
         type: 3}
@@ -3047,6 +3052,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   consequenceState: 0
+  renderers: []
 --- !u!114 &1623537390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3411,6 +3417,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   consequenceState: 0
+  renderers: []
 --- !u!114 &1744254702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3964,6 +3971,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   consequenceState: 1
+  renderers: []
 --- !u!1 &1992457794 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3661985432938654458, guid: 92b37e313b1213940be258438254fbee,

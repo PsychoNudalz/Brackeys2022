@@ -9802,7 +9802,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: d2e2e61b5c99fc94f9753ab117ddbef1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10100,9 +10100,5 @@ MonoBehaviour:
   shoot_los_layerMask:
     serializedVersion: 2
     m_Bits: 17216
-  move_range: 3
-  move_los_tagList: []
-  move_los_layerMask:
-    serializedVersion: 2
-    m_Bits: 0
+  movePoint: {fileID: 0}
   switchInteractable: {fileID: 0}

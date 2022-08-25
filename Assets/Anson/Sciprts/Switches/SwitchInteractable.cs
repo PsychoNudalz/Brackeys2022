@@ -39,6 +39,7 @@ public class SwitchInteractable : InteractableObject
 
     private void Start()
     {
+        FindRenderersInConsequences();
         SetColour();
     }
 
@@ -60,11 +61,25 @@ public class SwitchInteractable : InteractableObject
 
 
     [ContextMenu("Auto Find renderers in consequence")]
-    public void FindRenderersInConsequences()
+    public void AutoFindRenderersInConsequences()
     {
         foreach (ConsequenceObject consequenceObject in onOnConsequence.Concat(onOffConsequence).ToArray())
         {
             foreach (Renderer renderer in consequenceObject.GetComponentsInChildren<Renderer>())
+            {
+                if (!systemRenderers.Contains(renderer))
+                {
+                    systemRenderers.Add(renderer);
+                }
+            }
+        }
+    }
+    [ContextMenu("Find renderers in consequence")]
+    public void FindRenderersInConsequences()
+    {
+        foreach (ConsequenceObject consequenceObject in onOnConsequence.Concat(onOffConsequence).ToArray())
+        {
+            foreach (Renderer renderer in consequenceObject.Renderers)
             {
                 if (!systemRenderers.Contains(renderer))
                 {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Search;
 
 public class ConsequenceObject : MonoBehaviour
 {
@@ -22,6 +23,12 @@ public class ConsequenceObject : MonoBehaviour
 
     [SerializeField]
     private ConsequenceState consequenceState = ConsequenceState.Off;
+
+    [Header("Changeable materials")]
+    [SerializeField]
+    private Renderer[] renderers;
+
+    public Renderer[] Renderers => renderers;
 
     [ContextMenu("OnUse")]
     public virtual void OnUse()
