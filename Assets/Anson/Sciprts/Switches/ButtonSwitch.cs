@@ -20,12 +20,17 @@ public class ButtonSwitch : SwitchInteractable
     {
         FindRenderersInConsequences();
         SetColour();
+        SetTimeMaterial();
+    }
+
+    private void SetTimeMaterial()
+    {
         if (timerMaterial)
         {
-            timerMaterial.material.SetFloat("_Value",GetTimeFloat());
+            timerMaterial.material.SetFloat("_Value", GetTimeFloat());
         }
     }
-    
+
     private void Update()
     {
         if (interactState == InteractState.On)
@@ -36,10 +41,7 @@ public class ButtonSwitch : SwitchInteractable
                 OnOff();
             }
 
-            if (timerMaterial)
-            {
-                timerMaterial.material.SetFloat("_Value",GetTimeFloat());
-            }
+            SetTimeMaterial();
         }
     }
 
@@ -57,6 +59,8 @@ public class ButtonSwitch : SwitchInteractable
     public override void OnOn()
     {
         timer_Now = timer;
+        SetTimeMaterial();
+
         if (interactState == InteractState.Off)
         {
             base.OnOn();
