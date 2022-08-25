@@ -72,7 +72,7 @@ public class Move_Ability : Ability
     {
         if (target is MovePoint movePoint)
         {
-            if (movePoint.IsInRange)
+            if (movePoint.IsInRange||movePoint.CurrentObject.Equals(currentObject))
             {
                 currentObject.OnMove(movePoint);
                 currentObject = null;
@@ -94,7 +94,7 @@ public class Move_Ability : Ability
         {
             if (target is MovePoint movePoint)
             {
-                return movePoint.IsInRange;
+                return movePoint.IsInRange||currentObject.Equals(movePoint.CurrentObject);
             }
         }
 

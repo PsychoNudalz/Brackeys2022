@@ -31,6 +31,8 @@ public class MovePoint : MonoBehaviour
 
     public bool IsInRange => movePointState == MovePointEnum.InRange;
 
+    public MovableObject CurrentObject => currentObject;
+
     public void OnInRange_Enter()
     {
         if (movePointState == MovePointEnum.Empty)
