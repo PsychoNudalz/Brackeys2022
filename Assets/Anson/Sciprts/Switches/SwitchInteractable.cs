@@ -49,11 +49,14 @@ public class SwitchInteractable : InteractableObject
         Material systemMaterial;
         foreach (Renderer systemRenderer in systemRenderers)
         {
-            systemMaterial = systemRenderer.material;
-            systemMaterial.color = systemColour;
-            if (systemMaterial.HasColor(colourMaterialName))
+            if (systemRenderer)
             {
-                systemMaterial.SetColor(colourMaterialName,systemColour);
+                systemMaterial = systemRenderer.material;
+                systemMaterial.color = systemColour;
+                if (systemMaterial.HasColor(colourMaterialName))
+                {
+                    systemMaterial.SetColor(colourMaterialName,systemColour);
+                }
             }
         }
     }

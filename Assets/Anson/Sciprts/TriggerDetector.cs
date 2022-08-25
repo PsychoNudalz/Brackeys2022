@@ -72,6 +72,8 @@ public class TriggerDetector : MonoBehaviour
                 }
 
                 obstructedColliders = colliders;
+                isObstructed = obstructedColliders.Count > 0;
+
             }
         }
     }
