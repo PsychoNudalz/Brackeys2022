@@ -56,12 +56,16 @@ public class CharacterControllerScript : MonoBehaviour
     [SerializeField]
     private CharacterEffectsController characterEffectsController;
 
+    [SerializeField]
+    private CharacterShieldController characterShieldController;
 
     public CharacterMovementController CharacterMovementController => characterMovementController;
 
     public CharacterAbilityHandler CharacterAbilityHandler => characterAbilityHandler;
 
     public CharacterEffectsController CharacterEffectsController => characterEffectsController;
+
+    public CharacterShieldController CharacterShieldController => characterShieldController;
 
     public CharacterEnum CharacterEnum => characterEnum;
 
@@ -87,6 +91,11 @@ public class CharacterControllerScript : MonoBehaviour
         if (!characterAbilityHandler)
         {
             characterAbilityHandler = GetComponent<CharacterAbilityHandler>();
+        }
+
+        if (!characterShieldController)
+        {
+            characterShieldController = GetComponent<CharacterShieldController>();
         }
 
         if (!characterEffectsController)
@@ -139,5 +148,11 @@ public class CharacterControllerScript : MonoBehaviour
         // characterMovementController.enabled = false;
         // GetComponent<CharacterController>().enabled = false;
         characterMovementController.SetControlLock(true);
+    }
+
+    public void SetShield(bool b)
+    {
+        Debug.Log(name+" Shield: "+b);
+        characterShieldController.SetActive(b);
     }
 }

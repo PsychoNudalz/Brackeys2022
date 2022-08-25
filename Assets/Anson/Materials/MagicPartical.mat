@@ -21,6 +21,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AlphaMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
@@ -47,6 +51,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Alpha: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _CastShadows: 1
@@ -57,7 +62,9 @@ Material:
     - _ReceiveShadows: 1
     - _SrcBlend: 1
     - _Surface: 0
+    - _TakeAlphaValue: 1
     - _Tiling: 128
+    - _UseAlphaMap: 0
     - _WorkflowMode: 0
     - _ZTest: 4
     - _ZWrite: 1

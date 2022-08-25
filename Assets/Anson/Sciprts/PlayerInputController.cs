@@ -67,7 +67,7 @@ public class PlayerInputController : MonoBehaviour
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         RaycastHit raycastHit = RaycastFromCameraToMouse();
 
@@ -151,17 +151,23 @@ public class PlayerInputController : MonoBehaviour
 
     public void OnMouseClick(InputValue context)
     {
+       StartCoroutine(SelectObjectCoroutine());
+    }
+
+    private IEnumerator SelectObjectCoroutine()
+    {
         if (selectObject)
         {
             selectObject.OnSelect(false);
         }
+
         if (hoverObject)
         {
             hoverObject.OnSelect(true);
         }
 
         selectObject = hoverObject;
-        
+        yield return new WaitForEndOfFrame();
     }
 
     public void OnClimb()

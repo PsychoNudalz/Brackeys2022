@@ -77,7 +77,14 @@ public class PlayerUIInteractOptionController : MonoBehaviour
 
     public void ActivateWheel(Vector3 pos, List<AbilityEnum> abilityEnums, AbilityInteraction abilityInteraction)
     {
-        print("Activating interaction Wheel");
+
+        if (isActive)
+        {
+            StartCoroutine(DelayPlayerClick());
+            return;
+            
+        }
+        // print("Activating interaction Wheel");
         gameObject.SetActive(true);
         SetWheelActive(true, pos);
         this.abilityInteraction = abilityInteraction;
@@ -85,7 +92,7 @@ public class PlayerUIInteractOptionController : MonoBehaviour
         {
             if (abilityEnums.Contains(button.AbilityEnum))
             {
-                print("Showing: " + button.AbilityEnum);
+                // print("Showing: " + button.AbilityEnum);
                 button.SetActive(true, abilityInteraction);
             }
             else
@@ -93,6 +100,12 @@ public class PlayerUIInteractOptionController : MonoBehaviour
                 button.SetActive(false, abilityInteraction);
             }
         }
+    }
+
+    IEnumerator DelayPlayerClick()
+    {
+        yield return new WaitForEndOfFrame();
+        SetWheelActive(false);
     }
 
     public void UseButton(AbilityEnum abilityEnum)

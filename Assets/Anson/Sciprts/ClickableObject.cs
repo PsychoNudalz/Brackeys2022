@@ -72,10 +72,10 @@ public class ClickableObject : MonoBehaviour
         }
         else
         {
-            if (abilityInteraction)
-            {
-                HideInteractionWheel();
-            }
+            // if (abilityInteraction)
+            // {
+            //     HideInteractionWheel();
+            // }
             OnHover(false);
             highlightEffect.glow = 0;
         }

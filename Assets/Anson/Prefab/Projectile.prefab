@@ -142,8 +142,8 @@ MonoBehaviour:
       m_Calls: []
   layerMask:
     serializedVersion: 2
-    m_Bits: 17984
-  castSize: 1.2
+    m_Bits: 542272
+  castSize: 0.6
   onImpactEvent:
     m_PersistentCalls:
       m_Calls:

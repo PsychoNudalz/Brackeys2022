@@ -131,5 +131,6 @@ public class PlayerInteractOptionButtonController : MonoBehaviour
             return;
         }
         playerUIInteractOptionController.UseButton(abilityEnum);
+        playerUIInteractOptionController.SetWheelActive(false);
     }
 }
