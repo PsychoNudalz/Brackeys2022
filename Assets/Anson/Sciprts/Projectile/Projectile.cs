@@ -17,6 +17,15 @@ public class Projectile : MonoBehaviour
 
     private float spawnTime;
 
+    [Header("Deflect")]
+    [SerializeField]
+    private string deflectTag = "Deflect";
+    [SerializeField]
+    private LayerMask deflectLayerMask;
+
+    [SerializeField]
+    private UnityEvent onDeflectEvent;
+
     [Header("On Impact")]
     [SerializeField]
     private LayerMask layerMask;
@@ -27,7 +36,15 @@ public class Projectile : MonoBehaviour
     [SerializeField]
     private UnityEvent onImpactEvent;
 
+    [SerializeField]
+    private Collider ownCollider;
+
     private bool exploded = false;
+
+    private void Awake()
+    {
+        
+    }
 
     private void Start()
     {
@@ -52,12 +69,27 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        OnImpact();
+        if (!collision.collider.Equals(ownCollider)&&!collision.collider.tag.Equals(deflectTag))
+        {
+            OnImpact();
+        }
+        else
+        {
+            DeflectProjectile(collision.collider);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        OnImpact();
+        if (!other.Equals(ownCollider)&&!other.tag.Equals(deflectTag))
+        {
+            OnImpact();
+        }
+        else
+        {
+            DeflectProjectile(other);
+
+        }
     }
 
     public void OnImpact()
@@ -107,5 +139,19 @@ public class Projectile : MonoBehaviour
         transform.rotation = Quaternion.identity;
         transform.forward = dir;
         direction = dir.normalized;
+    }
+
+    public void DeflectProjectile(Collider collider)
+    {
+        Vector3 dir = (collider.transform.position - transform.position).normalized;
+        if(Physics.Raycast(transform.position,dir,out var raycast,castSize*2,deflectLayerMask))
+        {
+            onDeflectEvent.Invoke();
+            Launch(Vector3.Reflect(direction,raycast.normal));
+            
+        }else
+        {
+            Debug.LogError("deflection failed error");
+        }
     }
 }

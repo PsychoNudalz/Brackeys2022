@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 534455807304953767}
   m_Layer: 18
   m_Name: Projectile
-  m_TagString: Projectiles
+  m_TagString: Deflection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,6 +133,13 @@ MonoBehaviour:
   speed: 2.5
   direction: {x: 0, y: 0, z: 1}
   lifetime: 20
+  deflectTag: Deflection
+  deflectLayerMask:
+    serializedVersion: 2
+    m_Bits: 524288
+  onDeflectEvent:
+    m_PersistentCalls:
+      m_Calls: []
   layerMask:
     serializedVersion: 2
     m_Bits: 17984
@@ -176,6 +183,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ownCollider: {fileID: 0}
 --- !u!135 &534455807304953767
 SphereCollider:
   m_ObjectHideFlags: 0
