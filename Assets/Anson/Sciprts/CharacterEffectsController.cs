@@ -9,6 +9,7 @@ public class CharacterEffectsController : MonoBehaviour
     [Header("Animation")]
     [SerializeField]
     private Animator avatar;
+    
     [Space(10)]
     [Header("Highlight")]
     [SerializeField]
@@ -47,6 +48,22 @@ public class CharacterEffectsController : MonoBehaviour
     public void Climb()
     {
         avatar.SetTrigger("Climb");
+    }
+
+    public void Death()
+    {
+        avatar.SetTrigger("Death");
+    }
+
+    public void Ability_Main()
+    {
+        avatar.SetTrigger("Ability_Main");
+    }
+
+    public void Ability_Team()
+    {
+        avatar.SetTrigger("Ability_Team");
+
     }
 
     public void SetModelSelectHighlight(bool b)

@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterState: 1
-  speed: 3
+  speed: 4
   gravity: 6
   groundCheckDistance: 0.6
   groundLayer:
@@ -755,6 +755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterControllerScript: {fileID: 6157155329068032651}
+  characterEffectsController: {fileID: 5486511849180655649}
   ability_main: {fileID: 0}
   ability_team: {fileID: 0}
 --- !u!114 &4689168540862870570

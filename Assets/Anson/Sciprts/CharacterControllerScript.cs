@@ -160,11 +160,9 @@ public class CharacterControllerScript : MonoBehaviour
 
         GameManager.current.checkForGameOver();
         SetActive(false);
+        
+        characterEffectsController.Death();
 
-        // play death animation
-        //
-        // characterMovementController.enabled = false;
-        // GetComponent<CharacterController>().enabled = false;
         characterMovementController.SetControlLock(true);
     }
 

@@ -6,6 +6,9 @@ public class CharacterAbilityHandler : MonoBehaviour
 {
     [SerializeField]
     private CharacterControllerScript characterControllerScript;
+
+    [SerializeField]
+    private CharacterEffectsController characterEffectsController;
     
     [Header("Abilities")]
     [SerializeField]
@@ -39,6 +42,7 @@ public class CharacterAbilityHandler : MonoBehaviour
         {
             return ;
         }
+        characterEffectsController?.Ability_Main();
         ability_main.OnUse(target);
     }
 
@@ -57,6 +61,7 @@ public class CharacterAbilityHandler : MonoBehaviour
         {
             return;
         }
+        characterEffectsController?.Ability_Team();
         ability_team.OnUse(target);
     }
 }

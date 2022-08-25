@@ -53,6 +53,7 @@ Material:
     m_Floats:
     - Vector1_8606F96E: 0
     - _Alpha: 1
+    - _NoiseValue: 200
     - _OutlineDepthSensitivity: 1
     - _OutlineNormalsSensitivity: 1
     - _OutlineThickness: 1
