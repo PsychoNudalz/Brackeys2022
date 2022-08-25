@@ -14,6 +14,10 @@ public class MovePointAbilityInteraction : AbilityInteraction
 
     public override bool CanMove()
     {
+        if (CharacterManager.GetMage().Alive == AliveEnum.Dead)
+        {
+            return false;
+        }
         return CharacterManager.GetMage().CharacterAbilityHandler.CanUseAbility_Main(movePoint);
     }
 

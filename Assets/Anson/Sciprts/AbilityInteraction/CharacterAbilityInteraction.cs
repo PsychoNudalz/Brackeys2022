@@ -30,7 +30,11 @@ public class CharacterAbilityInteraction : AbilityInteraction
 
     public override bool CanShield()
     {
-        return !characterControllerScript.Equals(CharacterManager.GetMage()) && IsLineOfSight(CharacterEnum.Mage,
+        if (CharacterManager.GetMage().Alive == AliveEnum.Dead)
+        {
+            return false;
+        }
+        return (CharacterManager.GetMage().Alive == AliveEnum.Alive)&&!characterControllerScript.Equals(CharacterManager.GetMage()) && IsLineOfSight(CharacterEnum.Mage,
             shield_los_range, shield_los_tagList, shield_los_layerMask, out var raycastHit);
     }
 

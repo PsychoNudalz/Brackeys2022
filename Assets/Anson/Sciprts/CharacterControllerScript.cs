@@ -78,6 +78,8 @@ public class CharacterControllerScript : MonoBehaviour
 
     public Vector3 CentreOffset => centreOffset;
 
+    public bool IsShielded => characterShieldController.IsActive;
+
 
     private void Awake()
     {

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CharacterAbilityHandler : MonoBehaviour
 {
+    [SerializeField]
+    private CharacterControllerScript characterControllerScript;
+    
     [Header("Abilities")]
     [SerializeField]
     private Ability ability_main;
@@ -15,9 +18,15 @@ public class CharacterAbilityHandler : MonoBehaviour
 
     public Ability AbilityTeam => ability_team;
 
+    public CharacterControllerScript CharacterControllerScript
+    {
+        get => characterControllerScript;
+        set => characterControllerScript = value;
+    }
+
     public bool CanUseAbility_Main(object target = null)
     {
-        if (!ability_main)
+        if (!ability_main||characterControllerScript.Alive == AliveEnum.Dead)
         {
             return false;
         }
@@ -26,7 +35,7 @@ public class CharacterAbilityHandler : MonoBehaviour
 
     public void UseAbility_Main(object target = null)
     {
-        if (!ability_main)
+        if (!ability_main||characterControllerScript.Alive == AliveEnum.Dead)
         {
             return ;
         }
@@ -35,7 +44,7 @@ public class CharacterAbilityHandler : MonoBehaviour
 
     public bool CanUseAbility_Team(object target = null)
     {
-        if (!ability_team)
+        if (!ability_team||characterControllerScript.Alive == AliveEnum.Dead)
         {
             return false;
         }
@@ -44,7 +53,7 @@ public class CharacterAbilityHandler : MonoBehaviour
 
     public void UseAbility_Team(object target = null)
     {
-        if (!ability_team)
+        if (!ability_team||characterControllerScript.Alive == AliveEnum.Dead)
         {
             return;
         }

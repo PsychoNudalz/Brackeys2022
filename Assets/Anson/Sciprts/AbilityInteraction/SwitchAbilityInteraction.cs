@@ -54,7 +54,10 @@ public class SwitchAbilityInteraction : AbilityInteraction
 
     public override bool CanSwordLock()
     {
-
+        if (CharacterManager.GetSoldier().Alive == AliveEnum.Dead)
+        {
+            return false;
+        }
         if (CharacterManager.GetSoldier().CharacterAbilityHandler.AbilityTeam is Lock_Ability ability)
         {
             if (ability.CurrentSwitch)
@@ -79,6 +82,10 @@ public class SwitchAbilityInteraction : AbilityInteraction
 
     public override bool CanShoot()
     {
+        if (CharacterManager.GetArcher().Alive == AliveEnum.Dead)
+        {
+            return false;
+        }
         if (CharacterManager.GetArcher().CharacterAbilityHandler.AbilityMain is Shoot_Ability ability)
         {
             if (ability.CurrentSwitch)
@@ -108,6 +115,10 @@ public class SwitchAbilityInteraction : AbilityInteraction
 
     public override bool CanMove()
     {
+        if (CharacterManager.GetMage().Alive == AliveEnum.Dead)
+        {
+            return false;
+        }
         return CharacterManager.GetMage().CharacterAbilityHandler.CanUseAbility_Main(movePoint);
     }
 

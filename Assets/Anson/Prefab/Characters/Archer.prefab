@@ -81,7 +81,7 @@ MonoBehaviour:
   stopDistance: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 49920
+    m_Bits: 50944
   losOffset: {x: 0, y: 0, z: 0}
   range: 100
 --- !u!1 &2888121860948844839
@@ -605,6 +605,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 505121263191534318, guid: 9b859da5eee0c474e8319dce4b72e0ca,
+        type: 3}
+      propertyPath: rmsCount
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1091191642854799358, guid: 9b859da5eee0c474e8319dce4b72e0ca,
         type: 3}
       propertyPath: rmsCount
@@ -614,6 +619,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847505128263488765, guid: 9b859da5eee0c474e8319dce4b72e0ca,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3867196311551554356, guid: 9b859da5eee0c474e8319dce4b72e0ca,
         type: 3}

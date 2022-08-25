@@ -122,7 +122,7 @@ public class Projectile : MonoBehaviour
                 {
                     CharacterControllerScript character =
                         raycastHit.collider.GetComponentInParent<CharacterControllerScript>();
-                    if (character)
+                    if (character&&!character.IsShielded)
                     {
                         character.KillCharacter();
                     }

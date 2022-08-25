@@ -174,13 +174,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isObstructed: 0
   tagList: []
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
   obstructedColliders: []
   useCastCheck: 0
   centre: {x: 0, y: 0, z: 0}
   size: {x: 0, y: 0, z: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
   checkTime: 1
   interactableObject: {fileID: 0}
   interactableObjectCollider: {fileID: 0}
@@ -542,6 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterEnum: 0
+  isInControl: 0
   aliveEnum: 0
   suppressionEnum: 0
   centreOffset: {x: 0, y: 1, z: 0}
@@ -718,7 +719,7 @@ MonoBehaviour:
   seeThroughBorderOnly: 0
   seeThroughBorderWidth: 0.45
   seeThroughOrdered: 0
-  rmsCount: 2
+  rmsCount: 1
   hitFxInitialIntensity: 0
   hitFxMode: 0
   hitFxFadeOutDuration: 0.25
@@ -753,6 +754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d7643bcb42e184ba58a8a7b243d954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterControllerScript: {fileID: 6157155329068032651}
   ability_main: {fileID: 0}
   ability_team: {fileID: 0}
 --- !u!114 &4689168540862870570
