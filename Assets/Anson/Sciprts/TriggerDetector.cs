@@ -11,9 +11,6 @@ public class TriggerDetector : MonoBehaviour
     [SerializeField]
     private List<string> tagList;
 
-    [SerializeField]
-    private LayerMask layerMask;
-
 
     [SerializeField]
     private List<Collider> obstructedColliders = new List<Collider>();
@@ -27,6 +24,9 @@ public class TriggerDetector : MonoBehaviour
 
     [SerializeField]
     private Vector3 size;
+
+    [SerializeField]
+    private LayerMask layerMask;
 
     [SerializeField]
     private float checkTime = 1f;

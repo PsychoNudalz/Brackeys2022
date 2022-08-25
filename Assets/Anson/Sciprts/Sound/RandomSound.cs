@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = Unity.Mathematics.Random;
 /// <summary>
@@ -13,8 +14,13 @@ public class RandomSound : Sound
     [SerializeField]
     private Sound[] sounds;
 
+    [SerializeField]
+    private AudioClip[] audioClips;
+
     private int seed = 0;
 
+    
+    
     protected override void StartBehaviour()
     {
         //base.StartBehaviour();
@@ -30,6 +36,16 @@ public class RandomSound : Sound
         if (sounds.Length == 0)
         {
             SetAllChildrenSounds();
+        }
+        
+    }
+
+    [ContextMenu("Bind Audio Clip to source")]
+    public void BindAudioClipToSource()
+    {
+        for (int i = 0; i < Mathf.Min(audioClips.Length,sounds.Length); i++)
+        {
+            sounds[i].Source.clip = audioClips[i];
         }
     }
 
