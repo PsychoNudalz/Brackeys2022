@@ -12,7 +12,20 @@ public class ButtonSwitch : SwitchInteractable
     [SerializeField]
     private float timer_Now = 0;
 
+    [SerializeField]
+    private Renderer timerMaterial;
 
+
+    private void Start()
+    {
+        FindRenderersInConsequences();
+        SetColour();
+        if (timerMaterial)
+        {
+            timerMaterial.material.SetFloat("_Value",GetTimeFloat());
+        }
+    }
+    
     private void Update()
     {
         if (interactState == InteractState.On)
@@ -21,6 +34,11 @@ public class ButtonSwitch : SwitchInteractable
             if (timer_Now < 0)
             {
                 OnOff();
+            }
+
+            if (timerMaterial)
+            {
+                timerMaterial.material.SetFloat("_Value",GetTimeFloat());
             }
         }
     }

@@ -3,14 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.VFX;
+
 /// <summary>
 /// play effects mostly for calling unity events inside an animation
 /// </summary>
 public class EffectPlayer : MonoBehaviour
 {
-    [SerializeField] ParticleSystem[] particleSystems;
-    [SerializeField] VisualEffect[] visualEffects;
-    [SerializeField] UnityEvent[] unityEvents;
+    [SerializeField]
+    ParticleSystem[] particleSystems;
+
+    [SerializeField]
+    VisualEffect[] visualEffects;
+
+    [SerializeField]
+    UnityEvent[] unityEvents;
+
+    [SerializeField]
+    [TextArea(5,20)]
+    private string Notes;
 
     public void PlayPS(int index)
     {

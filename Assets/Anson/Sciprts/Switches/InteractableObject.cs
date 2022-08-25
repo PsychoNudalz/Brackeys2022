@@ -16,24 +16,28 @@ public abstract class InteractableObject : MonoBehaviour
     }
 
     [Header("Base Interaction")]
-    [SerializeField]
-    protected UnityEvent onOnEvent;
-
+    [Header("--------On On--------")]
     [SerializeField]
     protected ConsequenceObject[] onOnConsequence;
 
-    [Space(10)]
     [SerializeField]
-    protected UnityEvent onOffEvent;
+    protected UnityEvent onOnEvent;
 
+    [Header("--------On Off--------")]
+    [Space(10)]
     [SerializeField]
     protected ConsequenceObject[] onOffConsequence;
 
+    [SerializeField]
+    protected UnityEvent onOffEvent;
+
+    [Space(10)]
     [SerializeField]
     protected InteractState interactState = InteractState.Off;
 
     protected InteractState originalInteractState = InteractState.Off;
 
+    [Space(20)]
     [Header("Locks")]
     [SerializeField]
     private UnityEvent OnSword_Lock;

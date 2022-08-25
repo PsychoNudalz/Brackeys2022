@@ -894,6 +894,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1530782665020804959}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1873224116839461390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5eaa313737cb64aa18fb8e8bd0bc8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1530782665020804959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5611028098653623771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873224116839461390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87d3620ffef86954391083e75d551c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystems: []
+  visualEffects: []
+  unityEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+  - m_PersistentCalls:
+      m_Calls: []
+  - m_PersistentCalls:
+      m_Calls: []
+  - m_PersistentCalls:
+      m_Calls: []
+  - m_PersistentCalls:
+      m_Calls: []
+  - m_PersistentCalls:
+      m_Calls: []
+  Notes: 'Unity Events
+
+    0- Footsteps
+
+    1- Interact
+
+    2- Climb
+
+    3- Death
+
+    4-
+    AbilityMain
+
+    5- AbilityTeam'
 --- !u!95 &4923836342169023182 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 5a5eaa313737cb64aa18fb8e8bd0bc8c,
