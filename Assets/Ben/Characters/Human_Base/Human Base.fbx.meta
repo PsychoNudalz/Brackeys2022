@@ -1,29 +1,8 @@
 fileFormatVersion: 2
-guid: 4c0232bd0232f74438f52a68a1a93103
+guid: 94a6c0edd2366be4a86094b3c3addee7
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable:
-  - first:
-      74: -4226405839685905649
-    second: Armature|Soldier_APose
-  - first:
-      74: 1847389513589673285
-    second: Armature|Soldier_Blink
-  - first:
-      74: 2385747505689835637
-    second: Pupils|Soldier_Blink
-  - first:
-      74: -1431225571419644569
-    second: Sword|Soldier_Blink
-  - first:
-      74: -3102363303398738059
-    second: Eyes|Soldier_Blink
-  - first:
-      74: 162707934329451482
-    second: Body|Soldier_Blink
-  - first:
-      74: -1200493190240026290
-    second: Dagger|Soldier_Blink
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
