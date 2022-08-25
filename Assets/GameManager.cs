@@ -76,6 +76,14 @@ public class GameManager : MonoBehaviour
             StartCoroutine(resetLevel());
     }
 
+    public void loadNextLevel()
+    {
+        if (SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        else
+            Debug.Log("that was the final level");
+    }
+
     public IEnumerator resetLevel()
     {
         yield return new WaitForSeconds(2f);

@@ -18,11 +18,12 @@ public class DamageDetector : MonoBehaviour
     {
         if (other.tag == "DamageBox")
             killCharacter();
+        if (other.tag == "Escape")
+            gm.loadNextLevel();
     }
 
     private void killCharacter()
     {
         charControl.KillCharacter();
-
     }
 }

@@ -15,6 +15,7 @@ TagManager:
   - GameManager
   - Object
   - Deflection
+  - Escape
   layers:
   - Default
   - TransparentFX
