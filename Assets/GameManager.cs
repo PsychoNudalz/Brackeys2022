@@ -10,16 +10,15 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject mage;
     [SerializeField] private GameObject archer;
+    [SerializeField] private CanvasGroup canvas;
 
-    private int characterAmount;
+    public int characterAmount;
     public int characterDeaths;
-    private CanvasGroup canvas;
 
     public static GameManager current;
 
     private void Awake()
     {
-        canvas = GetComponentInChildren<CanvasGroup>();
         if (!current)
         {
             current = this;
@@ -64,7 +63,7 @@ public class GameManager : MonoBehaviour
         switch (scene.buildIndex)
         {
             case 1:
-                startLevel(true, true, 3);
+                startLevel(false, false, 1);
                 break;
         }
     }
