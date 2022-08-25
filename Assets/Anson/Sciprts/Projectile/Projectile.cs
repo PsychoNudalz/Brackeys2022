@@ -20,6 +20,7 @@ public class Projectile : MonoBehaviour
     [Header("Deflect")]
     [SerializeField]
     private string deflectTag = "Deflect";
+
     [SerializeField]
     private LayerMask deflectLayerMask;
 
@@ -43,7 +44,6 @@ public class Projectile : MonoBehaviour
 
     private void Awake()
     {
-        
     }
 
     private void Start()
@@ -69,26 +69,27 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!collision.collider.Equals(ownCollider)&&!collision.collider.tag.Equals(deflectTag))
-        {
-            OnImpact();
-        }
-        else
+        if (collision.collider.tag.Equals(deflectTag))
         {
             DeflectProjectile(collision.collider);
+        }
+
+        else if (!collision.collider.Equals(ownCollider))
+        {
+            OnImpact();
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.Equals(ownCollider)&&!other.tag.Equals(deflectTag))
-        {
-            OnImpact();
-        }
-        else
+        if (other.tag.Equals(deflectTag))
         {
             DeflectProjectile(other);
+        }
 
+        else if (!other.Equals(ownCollider))
+        {
+            OnImpact();
         }
     }
 
@@ -119,7 +120,8 @@ public class Projectile : MonoBehaviour
 
                 else
                 {
-                    CharacterControllerScript character = raycastHit.collider.GetComponentInParent<CharacterControllerScript>();
+                    CharacterControllerScript character =
+                        raycastHit.collider.GetComponentInParent<CharacterControllerScript>();
                     if (character)
                     {
                         character.killCharacter();
@@ -144,12 +146,12 @@ public class Projectile : MonoBehaviour
     public void DeflectProjectile(Collider collider)
     {
         Vector3 dir = (collider.transform.position - transform.position).normalized;
-        if(Physics.Raycast(transform.position,dir,out var raycast,castSize*2,deflectLayerMask))
+        if (Physics.Raycast(transform.position, dir, out var raycast, castSize * 2, deflectLayerMask))
         {
             onDeflectEvent.Invoke();
-            Launch(Vector3.Reflect(direction,raycast.normal));
-            
-        }else
+            Launch(Vector3.Reflect(direction, raycast.normal));
+        }
+        else
         {
             Debug.LogError("deflection failed error");
         }
