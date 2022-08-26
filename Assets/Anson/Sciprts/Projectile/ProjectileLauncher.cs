@@ -6,7 +6,6 @@ using UnityEngine.Events;
 
 public class ProjectileLauncher : MonoBehaviour
 {
-
     [SerializeField]
     private GameObject projectileGO;
 
@@ -19,6 +18,7 @@ public class ProjectileLauncher : MonoBehaviour
     [SerializeField]
     private float shootTime = 1;
 
+    [SerializeField]
     private float lastShotTime = 0;
 
     [SerializeField]
@@ -34,7 +34,7 @@ public class ProjectileLauncher : MonoBehaviour
 
     private void Update()
     {
-        if (isActive&&shootTime!=0)
+        if (isActive && shootTime != 0)
         {
             if (Time.time - lastShotTime > shootTime)
             {
@@ -46,7 +46,7 @@ public class ProjectileLauncher : MonoBehaviour
     public void OnShoot()
     {
         lastShotTime = Time.time;
-        projectile = Instantiate(projectileGO,launchPoint.position,launchPoint.rotation).GetComponent<Projectile>();
+        projectile = Instantiate(projectileGO, launchPoint.position, launchPoint.rotation).GetComponent<Projectile>();
         projectile.Launch(launchPoint.forward);
         onShootEvent.Invoke();
     }

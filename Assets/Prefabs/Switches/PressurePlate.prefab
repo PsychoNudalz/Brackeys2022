@@ -786,7 +786,7 @@ MonoBehaviour:
       m_Calls: []
   systemColour: {r: 0, g: 0, b: 1, a: 1}
   systemRenderers:
-  - {fileID: 0}
+  - {fileID: 368733723444261500}
   showDebug: 1
   triggerZone: {fileID: 368733723076836818}
 --- !u!114 &368733724181261991

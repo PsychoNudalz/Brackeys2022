@@ -44,7 +44,7 @@ public class MovePoint : MonoBehaviour
 
     public void OnInRange_Exit()
     {
-        if (movePointState == MovePointEnum.InRange)
+        if (movePointState is MovePointEnum.InRange or MovePointEnum.Occupied)
         {
             inRange_Exit.Invoke();
             if (!currentObject)

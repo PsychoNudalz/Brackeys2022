@@ -70,6 +70,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   abilityStateEnum: 0
+  orientationLockTime: 1
+  abilityEffect: {fileID: 0}
+  characterMovementController: {fileID: 0}
   characterCollider: {fileID: 3759466470562296229}
   currentObject: {fileID: 0}
   select_range: 3
@@ -79,7 +82,7 @@ MonoBehaviour:
   select_los_layerMask:
     serializedVersion: 2
     m_Bits: 18240
-  move_range: 10
+  move_range: 15
   move_layerMask:
     serializedVersion: 2
     m_Bits: 131072
@@ -157,6 +160,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   abilityStateEnum: 0
+  orientationLockTime: 1
+  abilityEffect: {fileID: 0}
+  characterMovementController: {fileID: 0}
   currentCharacter: {fileID: 3759466470562296228}
 --- !u!1001 &800642969557235148
 PrefabInstance:

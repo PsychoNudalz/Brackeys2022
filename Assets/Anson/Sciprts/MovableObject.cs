@@ -96,4 +96,12 @@ public class MovableObject : MonoBehaviour
         moveState = MoveStateEnum.None;
 
     }
+
+    public void ClearMovePoint()
+    {
+        if (currentMovePoint)
+        {
+            currentMovePoint.OnMove_Exit();
+        }
+    }
 }

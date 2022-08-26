@@ -97,7 +97,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   consequenceState: 0
-  renderers: []
+  renderers:
+  - {fileID: 4834799081939207028}
 --- !u!1 &4834799081939207027
 GameObject:
   m_ObjectHideFlags: 0

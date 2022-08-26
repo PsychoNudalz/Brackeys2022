@@ -122,12 +122,12 @@ public class Move_Ability : Ability
         {
             if (hit.collider.Equals(characterCollider))
             {
-                Debug.DrawRay(target, dir * range, Color.green, 5f);
+                Debug.DrawRay(target, dir * range, Color.green, Time.deltaTime*2f);
                 return true;
             }
         }
 
-        Debug.DrawRay(target, dir * range, Color.red, 5f);
+        Debug.DrawRay(target, dir * range, Color.red, Time.deltaTime*2f);
         return false;
     }
 
