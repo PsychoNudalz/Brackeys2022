@@ -36,7 +36,7 @@ public class PlayerInputController : MonoBehaviour
 
     [Header("Components")]
     [SerializeField]
-    private Camera mainCamera;
+    private Camera castCamera;
 
     private GameManager gm;
 
@@ -66,7 +66,11 @@ public class PlayerInputController : MonoBehaviour
 
     private void Awake()
     {
-        mainCamera = Camera.main;
+        if (!castCamera)
+        {
+            castCamera = Camera.main;
+        }
+
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
@@ -82,7 +86,7 @@ public class PlayerInputController : MonoBehaviour
         {
             // float targetAngle = Mathf.Atan2(moveDir.x, moveDir.y) * Mathf.Rad2Deg + mainCamera.eulerAngles.y;
             // float angle = Mathf.SmoothDamp(())
-            moveDir = Quaternion.Euler(0f, mainCamera.transform.eulerAngles.y, 0f) *
+            moveDir = Quaternion.Euler(0f, castCamera.transform.eulerAngles.y, 0f) *
                       new Vector3(moveDir.x, 0, moveDir.y);
         }
 
@@ -121,14 +125,14 @@ public class PlayerInputController : MonoBehaviour
     public RaycastHit RaycastFromCameraToMouse()
     {
         Ray ray;
-        if (mainCamera.orthographic)
+        if (castCamera.orthographic)
         {
-            ray = new Ray(mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()),
-                mainCamera.transform.forward);
+            ray = new Ray(castCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()),
+                castCamera.transform.forward);
         }
         else
         {
-            ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+            ray = castCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
             
             
         }
