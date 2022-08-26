@@ -131,6 +131,6 @@ public class PlayerInteractOptionButtonController : MonoBehaviour
             return;
         }
         playerUIInteractOptionController.UseButton(abilityEnum);
-        playerUIInteractOptionController.SetWheelActive(false);
+        playerUIInteractOptionController.SetWheelActive(false,new Vector3());
     }
 }

@@ -4900,7 +4900,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4412410900411226352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.28, y: 0.88, z: -2.72}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5127,6 +5127,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onUseConsequence: []
+  onUseEvent:
+    m_PersistentCalls:
+      m_Calls: []
   interactState: 0
   OnSword_Lock:
     m_PersistentCalls:
@@ -5210,7 +5214,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.6}
+  m_Size: {x: 1, y: 2, z: 0.6}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4412410900450317116
 GameObject:

@@ -22,7 +22,7 @@ public class SwitchInteractable : InteractableObject
     {
         if (showDebug)
         {
-            foreach (ConsequenceObject consequenceObject in onOnConsequence.Concat(onOffConsequence).ToArray())
+            foreach (ConsequenceObject consequenceObject in AllConsequenceObjects())
             {
                 Gizmos.color = systemColour;
                 try
@@ -37,10 +37,22 @@ public class SwitchInteractable : InteractableObject
         }
     }
 
+    private ConsequenceObject[] AllConsequenceObjects()
+    {
+        return onUseConsequence.Concat(onOnConsequence.Concat(onOffConsequence)).ToArray();
+    }
+
     private void Start()
     {
         FindRenderersInConsequences();
         SetColour();
+        if (interactState == InteractState.On)
+        {
+            OnOn();
+        }else if (interactState == InteractState.Off)
+        {
+            OnOff();
+        }
     }
 
     [ContextMenu("Set Colour")]
@@ -66,7 +78,7 @@ public class SwitchInteractable : InteractableObject
     [ContextMenu("Auto Find renderers in consequence")]
     public void AutoFindRenderersInConsequences()
     {
-        foreach (ConsequenceObject consequenceObject in onOnConsequence.Concat(onOffConsequence).ToArray())
+        foreach (ConsequenceObject consequenceObject in AllConsequenceObjects())
         {
             foreach (Renderer renderer in consequenceObject.GetComponentsInChildren<Renderer>())
             {
@@ -80,7 +92,7 @@ public class SwitchInteractable : InteractableObject
     [ContextMenu("Find renderers in consequence")]
     public void FindRenderersInConsequences()
     {
-        foreach (ConsequenceObject consequenceObject in onOnConsequence.Concat(onOffConsequence).ToArray())
+        foreach (ConsequenceObject consequenceObject in AllConsequenceObjects())
         {
             foreach (Renderer renderer in consequenceObject.Renderers)
             {

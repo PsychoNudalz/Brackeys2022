@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,6 +32,18 @@ public class ConsequenceObject : MonoBehaviour
     public Renderer[] Renderers => renderers;
 
     [ContextMenu("OnUse")]
+    private void Awake()
+    {
+        if (consequenceState == ConsequenceState.Off)
+        {
+            OnOff();
+        }
+        else if (consequenceState == ConsequenceState.On)
+        {
+            OnOn();
+        }
+    }
+
     public virtual void OnUse()
     {
         if (CanUse())

@@ -168,7 +168,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   consequenceState: 1
-  renderers: []
+  renderers:
+  - {fileID: 4971227459773692641}
+  - {fileID: 3112187849452541996}
 --- !u!1 &8314438185049865540
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,9 +484,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92b37e313b1213940be258438254fbee, type: 3}
+--- !u!23 &3112187849452541996 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -2859109400176981367, guid: 92b37e313b1213940be258438254fbee,
+    type: 3}
+  m_PrefabInstance: {fileID: 8314438185012646565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4489194773694252963 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3661985432938654458, guid: 92b37e313b1213940be258438254fbee,
+    type: 3}
+  m_PrefabInstance: {fileID: 8314438185012646565}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4971227459773692641 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -5215299815803115452, guid: 92b37e313b1213940be258438254fbee,
     type: 3}
   m_PrefabInstance: {fileID: 8314438185012646565}
   m_PrefabAsset: {fileID: 0}

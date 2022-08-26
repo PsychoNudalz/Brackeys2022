@@ -34,7 +34,7 @@ public class ProjectileLauncher : MonoBehaviour
 
     private void Update()
     {
-        if (isActive)
+        if (isActive&&shootTime!=0)
         {
             if (Time.time - lastShotTime > shootTime)
             {
@@ -51,10 +51,10 @@ public class ProjectileLauncher : MonoBehaviour
         onShootEvent.Invoke();
     }
 
-    private void OnEnable()
-    {
-        SetActive(true);
-    }
+    // private void OnEnable()
+    // {
+    //     SetActive(true);
+    // }
 
     public void SetActive(bool b)
     {

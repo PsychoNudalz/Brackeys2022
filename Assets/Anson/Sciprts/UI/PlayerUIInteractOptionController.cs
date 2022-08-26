@@ -57,6 +57,10 @@ public class PlayerUIInteractOptionController : MonoBehaviour
   
         if (b)
         {
+            if (!worldPos.Equals(pos))
+            {
+                SetScreenPosition(pos);
+            }
             animator.SetBool("OpenWheel", true);
         }
         else
@@ -65,10 +69,7 @@ public class PlayerUIInteractOptionController : MonoBehaviour
         }
 
         isActive = b;
-        if (!worldPos.Equals(pos))
-        {
-            SetScreenPosition(pos);
-        }
+
     }
 
     private Vector3 SetScreenPosition(Vector3 pos)

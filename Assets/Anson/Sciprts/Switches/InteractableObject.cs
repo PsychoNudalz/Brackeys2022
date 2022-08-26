@@ -17,19 +17,29 @@ public abstract class InteractableObject : MonoBehaviour
 
     [Header("Base Interaction")]
     [Header("--------On On--------")]
+    [Tooltip("Plays the On On method")]
     [SerializeField]
     protected ConsequenceObject[] onOnConsequence;
 
     [SerializeField]
     protected UnityEvent onOnEvent;
 
-    [Header("--------On Off--------")]
     [Space(10)]
+    [Header("--------On Off--------")]
+    [Tooltip("Plays the On Off method")]
     [SerializeField]
     protected ConsequenceObject[] onOffConsequence;
 
     [SerializeField]
     protected UnityEvent onOffEvent;
+
+    [Space(10)]
+    [Header("--------On Use--------")]
+    [SerializeField]
+    protected ConsequenceObject[] onUseConsequence;
+
+    [SerializeField]
+    protected UnityEvent onUseEvent;
 
     [Space(10)]
     [SerializeField]
@@ -60,6 +70,7 @@ public abstract class InteractableObject : MonoBehaviour
     {
         if (CanUse())
         {
+            OnUseBehaviour();
             if (interactState == InteractState.Off)
             {
                 OnOn();
@@ -75,6 +86,19 @@ public abstract class InteractableObject : MonoBehaviour
         return false;
     }
 
+    public virtual void OnUseBehaviour()
+    {
+        foreach (ConsequenceObject consequenceObject in onUseConsequence)
+        {
+            consequenceObject?.OnUse();
+        }
+
+        onUseEvent.Invoke();
+    }
+
+    /// <summary>
+    /// Play On Offs
+    /// </summary>
     public virtual void OnOff()
     {
         if (!CanUse())
@@ -91,6 +115,9 @@ public abstract class InteractableObject : MonoBehaviour
         interactState = InteractState.Off;
     }
 
+    /// <summary>
+    /// Play On Ons
+    /// </summary>
     public virtual void OnOn()
     {
         if (!CanUse())
