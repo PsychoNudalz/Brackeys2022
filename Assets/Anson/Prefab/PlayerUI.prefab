@@ -384,6 +384,7 @@ MonoBehaviour:
   - {fileID: 7443451624008426366}
   abilityInteraction: {fileID: 0}
   worldPos: {x: 0, y: 0, z: 0}
+  margin: {x: 0.1, y: 0.2}
 --- !u!95 &7716455622363916146
 Animator:
   serializedVersion: 4

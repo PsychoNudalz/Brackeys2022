@@ -22,6 +22,9 @@ public class PlayerUIInteractOptionController : MonoBehaviour
     [SerializeField]
     private Vector3 worldPos;
 
+    [SerializeField]
+    private Vector2 margin = new Vector2(.1f, .1f);
+
     private void Awake()
     {
         if (!abilityInteraction)
@@ -54,13 +57,13 @@ public class PlayerUIInteractOptionController : MonoBehaviour
 
     public void SetWheelActive(bool b, Vector3 pos)
     {
-  
         if (b)
         {
             if (!worldPos.Equals(pos))
             {
                 SetScreenPosition(pos);
             }
+
             animator.SetBool("OpenWheel", true);
         }
         else
@@ -69,13 +72,14 @@ public class PlayerUIInteractOptionController : MonoBehaviour
         }
 
         isActive = b;
-
     }
 
     private Vector3 SetScreenPosition(Vector3 pos)
     {
         worldPos = pos;
-        transform.position = Camera.main.WorldToScreenPoint(pos);
+        Vector2 temp = Camera.main.WorldToScreenPoint(pos);
+        transform.position = new Vector2(Mathf.Clamp(temp.x, Screen.width * margin.x, Screen.width * (1f - margin.x)),
+            Mathf.Clamp(temp.y, Screen.height * margin.y, Screen.height * (1f - margin.y)));
         return transform.position;
     }
 
