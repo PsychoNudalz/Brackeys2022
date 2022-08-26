@@ -148,6 +148,10 @@ public class PlayerInputController : MonoBehaviour
             ClickableObject temp = raycastHit.collider.GetComponentInParent<ClickableObject>();
             if (temp)
             {
+                if (hoverObject&&!hoverObject.Equals(temp))
+                {
+                    hoverObject.OnHover(false);
+                }
                 hoverObject = temp;
                 hoverObject.OnHover(true);
             }

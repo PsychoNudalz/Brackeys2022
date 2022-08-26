@@ -419,7 +419,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  checkTime: 1
+  checkTime: 0.25
 --- !u!1 &3505285801221437699
 GameObject:
   m_ObjectHideFlags: 0

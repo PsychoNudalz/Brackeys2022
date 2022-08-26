@@ -202,7 +202,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -633,11 +633,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1041859133283848914, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
         type: 3}
-      propertyPath: m_Lens.m_SensorSize.x
-      value: 1.7777778
-      objectReference: {fileID: 0}
-    - target: {fileID: 1041859133283848914, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
-        type: 3}
       propertyPath: m_Lens.OrthographicSize
       value: 15
       objectReference: {fileID: 0}
@@ -680,11 +675,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3198707749175963398, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
-        type: 3}
-      propertyPath: orthographic size
-      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3198707749175963417, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
         type: 3}
@@ -745,11 +735,6 @@ PrefabInstance:
         type: 3}
       propertyPath: mouseLayer.m_Bits
       value: 21568
-      objectReference: {fileID: 0}
-    - target: {fileID: 7936712807487707183, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
-        type: 3}
-      propertyPath: orthographic size
-      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7936712807487707184, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
         type: 3}
