@@ -77,13 +77,14 @@ MonoBehaviour:
   arrowGO: {fileID: 5181637610344338793}
   arrowLine: {fileID: 53838188550249395}
   arrowState: 0
-  moveSpeed: 25
+  moveSpeed: 22
   stopDistance: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 50944
+    m_Bits: 49920
   losOffset: {x: 0, y: 0, z: 0}
   range: 100
+  arrowDetectionDelay: 0.1
 --- !u!1 &2888121860948844839
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,8 +226,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.2, y: 0.2, z: 0.45}
+  m_Center: {x: 0, y: 0, z: 0.18}
 --- !u!1 &5464086819131220893
 GameObject:
   m_ObjectHideFlags: 0

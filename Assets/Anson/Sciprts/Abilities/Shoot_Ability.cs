@@ -50,6 +50,11 @@ public class Shoot_Ability : Ability
     [SerializeField]
     private float range = 100f;
 
+    [SerializeField]
+    private float arrowDetectionDelay = .2f;
+
+    float arrowDetectionDelay_now;
+
 
     public SwitchInteractable CurrentSwitch => currentSwitch;
 
@@ -78,6 +83,10 @@ public class Shoot_Ability : Ability
     {
         if (arrowState is ArrowStateEnum.Stuck or ArrowStateEnum.Firing && abilityStateEnum == AbilityStateEnum.Using)
         {
+            if (arrowState == ArrowStateEnum.Firing&&arrowDetectionDelay_now>=0)
+            {
+                arrowDetectionDelay_now -= Time.deltaTime;
+            }
             if (!CheckLOS())
             {
                 OnUse_End();
@@ -89,6 +98,7 @@ public class Shoot_Ability : Ability
     {
         OnUse_Enter(target);
     }
+
 
     public override void OnUse_Enter(object target = null)
     {
@@ -112,6 +122,7 @@ public class Shoot_Ability : Ability
             arrowGO.transform.position = transform.position;
             arrowGO.SetActive(true);
             arrowState = ArrowStateEnum.Firing;
+            arrowDetectionDelay_now = arrowDetectionDelay;
         }
     }
 
@@ -153,6 +164,11 @@ public class Shoot_Ability : Ability
             return false;
         }
 
+        if (arrowDetectionDelay_now > 0f)
+        {
+            return true;
+        }
+
         Vector3 dir = (arrowGO.transform.position - transform.position+losOffset).normalized;
         if (Physics.Raycast(transform.position+losOffset,
                 dir,
@@ -160,12 +176,12 @@ public class Shoot_Ability : Ability
         {
             if (raycastHit.collider.gameObject.Equals(arrowGO))
             {
-                Debug.DrawRay(transform.position+losOffset, dir * range, Color.green, 5f);
+                Debug.DrawRay(transform.position+losOffset, dir * range, Color.green, Time.deltaTime*2f);
                 return true;
             }
         }
 
-        Debug.DrawRay(transform.position+losOffset, dir * range, Color.red, 5f);
+        Debug.DrawRay(transform.position+losOffset, dir * range, Color.red, Time.deltaTime*2f);
         return false;
     }
 
