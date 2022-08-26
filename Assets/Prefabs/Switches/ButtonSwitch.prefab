@@ -5170,7 +5170,8 @@ MonoBehaviour:
       m_Calls: []
   systemColour: {r: 0, g: 1, b: 0, a: 1}
   systemRenderers:
-  - {fileID: 4412410900450317119}
+  - {fileID: 120259270789577355}
+  - {fileID: 7521807125535860752}
   showDebug: 1
   timer: 5
   timer_Now: 0
@@ -10413,6 +10414,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1de31813adecc00458468b0dc5cf5e86, type: 3}
+--- !u!23 &120259270789577355 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -2859109400176981367, guid: 1de31813adecc00458468b0dc5cf5e86,
+    type: 3}
+  m_PrefabInstance: {fileID: 6483309953450029058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &4211729932359192271 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -2050745305917096243, guid: 1de31813adecc00458468b0dc5cf5e86,
@@ -10461,6 +10468,12 @@ MonoBehaviour:
 --- !u!4 &6806031333150283753 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1de31813adecc00458468b0dc5cf5e86,
+    type: 3}
+  m_PrefabInstance: {fileID: 6483309953450029058}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &7521807125535860752 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -5648767689465423854, guid: 1de31813adecc00458468b0dc5cf5e86,
     type: 3}
   m_PrefabInstance: {fileID: 6483309953450029058}
   m_PrefabAsset: {fileID: 0}
