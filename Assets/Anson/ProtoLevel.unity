@@ -3034,6 +3034,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button-Turretx3
       objectReference: {fileID: 0}
+    - target: {fileID: 4937160711750041711, guid: 080b48aea16de854fa830c2243cd2092,
+        type: 3}
+      propertyPath: systemColour.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937160711750041711, guid: 080b48aea16de854fa830c2243cd2092,
+        type: 3}
+      propertyPath: systemColour.g
+      value: 0.5322423
+      objectReference: {fileID: 0}
     - target: {fileID: 6695356915664549353, guid: 080b48aea16de854fa830c2243cd2092,
         type: 3}
       propertyPath: m_RootOrder

@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8314438184318840134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.24, y: 0, z: 1.36}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -54,13 +54,13 @@ MonoBehaviour:
   projectile: {fileID: 534455807304953765, guid: a84ccc1701d1f8a4b98eaf25c81bbb63,
     type: 3}
   launchPoint: {fileID: 8314438185049865543}
-  shootTime: 2
+  shootTime: 5
   onShootEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7324626626113566402}
         m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -167,7 +167,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  consequenceState: 1
+  consequenceState: 0
   renderers:
   - {fileID: 4971227459773692641}
   - {fileID: 3112187849452541996}

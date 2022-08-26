@@ -52,7 +52,6 @@ public class ButtonSwitch : SwitchInteractable
 
     public override bool OnUse()
     {
-        base.OnUse();
         OnOn();
         return true;
     }
@@ -65,12 +64,14 @@ public class ButtonSwitch : SwitchInteractable
         if (interactState == InteractState.Off)
         {
             base.OnOn();
+            OnUseBehaviour();
+
         }
     }
 
     public override void OnOff()
     {
-        base.OnUse();
+        OnUseBehaviour();
         base.OnOff();
     }
 }

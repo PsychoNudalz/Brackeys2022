@@ -7,12 +7,20 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Transform archerSpawnpoint;
-    [SerializeField] private Transform mageSpawnpoint;
+    [SerializeField]
+    private Transform archerSpawnpoint;
 
-    [SerializeField] private GameObject mage;
-    [SerializeField] private GameObject archer;
-    [SerializeField] private CanvasGroup canvas;
+    [SerializeField]
+    private Transform mageSpawnpoint;
+
+    [SerializeField]
+    private GameObject mage;
+
+    [SerializeField]
+    private GameObject archer;
+
+    [SerializeField]
+    private CanvasGroup canvas;
 
     public int characterAmount;
     public int characterDeaths;
@@ -30,20 +38,14 @@ public class GameManager : MonoBehaviour
             Destroy(current.gameObject);
             current = this;
         }
-        
-
     }
 
     private void Start()
     {
         archer = CharacterManager.GetArcher().GameObject();
         mage = CharacterManager.GetMage().GameObject();
-        
+
         //Override so that it takes all 3 characters on other scenes
-        if (characterAmount == 0)
-        {
-            startLevel(false,false,3);
-        }
     }
 
     private void startLevel(bool archerSpawned, bool mageSpawned, int charAmt)
@@ -90,6 +92,10 @@ public class GameManager : MonoBehaviour
                 break;
             case 2:
                 startLevel(true, false, 2);
+                break;
+
+            default:
+                startLevel(false, false, 3);
                 break;
         }
     }

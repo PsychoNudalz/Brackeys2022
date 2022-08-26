@@ -65,6 +65,7 @@ public class Shoot_Ability : Ability
         if (arrowState == ArrowStateEnum.Firing)
         {
             FireArrowAnimation();
+
         }
 
         if (abilityStateEnum == AbilityStateEnum.Using)
@@ -75,7 +76,7 @@ public class Shoot_Ability : Ability
 
     private void FixedUpdate()
     {
-        if (arrowState == ArrowStateEnum.Stuck && abilityStateEnum == AbilityStateEnum.Using)
+        if (arrowState is ArrowStateEnum.Stuck or ArrowStateEnum.Firing && abilityStateEnum == AbilityStateEnum.Using)
         {
             if (!CheckLOS())
             {
