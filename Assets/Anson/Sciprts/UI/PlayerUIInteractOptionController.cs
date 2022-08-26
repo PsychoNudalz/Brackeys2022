@@ -78,7 +78,7 @@ public class PlayerUIInteractOptionController : MonoBehaviour
     public void ActivateWheel(Vector3 pos, List<AbilityEnum> abilityEnums, AbilityInteraction abilityInteraction)
     {
 
-        if (isActive)
+        if (gameObject.activeSelf&& isActive)
         {
             StartCoroutine(DelayPlayerClick());
             return;
