@@ -1,14 +1,25 @@
 fileFormatVersion: 2
-guid: 01e8b8e5cb74c1d4682ceaabe636ebe3
+guid: 175562260eec1d049a0a5e30b0803196
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -2815351192135834977
+    second: Armature.002|Plate_UptoDown
+  - first:
+      74: -3304948256175154758
+    second: Armature.002|PlateDownToUp
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BowAndArrow
-    second: {fileID: 2100000, guid: e1e71126d1c0cd1408380bd6260d6028, type: 2}
+      name: 1x1Block
+    second: {fileID: 2100000, guid: 6abb742dd3441974d978783c3964d1c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 2x2PressurePlate
+    second: {fileID: 2100000, guid: 392de716620d130419dc82fbd196d34d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

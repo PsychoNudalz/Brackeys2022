@@ -1,14 +1,30 @@
 fileFormatVersion: 2
-guid: 01e8b8e5cb74c1d4682ceaabe636ebe3
+guid: f0a0edb64d0c0054394b1f42b603dba3
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 5284142036826313719
+    second: Armature|Door_Close
+  - first:
+      74: 7051517125472779756
+    second: Armature|Door_Open
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BowAndArrow
-    second: {fileID: 2100000, guid: e1e71126d1c0cd1408380bd6260d6028, type: 2}
+      name: 1x1Edge
+    second: {fileID: 2100000, guid: a5e465ee4bdf61445a45171624da6ca5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1x1Tile
+    second: {fileID: 2100000, guid: 68ce52c4aa855a846bd1cc674abeb609, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door
+    second: {fileID: 2100000, guid: 850698037c22ce54fbe0cfdf1b7672bb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

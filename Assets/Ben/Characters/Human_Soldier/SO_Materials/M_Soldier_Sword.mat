@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Soldier_Sword
-  m_Shader: {fileID: -6465566751694194690, guid: f1ae2d9b8eee3a741bb0d2b9ba8e6733,
+  m_Shader: {fileID: -6465566751694194690, guid: f8e6daf49eec07d46ab6480624568ce3,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -71,7 +71,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTexture:
-        m_Texture: {fileID: 2800000, guid: 3a0e193dd363db34c934d692c251bb71, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2d2bb3b116a7aa04798d219c58ecdca8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:

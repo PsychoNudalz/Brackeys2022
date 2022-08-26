@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 01e8b8e5cb74c1d4682ceaabe636ebe3
+guid: 5c0fce0999c472543a3dc9ce25690e40
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BowAndArrow
-    second: {fileID: 2100000, guid: e1e71126d1c0cd1408380bd6260d6028, type: 2}
+      name: Barrel
+    second: {fileID: 2100000, guid: 5e64e572171b39942beff90fb2ef022a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door
+    second: {fileID: 2100000, guid: 850698037c22ce54fbe0cfdf1b7672bb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

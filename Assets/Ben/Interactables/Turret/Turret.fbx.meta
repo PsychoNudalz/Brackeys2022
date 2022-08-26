@@ -1,14 +1,27 @@
 fileFormatVersion: 2
-guid: 01e8b8e5cb74c1d4682ceaabe636ebe3
+guid: d3b0284f557a6db4d9a98c53f52f1e32
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 790640055248080966
+    second: Armature.001|Turret_Idle
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BowAndArrow
-    second: {fileID: 2100000, guid: e1e71126d1c0cd1408380bd6260d6028, type: 2}
+      name: 1x1Block
+    second: {fileID: 2100000, guid: 6abb742dd3441974d978783c3964d1c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 2x2PressurePlate
+    second: {fileID: 2100000, guid: 392de716620d130419dc82fbd196d34d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light
+    second: {fileID: 2100000, guid: 048ece63cfa75384a9c53c6016c9edff, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

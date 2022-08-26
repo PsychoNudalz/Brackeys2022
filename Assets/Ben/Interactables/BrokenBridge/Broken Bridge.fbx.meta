@@ -1,14 +1,17 @@
 fileFormatVersion: 2
-guid: 01e8b8e5cb74c1d4682ceaabe636ebe3
+guid: 8ce631f199270d6438498845021bf8ee
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 2262309982124458285
+    second: Armature|Bridge_Collapse
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BowAndArrow
-    second: {fileID: 2100000, guid: e1e71126d1c0cd1408380bd6260d6028, type: 2}
+      name: 1x2 Bridge
+    second: {fileID: 2100000, guid: f52d63a71d60eef4e98bd6f60fd2e929, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 01e8b8e5cb74c1d4682ceaabe636ebe3
+guid: fbfa08cc6dae2da42b3ac51fdc2f7782
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BowAndArrow
-    second: {fileID: 2100000, guid: e1e71126d1c0cd1408380bd6260d6028, type: 2}
+      name: 1x1Block.007
+    second: {fileID: 2100000, guid: 6abb742dd3441974d978783c3964d1c3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
