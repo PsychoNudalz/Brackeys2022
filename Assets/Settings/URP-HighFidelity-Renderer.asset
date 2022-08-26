@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   renderPassEvent: 1000
-  clearStencil: 0
+  clearStencil: 1
 --- !u!114 &-7046830061793023450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,11 +95,11 @@ MonoBehaviour:
   m_RendererFeatures:
   - {fileID: -1878332245247344467}
   - {fileID: 488001018269401950}
-  - {fileID: -7046830061793023450}
   - {fileID: -7592478532467620463}
+  - {fileID: -7046830061793023450}
   - {fileID: 2574087703698820172}
   - {fileID: 4013106114606582999}
-  m_RendererFeatureMap: adc0de57c6d2eee55e03fa2f57bac506266a48fe64a1349e91057d5b0019a2964c4cabdf20ffb823d7cc12b7bf6ab137
+  m_RendererFeatureMap: adc0de57c6d2eee55e03fa2f57bac50691057d5b0019a296266a48fe64a1349e4c4cabdf20ffb823d7cc12b7bf6ab137
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
