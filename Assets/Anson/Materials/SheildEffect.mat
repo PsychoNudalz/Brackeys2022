@@ -64,6 +64,7 @@ Material:
     - _Surface: 0
     - _TakeAlphaValue: 0
     - _Tiling: 32
+    - _UseAlphaMap: 1
     - _WorkflowMode: 0
     - _ZTest: 4
     - _ZWrite: 1

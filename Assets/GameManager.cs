@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
@@ -28,11 +30,29 @@ public class GameManager : MonoBehaviour
             Destroy(current.gameObject);
             current = this;
         }
+        
+
+    }
+
+    private void Start()
+    {
+        archer = CharacterManager.GetArcher().GameObject();
+        mage = CharacterManager.GetMage().GameObject();
+        
+        //Override so that it takes all 3 characters on other scenes
+        if (characterAmount == 0)
+        {
+            startLevel(false,false,3);
+        }
     }
 
     private void startLevel(bool archerSpawned, bool mageSpawned, int charAmt)
     {
-        LeanTween.alphaCanvas(canvas, 0, 1).setEaseInOutBack();
+        if (canvas)
+        {
+            LeanTween.alphaCanvas(canvas, 0, 1).setEaseInOutBack();
+        }
+
         characterAmount = charAmt;
         if (archerSpawned)
         {

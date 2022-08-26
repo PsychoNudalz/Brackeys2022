@@ -13,8 +13,47 @@ MonoBehaviour:
   m_Name: HighlightPlusRenderPassFeature
   m_EditorClassIdentifier: 
   m_Active: 1
-  renderPassEvent: 500
+  renderPassEvent: 1000
   clearStencil: 0
+--- !u!114 &-7046830061793023450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: TransparentObjects
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    passTag: TransparentObjects
+    Event: 1000
+    filterSettings:
+      RenderQueueType: 1
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 2147483647
+      PassNames: []
+    overrideMaterial: {fileID: 0}
+    overrideMaterialPassIndex: 0
+    overrideDepthState: 1
+    depthCompareFunction: 4
+    enableWrite: 1
+    stencilSettings:
+      overrideStencilState: 0
+      stencilReference: 0
+      stencilCompareFunction: 8
+      passOperation: 0
+      failOperation: 0
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 0
+      restoreCamera: 1
+      offset: {x: 0, y: 0, z: 0, w: 0}
+      cameraFieldOfView: 60
 --- !u!114 &-1878332245247344467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,10 +94,12 @@ MonoBehaviour:
       type: 3}
   m_RendererFeatures:
   - {fileID: -1878332245247344467}
+  - {fileID: 488001018269401950}
+  - {fileID: -7046830061793023450}
   - {fileID: -7592478532467620463}
   - {fileID: 2574087703698820172}
   - {fileID: 4013106114606582999}
-  m_RendererFeatureMap: adc0de57c6d2eee591057d5b0019a2964c4cabdf20ffb823d7cc12b7bf6ab137
+  m_RendererFeatureMap: adc0de57c6d2eee55e03fa2f57bac506266a48fe64a1349e91057d5b0019a2964c4cabdf20ffb823d7cc12b7bf6ab137
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -98,6 +139,33 @@ MonoBehaviour:
   m_ClusteredRendering: 0
   m_TileSize: 32
   m_IntermediateTextureMode: 1
+--- !u!114 &488001018269401950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c52a56fe9db38a543952039e90eb87f3, type: 3}
+  m_Name: Blit
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    Event: 1000
+    blitMaterial: {fileID: 2100000, guid: 41e1389fcaa7ab041a4a2025080fa620, type: 2}
+    blitMaterialPassIndex: 0
+    setInverseViewMatrix: 0
+    requireDepthNormals: 1
+    srcType: 0
+    srcTextureId: _CameraColorTexture
+    srcTextureObject: {fileID: 0}
+    dstType: 0
+    dstTextureId: _BlitPassTexture
+    dstTextureObject: {fileID: 0}
+    overrideGraphicsFormat: 0
+    graphicsFormat: 48
 --- !u!114 &2574087703698820172
 MonoBehaviour:
   m_ObjectHideFlags: 0

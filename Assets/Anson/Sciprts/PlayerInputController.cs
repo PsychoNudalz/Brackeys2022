@@ -95,6 +95,7 @@ public class PlayerInputController : MonoBehaviour
 
     public void OnSwitchCharacter(InputValue context)
     {
+        //this is locked to only selected scenes
         if (gm.characterDeaths < 2 && gm.characterAmount > 1)
         {
             float value = context.Get<float>();
