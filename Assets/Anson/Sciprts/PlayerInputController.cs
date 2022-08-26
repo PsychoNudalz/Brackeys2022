@@ -10,12 +10,14 @@ public class PlayerInputController : MonoBehaviour
 {
     [SerializeField]
     private PlayerController playerController;
+
     [SerializeField]
     private PlayerCameraController playerCamController;
 
     [Space(10)]
     [SerializeField]
     private CharacterControllerScript characterController;
+
     [SerializeField]
     private CharacterMovementController characterMovementController;
 
@@ -35,6 +37,7 @@ public class PlayerInputController : MonoBehaviour
     [Header("Components")]
     [SerializeField]
     private Camera mainCamera;
+
     private GameManager gm;
 
     public PlayerController PlayerController
@@ -70,7 +73,6 @@ public class PlayerInputController : MonoBehaviour
     private void LateUpdate()
     {
         RaycastHit raycastHit = RaycastFromCameraToMouse();
-
     }
 
     public void OnMovement(InputValue context)
@@ -102,7 +104,7 @@ public class PlayerInputController : MonoBehaviour
             }
         }
     }
-    
+
     public void OnRotateCamera(InputValue context)
     {
         float value = context.Get<float>();
@@ -118,14 +120,27 @@ public class PlayerInputController : MonoBehaviour
 
     public RaycastHit RaycastFromCameraToMouse()
     {
-        Ray ray = new Ray(mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()),mainCamera.transform.forward);
+        Ray ray;
+        if (mainCamera.orthographic)
+        {
+            ray = new Ray(mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()),
+                mainCamera.transform.forward);
+        }
+        else
+        {
+            ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+            
+            
+        }
 
-        Physics.Raycast(ray, out var raycastHit, 1000f, mouseLayer);
-        
-        
+        float mouseCastDistance = 1000f;
+        Debug.DrawRay(ray.origin, ray.direction * mouseCastDistance, Color.cyan, 1f);
+        Physics.Raycast(ray, out var raycastHit, mouseCastDistance, mouseLayer);
+
+
         if (raycastHit.collider && mouseTags.Contains(raycastHit.collider.tag))
         {
-            ClickableObject temp =  raycastHit.collider.GetComponentInParent<ClickableObject>();
+            ClickableObject temp = raycastHit.collider.GetComponentInParent<ClickableObject>();
             if (temp)
             {
                 hoverObject = temp;
@@ -142,8 +157,8 @@ public class PlayerInputController : MonoBehaviour
             hoverObject?.OnHover(false);
             hoverObject = null;
         }
-        
-        
+
+
         // Debug.DrawRay(mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()),mainCamera.transform.forward*1000f);
 
         return raycastHit;
@@ -151,7 +166,7 @@ public class PlayerInputController : MonoBehaviour
 
     public void OnMouseClick(InputValue context)
     {
-       StartCoroutine(SelectObjectCoroutine());
+        StartCoroutine(SelectObjectCoroutine());
     }
 
     private IEnumerator SelectObjectCoroutine()
