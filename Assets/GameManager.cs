@@ -102,9 +102,12 @@ public class GameManager : MonoBehaviour
             case 2:
                 startLevel(true, false, 2);
                 break;
+            case 3:
+                startLevel(true, false, 2);
+                break;
 
             default:
-                startLevel(false, false, 3);
+                startLevel(true, true, 3);
                 break;
         }
     }
