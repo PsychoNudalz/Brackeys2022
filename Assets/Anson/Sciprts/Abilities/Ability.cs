@@ -27,14 +27,23 @@ public abstract class Ability : MonoBehaviour
     [Header("Base Ability")]
     [SerializeField]
     protected UnityEvent onUseEnterEvent;
+
     [SerializeField]
     protected UnityEvent onUseEndEvent;
 
     [SerializeField]
     protected AbilityStateEnum abilityStateEnum = AbilityStateEnum.Off;
 
+    [Header("Orientation Lock Time")]
+    [SerializeField]
+    private float orientationLockTime = 1f;
+    
     [Header("Components")]
+    [SerializeField]
     protected AbilityEffect abilityEffect;
+
+    [SerializeField]
+    private CharacterMovementController characterMovementController;
 
     public AbilityStateEnum AbilityState => abilityStateEnum;
 
@@ -43,6 +52,12 @@ public abstract class Ability : MonoBehaviour
         if (!abilityEffect)
         {
             abilityEffect = GetComponent<AbilityEffect>();
+        }
+
+//this is very fking bad
+        if (!characterMovementController)
+        {
+            characterMovementController = GetComponentInParent<CharacterMovementController>();
         }
     }
 

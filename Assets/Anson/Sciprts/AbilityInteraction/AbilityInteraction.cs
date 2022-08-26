@@ -58,14 +58,14 @@ public abstract class AbilityInteraction : MonoBehaviour
                 CharacterControllerScript temp = raycastHit.collider.GetComponentInParent<CharacterControllerScript>();
                 if (temp && temp.CharacterEnum.Equals(character))
                 {
-                    Debug.DrawRay(centreOfMass.position, dir * range, Color.green, 5f);
+                    Debug.DrawRay(centreOfMass.position, dir * range, Color.green, Time.deltaTime*2f);
 
                     return true;
                 }
             }
         }
 
-        Debug.DrawRay(centreOfMass.position, dir * range, Color.red, 5f);
+        Debug.DrawRay(centreOfMass.position, dir * range, Color.red, Time.deltaTime*2f);
 
         return false;
     }

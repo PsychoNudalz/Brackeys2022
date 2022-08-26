@@ -9,6 +9,8 @@ public class PressurePlateSwitch : SwitchInteractable
     [SerializeField]
     private TriggerDetector triggerZone;
 
+    private bool wasObstructed;
+
     private void FixedUpdate()
     {
         if (interactState == InteractState.Off && triggerZone.IsObstructed)
@@ -19,5 +21,12 @@ public class PressurePlateSwitch : SwitchInteractable
         {
             OnOff();
         }
+
+        if (wasObstructed!=triggerZone.IsObstructed)
+        {
+            OnUse();
+        }
+
+        wasObstructed = triggerZone.IsObstructed;
     }
 }

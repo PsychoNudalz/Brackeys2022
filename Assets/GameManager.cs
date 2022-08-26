@@ -44,6 +44,8 @@ public class GameManager : MonoBehaviour
     {
         archer = CharacterManager.GetArcher().GameObject();
         mage = CharacterManager.GetMage().GameObject();
+        canvas.gameObject.SetActive(true);
+
 
         //Override so that it takes all 3 characters on other scenes
     }
@@ -78,6 +80,13 @@ public class GameManager : MonoBehaviour
     void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        canvas.gameObject.SetActive(false);
+    }
+
+    private void OnApplicationQuit()
+    {
+        canvas.gameObject.SetActive(false);
+
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)

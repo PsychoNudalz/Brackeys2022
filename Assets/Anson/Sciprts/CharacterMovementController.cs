@@ -59,6 +59,7 @@ public class CharacterMovementController : MonoBehaviour
     private Vector3 moveDir = new Vector3();
 
     private bool controlLock = false;
+    private bool rotationLock = false;
 
     [Header("Components")]
     [SerializeField]
@@ -111,11 +112,34 @@ public class CharacterMovementController : MonoBehaviour
             {
                 characterController.Move(moveDir * (speed * Time.deltaTime));
 
-                modelTransform.localRotation = Quaternion.Euler(0,
-                    Vector3.SignedAngle(slantTransform.forward, moveDir, slantTransform.up), 0);
+                if (!rotationLock)
+                {
+                    SetRotationToTarget(moveDir);
+                }
             }
         }
     }
+
+    public void SetRotationToTarget(Vector3 targetDirection)
+    {
+        modelTransform.localRotation = Quaternion.Euler(0,
+            Vector3.SignedAngle(slantTransform.forward, targetDirection, slantTransform.up), 0);
+    }
+
+    public void SetRotationToTarget_Timed(Vector3 targetDirection, float t = .1f)
+    {
+        SetRotationToTarget(targetDirection);
+        StartCoroutine(SetRotationToTarget_TimedCoroutine(t));
+    }
+
+    IEnumerator SetRotationToTarget_TimedCoroutine(float t)
+    {
+        rotationLock = false;
+        yield return new WaitForSeconds(t);
+        rotationLock = true;
+    }
+    
+    
 
     public void SetControlLock(bool b)
     {
