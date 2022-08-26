@@ -323,7 +323,7 @@ PrefabInstance:
         type: 3}
       propertyPath: canvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8395931558369278334}
     - target: {fileID: 533236406932421635, guid: d72ee808d2602ce4bbf02ddf4c44207f,
         type: 3}
       propertyPath: m_Enabled
@@ -613,6 +613,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 8596930723667433739}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &8395931558369278334 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 273094177393303669, guid: f38e159405da3884cabf0c394602f9dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 8596930723667433739}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9122031782958507897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -628,7 +634,7 @@ PrefabInstance:
     - target: {fileID: 1041859133283848914, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
         type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.2800633
+      value: 1.7777778
       objectReference: {fileID: 0}
     - target: {fileID: 1041859133283848914, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
         type: 3}
@@ -683,27 +689,27 @@ PrefabInstance:
     - target: {fileID: 3198707749175963417, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -40
+      value: -28.5
       objectReference: {fileID: 0}
     - target: {fileID: 3198707749175963417, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.92387974
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: 3198707749175963417, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.382683
+      value: 0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 3198707749175963417, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000017881393
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3198707749175963417, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000029802322
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5226396539775177158, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
         type: 3}
@@ -739,6 +745,16 @@ PrefabInstance:
         type: 3}
       propertyPath: mouseLayer.m_Bits
       value: 21568
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936712807487707183, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
+        type: 3}
+      propertyPath: orthographic size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936712807487707184, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -28.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 171e0fee261a47b4fa9e95b5f9d0c3ee, type: 3}
