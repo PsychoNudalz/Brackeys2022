@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 01e8b8e5cb74c1d4682ceaabe636ebe3
+guid: 374de560e84f86d47a52bb90fb3bc074
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BowAndArrow
-    second: {fileID: 2100000, guid: e1e71126d1c0cd1408380bd6260d6028, type: 2}
+      name: 1x1Blip.007
+    second: {fileID: 2100000, guid: ee135f3012b83d040b7d8bf9c24900fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1x1Tile.008
+    second: {fileID: 2100000, guid: 68ce52c4aa855a846bd1cc674abeb609, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

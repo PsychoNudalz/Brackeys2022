@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 01e8b8e5cb74c1d4682ceaabe636ebe3
+guid: 5e8832e85e4db6c4a8add25115608e02
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BowAndArrow
-    second: {fileID: 2100000, guid: e1e71126d1c0cd1408380bd6260d6028, type: 2}
+      name: 1x1WallSide.007
+    second: {fileID: 2100000, guid: 00dae64b33ad4684eaa1e1aa59d7cf54, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1x1WallTop.007
+    second: {fileID: 2100000, guid: 6e6671789fc6f0c46ae829d4f4d9c004, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
