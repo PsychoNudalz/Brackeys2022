@@ -133,6 +133,6 @@ public abstract class AbilityInteraction : MonoBehaviour
 
     public virtual void HideInteractionWheel()
     {
-        PlayerUIController.current.PlayerUIInteractOptionController.SetWheelActive(false);
+        PlayerUIController.current.PlayerUIInteractOptionController.SetWheelActive(false, new Vector3());
     }
 }

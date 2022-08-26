@@ -19,6 +19,9 @@ public class PlayerUIInteractOptionController : MonoBehaviour
     [SerializeField]
     private AbilityInteraction abilityInteraction;
 
+    [SerializeField]
+    private Vector3 worldPos;
+
     private void Awake()
     {
         if (!abilityInteraction)
@@ -31,7 +34,7 @@ public class PlayerUIInteractOptionController : MonoBehaviour
             animator = GetComponent<Animator>();
         }
 
-        SetWheelActive(false);
+        SetWheelActive(false, new Vector3());
         if (buttons.Length == 0)
         {
             FindAllButtons();
@@ -46,11 +49,12 @@ public class PlayerUIInteractOptionController : MonoBehaviour
 
     public void SetWheelActiveEvent(bool b)
     {
-        SetWheelActive(b);
+        SetWheelActive(b, new Vector3());
     }
 
-    public void SetWheelActive(bool b, Vector3 pos = new Vector3())
+    public void SetWheelActive(bool b, Vector3 pos)
     {
+  
         if (b)
         {
             animator.SetBool("OpenWheel", true);
@@ -61,10 +65,17 @@ public class PlayerUIInteractOptionController : MonoBehaviour
         }
 
         isActive = b;
-        if (pos.magnitude > .001f)
+        if (!worldPos.Equals(pos))
         {
-            transform.position = Camera.main.WorldToScreenPoint(pos);
+            SetScreenPosition(pos);
         }
+    }
+
+    private Vector3 SetScreenPosition(Vector3 pos)
+    {
+        worldPos = pos;
+        transform.position = Camera.main.WorldToScreenPoint(pos);
+        return transform.position;
     }
 
     /// <summary>
@@ -77,13 +88,12 @@ public class PlayerUIInteractOptionController : MonoBehaviour
 
     public void ActivateWheel(Vector3 pos, List<AbilityEnum> abilityEnums, AbilityInteraction abilityInteraction)
     {
-
-        if (gameObject.activeSelf&& isActive)
+        if (gameObject.activeSelf && isActive)
         {
             StartCoroutine(DelayPlayerClick());
             return;
-            
         }
+
         // print("Activating interaction Wheel");
         gameObject.SetActive(true);
         SetWheelActive(true, pos);
@@ -105,7 +115,7 @@ public class PlayerUIInteractOptionController : MonoBehaviour
     IEnumerator DelayPlayerClick()
     {
         yield return new WaitForEndOfFrame();
-        SetWheelActive(false);
+        SetWheelActive(false, new Vector3());
     }
 
     public void UseButton(AbilityEnum abilityEnum)
