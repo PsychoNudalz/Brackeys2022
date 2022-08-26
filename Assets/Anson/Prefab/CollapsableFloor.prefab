@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 7841271194096432764}
   - component: {fileID: 3039021552337245061}
   - component: {fileID: 3413361062420463369}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: DetectionZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +488,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 0
-  checkTime: 1
+  checkTime: 0.3
 --- !u!1 &3942412800401871069
 GameObject:
   m_ObjectHideFlags: 0

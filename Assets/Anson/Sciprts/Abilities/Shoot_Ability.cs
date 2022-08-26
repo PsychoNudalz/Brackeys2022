@@ -179,6 +179,10 @@ public class Shoot_Ability : Ability
                 Debug.DrawRay(transform.position+losOffset, dir * range, Color.green, Time.deltaTime*2f);
                 return true;
             }
+            else
+            {
+                Debug.Log("LOS broken by: "+raycastHit.collider.gameObject);
+            }
         }
 
         Debug.DrawRay(transform.position+losOffset, dir * range, Color.red, Time.deltaTime*2f);
