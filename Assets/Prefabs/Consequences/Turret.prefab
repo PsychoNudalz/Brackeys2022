@@ -263,6 +263,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2125670252317632384, guid: 73377685b9e2eea4c8e471c00ec6d187,
+        type: 3}
+      propertyPath: volume
+      value: 0.545
+      objectReference: {fileID: 0}
+    - target: {fileID: 2125670252317632384, guid: 73377685b9e2eea4c8e471c00ec6d187,
+        type: 3}
+      propertyPath: pitchVariance
+      value: 0.343
+      objectReference: {fileID: 0}
     - target: {fileID: 5253320911025797183, guid: 73377685b9e2eea4c8e471c00ec6d187,
         type: 3}
       propertyPath: m_audioClip
