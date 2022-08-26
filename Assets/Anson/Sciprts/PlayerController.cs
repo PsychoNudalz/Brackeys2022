@@ -133,7 +133,7 @@ public class PlayerController : MonoBehaviour
         for (int i = 1; i < characterControllers.Length; i++)
         {
             temp = characterControllers[(characterIndex + i)%characterControllers.Length];
-            if (temp.Alive == AliveEnum.Alive)
+            if (temp.Alive == AliveEnum.Alive && temp.gameObject.activeSelf)
             {
                 characterIndex = (characterIndex + i)%characterControllers.Length;
 
@@ -171,7 +171,7 @@ public class PlayerController : MonoBehaviour
         for (int i = 1; i < characterControllers.Length; i++)
         {
             temp = characterControllers[(characterIndex - i+characterControllers.Length)%characterControllers.Length];
-            if (temp.Alive == AliveEnum.Alive)
+            if (temp.Alive == AliveEnum.Alive && temp.gameObject.activeSelf)
             {
                 characterIndex = (characterIndex - i+characterControllers.Length)%characterControllers.Length;
                 SetCharacter(temp);

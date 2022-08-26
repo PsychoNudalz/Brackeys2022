@@ -91,7 +91,7 @@ public class PlayerInputController : MonoBehaviour
 
     public void OnSwitchCharacter(InputValue context)
     {
-        if (gm.characterDeaths < 2)
+        if (gm.characterDeaths < 2 && gm.characterAmount > 1)
         {
             float value = context.Get<float>();
             if (value > 0)

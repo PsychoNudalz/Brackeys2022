@@ -6,24 +6,23 @@ public class DamageDetector : MonoBehaviour
 {
     private GameManager gm;
     private CharacterControllerScript charControl;
-    [SerializeField] private PlayerController playerCtrl;
 
     private void Awake()
     {
-        charControl = GetComponent<CharacterControllerScript>();
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "DamageBox")
-            killCharacter();
-        if (other.tag == "Escape")
+        if (gameObject.tag == "DamageBox")
+            killCharacter(other.gameObject);
+        if (gameObject.tag == "Escape")
             gm.loadNextLevel();
     }
 
-    private void killCharacter()
+    private void killCharacter(GameObject character)
     {
+        charControl = character.GetComponent<CharacterControllerScript>();
         charControl.KillCharacter();
     }
 }
