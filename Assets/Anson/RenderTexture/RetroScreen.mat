@@ -62,12 +62,12 @@ Material:
     - _Cull: 2
     - _DstBlend: 0
     - _IsActive: 1
-    - _LineStrength: 0.01
+    - _LineStrength: 0.02
     - _NoiseScale: 500
     - _NoiseStength: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _SceneLines: 32
+    - _SceneLines: 64
     - _SrcBlend: 1
     - _StepValue: 0.05
     - _Surface: 0

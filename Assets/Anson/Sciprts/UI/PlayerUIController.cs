@@ -80,7 +80,15 @@ public class PlayerUIController : MonoBehaviour
         SceneManager.LoadScene(0);
     }
     
-    
+    public static void SkipLevel()
+    {
+        int temp = (SceneManager.GetActiveScene().buildIndex + 1) % SceneManager.sceneCountInBuildSettings;
+        Debug.Log("Skip level to: "+temp);
+        SceneManager.LoadScene(temp);
+    }
+
+
+
 
     // Start is called before the first frame update
     void Start()

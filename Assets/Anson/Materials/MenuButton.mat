@@ -63,7 +63,7 @@ Material:
     - _ReceiveShadows: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _TakeAlphaValue: 1
+    - _TakeAlphaValue: 0
     - _Tiling: 64
     - _UseAlphaMap: 0
     - _WorkflowMode: 0
