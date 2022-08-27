@@ -1789,8 +1789,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1203351344208527177, guid: 8f98da7c01a93a243935acb9029cc319,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1203351344208527177, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.36
+      value: -25.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 1203351344208527190, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: field of view
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 1963106401989592563, guid: 8f98da7c01a93a243935acb9029cc319,
         type: 3}
@@ -1864,8 +1874,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5977367779366176864, guid: 8f98da7c01a93a243935acb9029cc319,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977367779366176864, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.36
+      value: -25.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977367779366176895, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: field of view
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134234093699587737, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134234093794354388, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134234094395217182, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134234094395217182, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134234094800336299, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134234094800336299, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_Lens.m_SensorSize.x
+      value: 2.0390072
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134234094961715801, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f98da7c01a93a243935acb9029cc319, type: 3}

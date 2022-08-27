@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4619732848469122376}
   - component: {fileID: 4619732848469122375}
   - component: {fileID: 4619732848469122374}
+  - component: {fileID: 8499170572391680890}
   m_Layer: 0
   m_Name: BridgeAnimator
   m_TagString: Untagged
@@ -69,36 +70,48 @@ MonoBehaviour:
   onOnEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4619732848469122375}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
+      - m_Target: {fileID: 8499170572391680890}
+        m_TargetAssemblyTypeName: AnimationObject, Assembly-CSharp
+        m_MethodName: Play_Bool
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: BridgeDown
+          m_StringArgument: BridgeDown/1
           m_BoolArgument: 0
         m_CallState: 2
   onOffEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4619732848469122375}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
+      - m_Target: {fileID: 8499170572391680890}
+        m_TargetAssemblyTypeName: AnimationObject, Assembly-CSharp
+        m_MethodName: Play_Bool
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: BridgeUp
+          m_StringArgument: BridgeDown/0
           m_BoolArgument: 0
         m_CallState: 2
   consequenceState: 0
-  renderers:
-  - {fileID: 4619732848798559826}
+  renderers: []
+--- !u!114 &8499170572391680890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4619732848469122377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881252a6428e5bb46988460e4e9b081b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4619732848469122375}
 --- !u!1 &4619732848798559829
 GameObject:
   m_ObjectHideFlags: 0
