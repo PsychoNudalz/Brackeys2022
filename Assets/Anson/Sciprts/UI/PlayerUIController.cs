@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerUIController : MonoBehaviour
 {
@@ -72,6 +73,11 @@ public class PlayerUIController : MonoBehaviour
     public static void ResetLevel()
     {
         FindObjectOfType<GameManager>().RestartLevel();
+    }
+
+    public static void MainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
     
     
