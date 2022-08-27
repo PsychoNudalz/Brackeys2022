@@ -68,6 +68,11 @@ public class PlayerUIController : MonoBehaviour
 
         }
     }
+
+    public static void ResetLevel()
+    {
+        FindObjectOfType<GameManager>().RestartLevel();
+    }
     
     
 

@@ -147,8 +147,10 @@ public class CharacterControllerScript : MonoBehaviour
         isInControl = b;
     }
 
-    public void
-        KillCharacter() //disables movement, switches to the next character (if possible) and disabled switching back
+    /// <summary>
+    /// //disables movement, switches to the next character (if possible) and disabled switching back
+    /// </summary>
+    public void KillCharacter()
     {
         if (aliveEnum == AliveEnum.Dead)
         {

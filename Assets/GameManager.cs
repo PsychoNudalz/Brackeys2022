@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager current;
 
+    private Coroutine resetLevelCoroutine;
+
     private void Awake()
     {
         if (!current)
@@ -50,13 +52,12 @@ public class GameManager : MonoBehaviour
         //Override so that it takes all 3 characters on other scenes
     }
 
-    private void startLevel(bool archerSpawned, bool mageSpawned, int charAmt)
+    private void startLevel(bool archerSpawned=false, bool mageSpawned=false, int charAmt=3)
     {
         if (canvas)
         {
             LeanTween.alphaCanvas(canvas, 0, 1).setEaseInOutBack();
         }
-
         characterAmount = charAmt;
         if (archerSpawned)
         {
@@ -86,7 +87,6 @@ public class GameManager : MonoBehaviour
     private void OnApplicationQuit()
     {
         canvas.gameObject.SetActive(false);
-
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -130,5 +130,20 @@ public class GameManager : MonoBehaviour
         LeanTween.alphaCanvas(canvas, 1, 1).setEaseInOutBack();
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public IEnumerator resetLevel_now()
+    {
+        LeanTween.alphaCanvas(canvas, 1, 1).setEaseInOutBack();
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void RestartLevel()
+    {
+        if (resetLevelCoroutine == null)
+        {
+            resetLevelCoroutine = StartCoroutine(resetLevel_now());
+        }
     }
 }
