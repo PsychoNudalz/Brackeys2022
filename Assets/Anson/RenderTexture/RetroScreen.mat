@@ -61,12 +61,13 @@ Material:
     - _CastShadows: 0
     - _Cull: 2
     - _DstBlend: 0
-    - _LineStrength: 0.02
+    - _IsActive: 1
+    - _LineStrength: 0.01
     - _NoiseScale: 500
     - _NoiseStength: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _SceneLines: 64
+    - _SceneLines: 32
     - _SrcBlend: 1
     - _StepValue: 0.05
     - _Surface: 0
@@ -76,6 +77,6 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _BlindStrength: {r: 0.6, g: 1, b: 0, a: 0}
-    - _MoveSpeed: {r: 0, g: 1, b: 0, a: 0}
+    - _MoveSpeed: {r: 0, g: 0.05, b: 0, a: 0}
     - _NoiseSpeed: {r: 0, g: -0.05, b: 0, a: 0}
   m_BuildTextureStacks: []
