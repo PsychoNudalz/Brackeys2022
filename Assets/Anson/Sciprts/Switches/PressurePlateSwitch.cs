@@ -16,16 +16,21 @@ public class PressurePlateSwitch : SwitchInteractable
         if (interactState == InteractState.Off && triggerZone.IsObstructed)
         {
             OnOn();
+            if (wasObstructed!=triggerZone.IsObstructed)
+            {
+                OnUse();
+            }
         }
         else if (interactState == InteractState.On && !triggerZone.IsObstructed)
         {
             OnOff();
+            if (wasObstructed!=triggerZone.IsObstructed)
+            {
+                OnUse();
+            }
         }
 
-        if (wasObstructed!=triggerZone.IsObstructed)
-        {
-            OnUse();
-        }
+
 
         wasObstructed = triggerZone.IsObstructed;
     }
