@@ -121,6 +121,8 @@ public class CharacterControllerScript : MonoBehaviour
             if (interactTriggerDetector.InteractableObject.OnUse())
             {
                 characterEffectsController.Interact();
+                characterMovementController.SetRotationToTarget_Timed(
+                    interactTriggerDetector.InteractableObject.transform.position - transform.position, 1f);
             }
         }
     }
@@ -145,13 +147,15 @@ public class CharacterControllerScript : MonoBehaviour
         isInControl = b;
     }
 
-    public void KillCharacter() //disables movement, switches to the next character (if possible) and disabled switching back
+    public void
+        KillCharacter() //disables movement, switches to the next character (if possible) and disabled switching back
     {
         if (aliveEnum == AliveEnum.Dead)
         {
             return;
         }
-        print(name +" is dead");
+
+        print(name + " is dead");
         aliveEnum = AliveEnum.Dead;
         if (isInControl)
         {
@@ -160,7 +164,7 @@ public class CharacterControllerScript : MonoBehaviour
 
         GameManager.current.checkForGameOver();
         SetActive(false);
-        
+
         characterEffectsController.Death();
 
         characterMovementController.SetControlLock(true);
@@ -168,7 +172,7 @@ public class CharacterControllerScript : MonoBehaviour
 
     public void SetShield(bool b)
     {
-        Debug.Log(name+" Shield: "+b);
+        Debug.Log(name + " Shield: " + b);
         characterShieldController.SetActive(b);
     }
 }

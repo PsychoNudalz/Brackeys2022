@@ -136,6 +136,7 @@ public class CharacterMovementController : MonoBehaviour
     {
         controlLock = true;
         rotationLock = true;
+        moveDir = new Vector3();
         yield return new WaitForSeconds(t);
         rotationLock = false;
         controlLock = false;
