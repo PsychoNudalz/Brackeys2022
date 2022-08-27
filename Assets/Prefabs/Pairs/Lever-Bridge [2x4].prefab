@@ -49,7 +49,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onUseConsequence.Array.data[0]
       value: 
-      objectReference: {fileID: 2774068850170217757}
+      objectReference: {fileID: 6934453009696845365}
     - target: {fileID: 5416651227195773314, guid: f68c9ba791cf74e49bc8e540c31553c0,
         type: 3}
       propertyPath: m_Name
@@ -193,9 +193,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7378002742640105563}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2774068850170217757 stripped
+--- !u!114 &6934453009696845365 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4619732848469122374, guid: 996b56517aaac794baf8393d564e7180,
+  m_CorrespondingSourceObject: {fileID: 459312335936665198, guid: 996b56517aaac794baf8393d564e7180,
     type: 3}
   m_PrefabInstance: {fileID: 7378002742640105563}
   m_PrefabAsset: {fileID: 0}

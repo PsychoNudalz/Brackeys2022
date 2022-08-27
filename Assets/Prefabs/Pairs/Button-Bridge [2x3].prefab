@@ -129,7 +129,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onUseConsequence.Array.data[0]
       value: 
-      objectReference: {fileID: 8549779904568690565}
+      objectReference: {fileID: 789043307229539614}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a7a8659e51b354489e119b026ba0ce0, type: 3}
 --- !u!4 &3639051053769543667 stripped
@@ -207,15 +207,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc607f534951a724f9f37a3762eb7d2a, type: 3}
---- !u!4 &8549779904010266560 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8726395491484688093, guid: bc607f534951a724f9f37a3762eb7d2a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1133932875072010525}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8549779904568690565 stripped
+--- !u!114 &789043307229539614 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8726395493075844760, guid: bc607f534951a724f9f37a3762eb7d2a,
+  m_CorrespondingSourceObject: {fileID: 382725997077533699, guid: bc607f534951a724f9f37a3762eb7d2a,
     type: 3}
   m_PrefabInstance: {fileID: 1133932875072010525}
   m_PrefabAsset: {fileID: 0}
@@ -225,3 +219,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ef5c0792f157a48a8472e77831e111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &8549779904010266560 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8726395491484688093, guid: bc607f534951a724f9f37a3762eb7d2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1133932875072010525}
+  m_PrefabAsset: {fileID: 0}

@@ -102,15 +102,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe609c05207ece443b2186b3dfbc09ef, type: 3}
---- !u!4 &7425378092627029452 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4834799082778513445, guid: fe609c05207ece443b2186b3dfbc09ef,
-    type: 3}
-  m_PrefabInstance: {fileID: 2599868012691832297}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7425378093194890633 stripped
+--- !u!114 &1823513535177655827 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4834799081156833376, guid: fe609c05207ece443b2186b3dfbc09ef,
+  m_CorrespondingSourceObject: {fileID: 4421125023209896954, guid: fe609c05207ece443b2186b3dfbc09ef,
     type: 3}
   m_PrefabInstance: {fileID: 2599868012691832297}
   m_PrefabAsset: {fileID: 0}
@@ -120,6 +114,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ef5c0792f157a48a8472e77831e111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &7425378092627029452 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4834799082778513445, guid: fe609c05207ece443b2186b3dfbc09ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 2599868012691832297}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7223391035884326744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -211,12 +211,12 @@ PrefabInstance:
         type: 3}
       propertyPath: onOffConsequence.Array.data[0]
       value: 
-      objectReference: {fileID: 7425378093194890633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4412410900411226367, guid: 8a7a8659e51b354489e119b026ba0ce0,
         type: 3}
       propertyPath: onUseConsequence.Array.data[0]
       value: 
-      objectReference: {fileID: 7425378093194890633}
+      objectReference: {fileID: 1823513535177655827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a7a8659e51b354489e119b026ba0ce0, type: 3}
 --- !u!4 &6413877618536535977 stripped

@@ -72,7 +72,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4120742635142193414
 Transform:
   m_ObjectHideFlags: 0
@@ -9948,7 +9948,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  isInRange: 0
+  currentObject: {fileID: 0}
 --- !u!65 &4120742635870600919
 BoxCollider:
   m_ObjectHideFlags: 0

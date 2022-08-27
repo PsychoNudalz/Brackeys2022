@@ -109,7 +109,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onUseConsequence.Array.data[0]
       value: 
-      objectReference: {fileID: 4012577344250541778}
+      objectReference: {fileID: 5327156080502750536}
     - target: {fileID: 368733724181261995, guid: e3d47d004bfa60f489bfc3adc27de29a,
         type: 3}
       propertyPath: onUseEvent.m_PersistentCalls.m_Calls.Array.size
@@ -219,13 +219,13 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8410228160010487474}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4012577344250541778 stripped
+--- !u!114 &5327156080502750536 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4834799081156833376, guid: fe609c05207ece443b2186b3dfbc09ef,
+  m_CorrespondingSourceObject: {fileID: 4421125023209896954, guid: fe609c05207ece443b2186b3dfbc09ef,
     type: 3}
   m_PrefabInstance: {fileID: 8410228160010487474}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4012577343683712656}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61ef5c0792f157a48a8472e77831e111, type: 3}

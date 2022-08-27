@@ -61,11 +61,11 @@ public class GameManager : MonoBehaviour
         characterAmount = charAmt;
         if (archerSpawned)
         {
-            archer?.SetActive(true);
+            CharacterManager.GetArcher().SetActive(true);
         }
         if (mageSpawned)
         {
-            mage?.SetActive(true);
+            CharacterManager.GetMage().SetActive(true);
         }
     }
 
