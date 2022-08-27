@@ -6,12 +6,16 @@ using System.Collections.Generic;
 
 public class MotionBlurController : MonoBehaviour
 {
+    [SerializeField]
     private Volume postProcess;
     private MotionBlur motionBlur;
 
     private void Awake()
     {
-        postProcess = GetComponent<Volume>();
+        if (!postProcess)
+        {
+            postProcess = GetComponent<Volume>();
+        }
     }
 
     private void Start()

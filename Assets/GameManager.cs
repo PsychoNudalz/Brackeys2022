@@ -62,10 +62,10 @@ public class GameManager : MonoBehaviour
         if (archerSpawned)
         {
             archer.SetActive(true);
-            if (mageSpawned)
-            {
-                mage.SetActive(true);
-            }
+        }
+        if (mageSpawned)
+        {
+            mage.SetActive(true);
         }
     }
 
@@ -90,18 +90,20 @@ public class GameManager : MonoBehaviour
         switch (scene.buildIndex)
         {
             case 0:
-                startLevel(false, false, 1);
+                //Main Menu
                 break;
             case 1:
                 startLevel(false, false, 1);
                 break;
             case 2:
-                startLevel(true, false, 2);
+                startLevel(false, false, 1);
                 break;
             case 3:
                 startLevel(true, false, 2);
                 break;
-
+            case 4:
+                startLevel(true, false, 2);
+                break;
             default:
                 startLevel(true, true, 3);
                 break;

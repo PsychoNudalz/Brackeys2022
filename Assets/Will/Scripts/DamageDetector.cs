@@ -23,6 +23,9 @@ public class DamageDetector : MonoBehaviour
     private void killCharacter(GameObject character)
     {
         charControl = character.GetComponent<CharacterControllerScript>();
-        charControl.KillCharacter();
+        if (character)
+        {
+            charControl.KillCharacter();
+        }
     }
 }
