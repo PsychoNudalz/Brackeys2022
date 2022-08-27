@@ -144,6 +144,8 @@ public class Shoot_Ability : Ability
         arrowState = ArrowStateEnum.Idle;
         ResetArrow();
         currentSwitch = null;
+        abilityEffect.OnUse_End();
+
         
         base.OnUse_End(target);
     }
@@ -203,25 +205,33 @@ public class Shoot_Ability : Ability
             //Check if Arrow is in range of destination
             if (Vector3.Distance(destination, arrowGO.transform.position) <= stopDistance)
             {
-                arrowState = ArrowStateEnum.Stuck;
-                if (currentSwitch is ButtonSwitch buttonSwitch)
-                {
-                    if (buttonSwitch.InteractState_Current == InteractableObject.InteractState.Off)
-                    {
-                        buttonSwitch.OnUse();
-                    }
-                    currentSwitch.LockCurrent(true);
-                }else if (currentSwitch is LeverSwitch leverSwitch)
-                {
-                    leverSwitch.OnUse();
-                    OnUse_End(currentSwitch);
-                }
+                StuckArrow();
             }
             else
             {
                 arrowGO.transform.forward = fireDir;
                 arrowGO.transform.position += fireDir * moveSpeed * Time.deltaTime;
             }
+        }
+    }
+
+    private void StuckArrow()
+    {
+        abilityEffect.OnUse_Start();
+        arrowState = ArrowStateEnum.Stuck;
+        if (currentSwitch is ButtonSwitch buttonSwitch)
+        {
+            if (buttonSwitch.InteractState_Current == InteractableObject.InteractState.Off)
+            {
+                buttonSwitch.OnUse();
+            }
+
+            currentSwitch.LockCurrent(true);
+        }
+        else if (currentSwitch is LeverSwitch leverSwitch)
+        {
+            leverSwitch.OnUse();
+            OnUse_End(currentSwitch);
         }
     }
 

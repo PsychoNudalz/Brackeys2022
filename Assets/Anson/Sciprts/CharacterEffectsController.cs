@@ -3,12 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using HighlightPlus;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CharacterEffectsController : MonoBehaviour
 {
     [Header("Animation")]
     [SerializeField]
     private Animator avatar;
+    
+    [Header("SFX")]
+        
+    [SerializeField]
+    private Sound ability_main_sfx;
+    [SerializeField]
+    private Sound ability_team_sfx;
+
+    [Header("OnDeath")]
+    [SerializeField]
+    private UnityEvent onDeathEvent;
+    
+    
     
     [Space(10)]
     [Header("Highlight")]
@@ -52,16 +66,20 @@ public class CharacterEffectsController : MonoBehaviour
 
     public void Death()
     {
+        onDeathEvent.Invoke();
         avatar.SetTrigger("Death");
     }
 
     public void Ability_Main()
     {
+        ability_main_sfx?.Play();
         avatar.SetTrigger("Ability_Main");
+        
     }
 
     public void Ability_Team()
     {
+        ability_team_sfx?.Play();
         avatar.SetTrigger("Ability_Team");
 
     }

@@ -9,13 +9,17 @@ public class CharacterAbilityHandler : MonoBehaviour
 
     [SerializeField]
     private CharacterEffectsController characterEffectsController;
-    
+
     [Header("Abilities")]
+    
     [SerializeField]
     private Ability ability_main;
 
+
     [SerializeField]
     private Ability ability_team;
+    
+
 
     public Ability AbilityMain => ability_main;
 
