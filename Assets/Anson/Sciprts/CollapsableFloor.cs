@@ -18,18 +18,23 @@ public class CollapsableFloor : MonoBehaviour
     private float checkTime = 1f;
 
     private float lastCheck;
+    private bool activated = false;    
 
     private void FixedUpdate()
     {
-        if (Time.time - lastCheck > checkTime)
+        if (!activated)
         {
-            lastCheck = Time.time;
-            if (triggerDetector.IsObstructed)
+            if (Time.time - lastCheck > checkTime)
             {
-                wasObstructed = true;
-            }else if (wasObstructed)
-            {
-                onCollapse.Invoke();
+                lastCheck = Time.time;
+                if (triggerDetector.IsObstructed)
+                {
+                    wasObstructed = true;
+                }else if (wasObstructed)
+                {
+                    activated = true;
+                    onCollapse.Invoke();
+                }
             }
         }
     }
