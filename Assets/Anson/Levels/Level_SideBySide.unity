@@ -141,6 +141,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelBox
       objectReference: {fileID: 0}
+    - target: {fileID: 4449101204243208817, guid: d856cc79c8c955c41b88ddd0d32a6ae5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5126326723193859663, guid: d856cc79c8c955c41b88ddd0d32a6ae5,
         type: 3}
       propertyPath: m_RootOrder
