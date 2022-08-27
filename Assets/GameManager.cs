@@ -61,13 +61,9 @@ public class GameManager : MonoBehaviour
         characterAmount = charAmt;
         if (archerSpawned)
         {
-            archer.transform.position = archerSpawnpoint.transform.position;
-            archer.transform.rotation = archerSpawnpoint.transform.rotation;
             archer.SetActive(true);
             if (mageSpawned)
             {
-                mage.transform.position = mageSpawnpoint.transform.position;
-                mage.transform.rotation = mageSpawnpoint.transform.rotation;
                 mage.SetActive(true);
             }
         }
