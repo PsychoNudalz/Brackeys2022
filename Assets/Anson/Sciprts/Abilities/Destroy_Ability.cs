@@ -13,6 +13,7 @@ public class Destroy_Ability : Ability
     {
         if (target is DestructibleObject destructibleObject)
         {
+            characterMovementController.SetRotationToTarget_Timed(destructibleObject.transform.position-transform.position, 1f);
             destructibleObject.Destroy();
         }
     }

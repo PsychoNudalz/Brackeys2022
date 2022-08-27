@@ -31,6 +31,8 @@ public class Shield_Ability : Ability
         {
             currentCharacter = character;
             currentCharacter.SetShield(true);
+            characterMovementController.SetRotationToTarget_Timed(character.transform.position-transform.position, 1f);
+
             base.OnUse_Enter(target);
         }
     }

@@ -43,7 +43,7 @@ public abstract class Ability : MonoBehaviour
     protected AbilityEffect abilityEffect;
 
     [SerializeField]
-    private CharacterMovementController characterMovementController;
+    protected CharacterMovementController characterMovementController;
 
     public AbilityStateEnum AbilityState => abilityStateEnum;
 

@@ -64,6 +64,8 @@ public class Move_Ability : Ability
         {
             movableObject.OnSelect();
             currentObject = movableObject;
+            characterMovementController.SetRotationToTarget_Timed(movableObject.transform.position-transform.position, 1f);
+
             base.OnUse_Enter(target);
         }
     }

@@ -134,9 +134,12 @@ public class CharacterMovementController : MonoBehaviour
 
     IEnumerator SetRotationToTarget_TimedCoroutine(float t)
     {
-        rotationLock = false;
-        yield return new WaitForSeconds(t);
+        controlLock = true;
         rotationLock = true;
+        yield return new WaitForSeconds(t);
+        rotationLock = false;
+        controlLock = false;
+
     }
     
     

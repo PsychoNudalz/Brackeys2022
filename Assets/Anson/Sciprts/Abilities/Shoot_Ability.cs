@@ -104,9 +104,12 @@ public class Shoot_Ability : Ability
     {
         if (target is SwitchInteractable si)
         {
+            characterMovementController.SetRotationToTarget_Timed(si.transform.position-transform.position, 1f);
+
             if (currentSwitch)
             {
                 SwitchInteractable temp = currentSwitch;
+
                 OnUse_End(target);
                 if (si.Equals(temp))
                 {

@@ -32,6 +32,8 @@ public class Lock_Ability : Ability
             {
                 currentSwitch = interactable;
                 currentSwitch.OnSwordLock(true);
+                characterMovementController.SetRotationToTarget_Timed(interactable.transform.position-transform.position, 1f);
+
                 base.OnUse_Enter(target);
             }
             else
