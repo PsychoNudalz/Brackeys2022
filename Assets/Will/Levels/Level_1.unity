@@ -129,6 +129,69 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 511049968}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &244085555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 244085558}
+  - component: {fileID: 244085557}
+  - component: {fileID: 244085556}
+  m_Layer: 0
+  m_Name: DialogueTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &244085556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244085555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0568fba8bdb61384c9a0d5a8678169b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechCtrl: {fileID: 1049972130}
+  newString:
+  - 'I have '
+  - JAMES...
+  - It's swordin' time.
+--- !u!65 &244085557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244085555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &244085558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244085555}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.75, z: 2.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &421367627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -830,6 +893,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 962152486}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1049972130 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1958937851032219750, guid: 8f98da7c01a93a243935acb9029cc319,
+    type: 3}
+  m_PrefabInstance: {fileID: 2028293212}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 078d60217349e9c42b3142588f169e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1120259771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1356,7 +1431,7 @@ PrefabInstance:
     - target: {fileID: 4412410900411226353, guid: 8a7a8659e51b354489e119b026ba0ce0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.7267246
+      value: 3.9767246
       objectReference: {fileID: 0}
     - target: {fileID: 4412410900411226353, guid: 8a7a8659e51b354489e119b026ba0ce0,
         type: 3}
@@ -1968,6 +2043,11 @@ PrefabInstance:
       propertyPath: archer
       value: 
       objectReference: {fileID: 1883833656}
+    - target: {fileID: 2035848192271355903, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2042441189302040140, guid: 8f98da7c01a93a243935acb9029cc319,
         type: 3}
       propertyPath: m_Name
@@ -2136,6 +2216,11 @@ PrefabInstance:
     - target: {fileID: 8348995245857331185, guid: 8f98da7c01a93a243935acb9029cc319,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8565848683723675138, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
