@@ -165,6 +165,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 172511508074669450, guid: bd433398ae02406429aef3b3754fce27,
         type: 3}
+      propertyPath: systemColour.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 172511508074669450, guid: bd433398ae02406429aef3b3754fce27,
+        type: 3}
+      propertyPath: systemColour.g
+      value: 0.63529414
+      objectReference: {fileID: 0}
+    - target: {fileID: 172511508074669450, guid: bd433398ae02406429aef3b3754fce27,
+        type: 3}
+      propertyPath: systemColour.r
+      value: 0.7489004
+      objectReference: {fileID: 0}
+    - target: {fileID: 172511508074669450, guid: bd433398ae02406429aef3b3754fce27,
+        type: 3}
       propertyPath: onUseConsequence.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -323,6 +338,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1454988496}
     m_Modifications:
+    - target: {fileID: 459312335936665198, guid: 996b56517aaac794baf8393d564e7180,
+        type: 3}
+      propertyPath: consequenceState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4619732848469122374, guid: 996b56517aaac794baf8393d564e7180,
         type: 3}
       propertyPath: consequenceState
