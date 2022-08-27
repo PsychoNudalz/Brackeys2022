@@ -27,7 +27,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
   m_Name: TransparentObjects
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     passTag: TransparentObjects
     Event: 1000
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    Event: 1000
+    Event: 450
     blitMaterial: {fileID: 2100000, guid: 41e1389fcaa7ab041a4a2025080fa620, type: 2}
     blitMaterialPassIndex: 0
     setInverseViewMatrix: 0
