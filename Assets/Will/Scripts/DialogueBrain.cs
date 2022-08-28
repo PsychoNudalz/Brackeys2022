@@ -5,13 +5,14 @@ using UnityEngine;
 public class DialogueBrain : MonoBehaviour
 {
     [SerializeField] private SpeechController speechCtrl;
+    [SerializeField] private int characterIndex;
     public string[] newString;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Character")
         {
-            StartCoroutine(speechCtrl.talk(newString, 0));
+            StartCoroutine(speechCtrl.talk(newString, characterIndex));
             GetComponent<Collider>().enabled = false;
         }
     }

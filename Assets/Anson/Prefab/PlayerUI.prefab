@@ -466,8 +466,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.825012, y: -4.9500046}
-  m_SizeDelta: {x: 1023.44995, y: 96.40001}
+  m_AnchoredPosition: {x: 7.825012, y: -30.925003}
+  m_SizeDelta: {x: 1023.44995, y: 44.450005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2841395919847229255
 CanvasRenderer:
@@ -497,14 +497,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'If you''re in search of random things to write about, you''re in the correct
-    place. We created the Random Writing Prompt Generator for the express purpose
-    of helping you to find interesting things to write about. This tool is easy to
-    use. First, choose the number of writing prompts you''d like to see and then
-    click on the button. A random assortment of fun writing prompts will instantly
-    appear.
-
-'
+  m_text: wadwa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dad322041c55a60419b49772eb487aaf, type: 2}
   m_sharedMaterial: {fileID: -9118317187328689764, guid: dad322041c55a60419b49772eb487aaf,
@@ -1070,7 +1063,6 @@ GameObject:
   - component: {fileID: 8584548564288674451}
   - component: {fileID: 4852952427518130659}
   - component: {fileID: 3952985952369510157}
-  - component: {fileID: 7809775469800286573}
   - component: {fileID: 6587546851532220158}
   m_Layer: 5
   m_Name: Image
@@ -1078,7 +1070,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8584548564288674451
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1093,12 +1085,12 @@ RectTransform:
   m_Children:
   - {fileID: 6851830766158004345}
   m_Father: {fileID: 7716455621531981062}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1139.1, y: 206.3}
+  m_SizeDelta: {x: 1139.1, y: 111.33}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &4852952427518130659
 CanvasRenderer:
@@ -1138,30 +1130,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7809775469800286573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4635909778396555524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 078d60217349e9c42b3142588f169e3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CharacterAvatar: {fileID: 5410146751032797419}
-  SpeechHolder: {fileID: 6587546851532220158}
-  SpeechBox: {fileID: 5787224601507686155}
-  UIText: {fileID: 7714287745709004532}
-  idleSprites:
-  - {fileID: 21300000, guid: 2425dfff75497fb4ca86fbc37eb1e355, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  speakingSprites:
-  - {fileID: 21300000, guid: 974836f054f32eb408afb2580fbdee6f, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!225 &6587546851532220158
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1170,7 +1138,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4635909778396555524}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -1206,7 +1174,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7716455621531981062}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1278,7 +1246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6851830766158004345
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1336,7 +1304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -438.20004, y: 159.14334}
+  m_AnchoredPosition: {x: -438.20004, y: 113.6}
   m_SizeDelta: {x: 1202, y: 676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4556627253795935167
@@ -1687,7 +1655,7 @@ RectTransform:
   - {fileID: 2324431865401717622}
   - {fileID: 2932148193239178658}
   m_Father: {fileID: 7716455621531981062}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1733,6 +1701,7 @@ GameObject:
   - component: {fileID: 7716455621531981064}
   - component: {fileID: 7716455621531981067}
   - component: {fileID: 7716455621531981066}
+  - component: {fileID: 3249345871570619060}
   m_Layer: 5
   m_Name: PlayerUI
   m_TagString: Untagged
@@ -1754,9 +1723,9 @@ RectTransform:
   m_Children:
   - {fileID: 8281306259167602819}
   - {fileID: 7716455622363916148}
-  - {fileID: 131604080704136507}
   - {fileID: 8404789941420013288}
   - {fileID: 8584548564288674451}
+  - {fileID: 131604080704136507}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1841,6 +1810,30 @@ MonoBehaviour:
   playerUIInteractOptionController: {fileID: 0}
   lowPixelRenderTexture: {fileID: 121156353150291721}
   retroMaterial: {fileID: 2100000, guid: 41e1389fcaa7ab041a4a2025080fa620, type: 2}
+--- !u!114 &3249345871570619060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7716455621531981069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 078d60217349e9c42b3142588f169e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CharacterAvatar: {fileID: 5410146751032797419}
+  SpeechHolder: {fileID: 6587546851532220158}
+  SpeechBox: {fileID: 4635909778396555524}
+  UIText: {fileID: 7714287745709004532}
+  idleSprites:
+  - {fileID: 21300000, guid: 2425dfff75497fb4ca86fbc37eb1e355, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  speakingSprites:
+  - {fileID: 21300000, guid: 974836f054f32eb408afb2580fbdee6f, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &7716455622363916151
 GameObject:
   m_ObjectHideFlags: 0
