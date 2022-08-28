@@ -52,22 +52,23 @@ public class SpeechController : MonoBehaviour
 
     public IEnumerator talk(string[] paragraphs, int charIndex)
     {
+        UIText.text = "";
         SpeechBox.gameObject.SetActive(true);
-        LeanTween.alphaCanvas(SpeechHolder, 1, 1);
-        yield return new WaitForSeconds(2);
+        LeanTween.alphaCanvas(SpeechHolder, 1, 0.35f);
+        yield return new WaitForSeconds(.5f);
         for (int i = 0; i < paragraphs.Length; i++)
         {
+            UIText.text = "";
             StartCoroutine(writeText(paragraphs[i], charIndex));
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
             //wait for player input
             while (Input.GetKeyDown(KeyCode.Space) == false)
             {
                 yield return null;
             }
         }
-        yield return new WaitForSeconds(0.5f);
-        LeanTween.alphaCanvas(SpeechHolder, 0, 1);
-        yield return new WaitForSeconds(1);
+        LeanTween.alphaCanvas(SpeechHolder, 0, 0.35f);
+        yield return new WaitForSeconds(0.35f);
         SpeechBox.gameObject.SetActive(false);
     }
 
