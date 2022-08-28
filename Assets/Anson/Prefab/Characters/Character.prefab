@@ -644,7 +644,7 @@ MonoBehaviour:
   characterState: 1
   speed: 5
   gravity: 6
-  groundCheckDistance: 0.5
+  groundCheckDistance: 0.4
   groundLayer:
     serializedVersion: 2
     m_Bits: 71424
