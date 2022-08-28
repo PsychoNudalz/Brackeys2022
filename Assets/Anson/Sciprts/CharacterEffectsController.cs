@@ -88,7 +88,10 @@ public class CharacterEffectsController : MonoBehaviour
     {
         if (b)
         {
-            flashCoroutine= StartCoroutine(SelectCharacterHighlightAnimation());
+            if (gameObject.activeSelf)
+            {
+                flashCoroutine= StartCoroutine(SelectCharacterHighlightAnimation());
+            }
         }
         else
         {
