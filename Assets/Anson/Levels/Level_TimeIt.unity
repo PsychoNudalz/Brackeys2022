@@ -1718,6 +1718,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor [4x4] (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3985831950432546946, guid: 54508ee42b1df254c8d3fdbc56b9cf0c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3985831950432546950, guid: 54508ee42b1df254c8d3fdbc56b9cf0c,
         type: 3}
       propertyPath: m_RootOrder
@@ -9998,6 +10003,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Floor [4x4] (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985831950432546946, guid: 54508ee42b1df254c8d3fdbc56b9cf0c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3985831950432546950, guid: 54508ee42b1df254c8d3fdbc56b9cf0c,
         type: 3}
