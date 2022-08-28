@@ -90,18 +90,27 @@ public class CharacterEffectsController : MonoBehaviour
         {
             return;
         }
-        if (b)
+
+        try
         {
-                flashCoroutine= StartCoroutine(SelectCharacterHighlightAnimation());
-        }
-        else
-        {
-            if (flashCoroutine != null)
+            if (b)
             {
-                StopCoroutine(flashCoroutine);
+                flashCoroutine = StartCoroutine(SelectCharacterHighlightAnimation());
             }
-            if (selectHighlightEffect)
-                selectHighlightEffect.highlighted = false;
+            else
+            {
+                if (flashCoroutine != null)
+                {
+                    StopCoroutine(flashCoroutine);
+                }
+
+                if (selectHighlightEffect)
+                    selectHighlightEffect.highlighted = false;
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("FUK U GAME");
         }
     }
 

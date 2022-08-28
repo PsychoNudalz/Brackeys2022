@@ -122,8 +122,10 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         else
+        {
             Debug.Log("that was the final level");
-        SceneManager.LoadScene(0);
+            SceneManager.LoadScene(0);
+        }
     }
 
     public IEnumerator resetLevel()
