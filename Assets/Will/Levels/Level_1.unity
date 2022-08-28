@@ -350,8 +350,9 @@ PrefabInstance:
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.data[0]
-      value: This pressure plate will need to stay down while I cross. Maybe I can
-        jam it with my dagger?
+      value: Hmmm... this pressure plate doesn't seem to stay down without me standing
+        on it... maybe I can hold it in by stabbing one of my trusty daggers through
+        it?
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
@@ -1241,17 +1242,24 @@ PrefabInstance:
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.data[0]
-      value: That was a close one...
+      value: 'AIEEEEE!! That was SO close!! One second later and I would''ve be ground
+        corn!! '
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.data[1]
-      value: I'll find them eventually, for now I better get moving.
+      value: I am never crossing another bridge for as long as I live, and I w-oh
+        great... another bridge...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[2]
+      value: This bridge does look a bit more sturdy though, I better check it out.
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
@@ -2773,6 +2781,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 894923342380629765, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 894923342380629765, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 894923342380629765, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 894923342380629765, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 894923342380629765, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 894923342380629765, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1203351344208527177, guid: 8f98da7c01a93a243935acb9029cc319,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2890,6 +2928,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6272498910108379773, guid: 8f98da7c01a93a243935acb9029cc319,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272498910108379773, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272498910108379773, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2910,6 +2958,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6917383680713671849, guid: 8f98da7c01a93a243935acb9029cc319,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917383680713671849, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917383680713671849, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2926,6 +2984,16 @@ PrefabInstance:
     - target: {fileID: 7599920038957095310, guid: 8f98da7c01a93a243935acb9029cc319,
         type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599920038957095310, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599920038957095310, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7599920038957095310, guid: 8f98da7c01a93a243935acb9029cc319,
@@ -2981,6 +3049,16 @@ PrefabInstance:
     - target: {fileID: 8348995245857331185, guid: 8f98da7c01a93a243935acb9029cc319,
         type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348995245857331185, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348995245857331185, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8348995245857331185, guid: 8f98da7c01a93a243935acb9029cc319,
@@ -3481,18 +3559,50 @@ PrefabInstance:
       objectReference: {fileID: 553398330}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
+      propertyPath: newString.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
       propertyPath: newString.Array.data[0]
-      value: Damn... lost track of them again. Curse this devil's labrinth!
+      value: Damn... I already lost them, just after we had met as well!
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.data[1]
-      value: I'll find them eventually, for now I better get moving.
+      value: Ughh... no matter, I am sure they will be fine, but I do worry about
+        that old Wizzard though...
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.data[2]
-      value: This bridge doesn't look stable, I should cross it quickly...
+      value: I just need to find that damn princess, then I can get out of here and
+        claim that reward money from the king. I really want that new lockpicking
+        set from the shoppe in my hometown.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[3]
+      value: First things first though, that bridge looks a bit unstable, I'd better
+        be quick crossing it before my heavy mug breaks it and I get swallowed into
+        the abyss. Is this even worth the reward money??!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[4]
+      value: 'Mmm... yeah, it totally is, that lockpicking set is gonna be rad for
+        my next quest (please don''t expect Fellowship 2: The Lockpicking Adventure!)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[5]
+      value: 'Sammy, just think of that beautiful lockpicking set as I... walk across
+        this totally stable and walkable bridge... eeek!!! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[6]
+      value: ' Welp... here goes nothing!!'
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}

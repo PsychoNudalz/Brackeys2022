@@ -3604,8 +3604,7 @@ PrefabInstance:
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.data[0]
-      value: ahhh, you two decided to show up again. I suppose you're in need of
-        my spells once more, hmm?
+      value: Ahhh you two young'uns again..?
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
@@ -4738,22 +4737,32 @@ PrefabInstance:
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.data[0]
-      value: My arrows will get incinerated when passing through those fire pits.
+      value: Not good...
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.data[1]
-      value: 
+      value: My arrows don't stand a chance against those flames!!
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.data[2]
-      value: Indeed...
+      value: If I am careful I can avoid wasting my precious arrows..
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[3]
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[4]
+      value: I'm putting my lucky arrow away for this one...
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
@@ -5075,6 +5084,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tutorial (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7986142621499644865, guid: c754408dcc864704e8a8a3dcf5001e0c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7986142621499644870, guid: c754408dcc864704e8a8a3dcf5001e0c,
         type: 3}
       propertyPath: m_RootOrder
@@ -5154,6 +5168,11 @@ PrefabInstance:
         Select a character to
 
         cast a shield.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986142621785944365, guid: c754408dcc864704e8a8a3dcf5001e0c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7986142621919705357, guid: c754408dcc864704e8a8a3dcf5001e0c,
         type: 3}
@@ -5318,6 +5337,115 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2008646777}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2019606288
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: speechCtrl
+      value: 
+      objectReference: {fileID: 2028293213}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: characterIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[0]
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[1]
+      value: Sammy I swear to god, where was that warning I asked for??!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.9133892
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.8635504
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858159, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueTrigger (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f87465b586e6dd44da2dc0f0fdfb0730, type: 3}
 --- !u!1001 &2028293212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5474,6 +5602,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042441189397629958, guid: 8f98da7c01a93a243935acb9029cc319,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5977367779366176864, guid: 8f98da7c01a93a243935acb9029cc319,
         type: 3}
