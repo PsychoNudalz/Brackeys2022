@@ -70,6 +70,7 @@ public class SpeechController : MonoBehaviour
         }
         LeanTween.alphaCanvas(SpeechHolder, 0, 0.35f);
         yield return new WaitForSeconds(0.35f);
+        UIText.text = "";
         SpeechBox.gameObject.SetActive(false);
     }
 
