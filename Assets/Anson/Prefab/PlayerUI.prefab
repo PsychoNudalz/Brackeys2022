@@ -2110,11 +2110,11 @@ MonoBehaviour:
   idleSprites:
   - {fileID: 21300000, guid: 2425dfff75497fb4ca86fbc37eb1e355, type: 3}
   - {fileID: 21300000, guid: dc0266b2847d14a48b46c58810b46788, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 3227b5216787fa946bf684dad0d2f772, type: 3}
   speakingSprites:
   - {fileID: 21300000, guid: 974836f054f32eb408afb2580fbdee6f, type: 3}
   - {fileID: 21300000, guid: e34819371ec56c342ad3a23588cd0c52, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 3227b5216787fa946bf684dad0d2f772, type: 3}
 --- !u!1 &7716455622363916151
 GameObject:
   m_ObjectHideFlags: 0
