@@ -62,7 +62,7 @@ Material:
     - _Cull: 2
     - _DstBlend: 0
     - _IsActive: 1
-    - _LineStrength: 0.02
+    - _LineStrength: 0.05
     - _NoiseScale: 500
     - _NoiseStength: 0.005
     - _QueueControl: 0
