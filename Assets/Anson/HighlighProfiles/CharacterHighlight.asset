@@ -68,7 +68,7 @@ MonoBehaviour:
   innerGlowWidth: 1
   innerGlowColor: {r: 1, g: 1, b: 1, a: 1}
   innerGlowVisibility: 0
-  targetFX: 1
+  targetFX: 0
   targetFXTexture: {fileID: 2800000, guid: 1de3c566a6c8c405b9f6f453137273ec, type: 3}
   targetFXColor: {r: 1, g: 1, b: 1, a: 1}
   targetFXRotationSpeed: 50
