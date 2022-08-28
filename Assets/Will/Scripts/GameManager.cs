@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
         if (archerSpawned)
         {
             CharacterManager.GetArcher().SetActive(true);
+            Debug.Log("AS");
         }
         if (mageSpawned)
         {
