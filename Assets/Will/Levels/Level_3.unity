@@ -319,19 +319,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
+      propertyPath: newString.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
       propertyPath: newString.Array.data[0]
-      value: Ah, about time you showed up.
+      value: Ah, about time you showed up Sammy!
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.data[1]
-      value: I don't know where the old man went but we should find him.
+      value: I don't know where the old man went but we should try find him.
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.data[2]
-      value: Looks like my arrow might be able to pin that button over there, let's
-        fire a shot at it.
+      value: I did some poking around here while you were doing whatever you were
+        doing,
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[3]
+      value: And I am pretty sure piercing these buttons with my arrows can keep
+        them activated!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[4]
+      value: ... however I don't want to waste any of my precious arrows... My family
+        isn't rich you know..?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[5]
+      value: I tied some rope to my lucky arrow so I can retrieve it at any time,
+        however I only have one short piece of rope...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[6]
+      value: We'd better hurry up before that old magic nerd finds himself in any
+        danger. Let's do this Sammy!
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
@@ -1936,7 +1965,7 @@ PrefabInstance:
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.data[2]
-      value: We might be dead if we don't.
+      value: If not we could end up medium rare or fall to our death in the abyss.
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858153, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
@@ -5918,6 +5947,105 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078d60217349e9c42b3142588f169e3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &2077574114
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: speechCtrl
+      value: 
+      objectReference: {fileID: 2028293213}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: characterIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[0]
+      value: You fell for it fool!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[1]
+      value: I never trust those damn bridges!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[2]
+      value: So... what now..?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858153, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858159, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueTrigger (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f87465b586e6dd44da2dc0f0fdfb0730, type: 3}
 --- !u!1001 &2105046316
 PrefabInstance:
   m_ObjectHideFlags: 0

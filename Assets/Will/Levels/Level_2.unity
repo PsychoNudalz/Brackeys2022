@@ -2436,13 +2436,29 @@ PrefabInstance:
       objectReference: {fileID: 730772068}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
+      propertyPath: newString.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
       propertyPath: newString.Array.data[0]
-      value: Hmm... these barrels are in the way.
+      value: Hmm... these spiky barrels are in the way!
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.data[1]
-      value: I'll try spinning my sword... that's a good trick!
+      value: They look quite cheap to be honest, maybe I can break them with my sword..?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[2]
+      value: I mean.. I have broken far stronger looking barrels with my sword back
+        in my hometown.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
+        type: 3}
+      propertyPath: newString.Array.data[3]
+      value: So... It's swordin' time!
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858154, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
@@ -2774,7 +2790,8 @@ PrefabInstance:
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
       propertyPath: newString.Array.data[0]
-      value: I'll need to be quick after I push this button.
+      value: Hmmm... this button has a timer on it, I better be quick or else it
+        could be a repeat of the first bridge... *shudders*
       objectReference: {fileID: 0}
     - target: {fileID: 8421809800455858152, guid: f87465b586e6dd44da2dc0f0fdfb0730,
         type: 3}
