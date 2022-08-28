@@ -52,6 +52,7 @@ public class SpeechController : MonoBehaviour
 
     public IEnumerator talk(string[] paragraphs, int charIndex)
     {
+        setCharacterToIdle(charIndex);
         UIText.text = "";
         SpeechBox.gameObject.SetActive(true);
         LeanTween.alphaCanvas(SpeechHolder, 1, 0.35f);
