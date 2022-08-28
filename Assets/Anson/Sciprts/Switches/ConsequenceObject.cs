@@ -44,24 +44,25 @@ public class ConsequenceObject : MonoBehaviour
             OnOn();
         }
     }
-    //
-    // public void FindRenderersInConsequences()
-    // {
-    //     List<Renderer> temp = new List<Renderer>(renderers);
-    //     List<Renderer> newList = new List<Renderer>();
-    //     foreach (ConsequenceObject consequenceObject in GetComponentsInChildren<ConsequenceObject>())
-    //     {
-    //         foreach (Renderer renderer in consequenceObject.Renderers)
-    //         {
-    //             if (!temp.Contains(renderer))
-    //             {
-    //                 newList.Add(renderer);
-    //             }
-    //         }
-    //     }
-    //
-    //     renderers = newList.ToArray();
-    // }
+    
+    [ContextMenu("Find all renderers")]
+    public void FindRenderersInConsequences()
+    {
+        List<Renderer> temp = new List<Renderer>(renderers);
+        List<Renderer> newList = new List<Renderer>();
+        foreach (ConsequenceObject consequenceObject in GetComponentsInChildren<ConsequenceObject>())
+        {
+            foreach (Renderer renderer in consequenceObject.Renderers)
+            {
+                if (!temp.Contains(renderer))
+                {
+                    newList.Add(renderer);
+                }
+            }
+        }
+    
+        renderers = newList.ToArray();
+    }
 
     public virtual void OnUse()
     {

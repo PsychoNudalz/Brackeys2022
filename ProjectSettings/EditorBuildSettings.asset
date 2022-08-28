@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Anson/Levels/Level_TimeIt.unity
     guid: bd09d4f5efdb87b418687e314a9f9331
+  - enabled: 1
+    path: Assets/Anson/Levels/Level_SideBySide.unity
+    guid: 9c87a59cf55850e41bca6e3e3a2ad2f7
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 3e324ddd8cfbfe2459072bf0efb5a4cc,
       type: 2}
